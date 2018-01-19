@@ -1,0 +1,35 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>Actividades de Atención</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+      <ul>
+        <li [routerLink]="['/activity']" *ngFor="let activity of activities">
+          <nav *ngIf="activity.type == 'atencion'">
+            <mat-icon matListIcon class="activity-icon">videogame_asset</mat-icon>
+            <a matLine class="activity-list">Actividad {{ activity.numberOf }}</a>
+          </nav>
+        </li>
+      </ul>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>Actividades Videoespaciales</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+      <ul>
+        <li *ngFor="let activity of activitiesv">
+          <nav *ngIf="activity.type == 'videoespacial'" class="ng-star-inserted">
+            <mat-icon matListIcon class="activity-icon">switch_video</mat-icon>
+            <a matLine href='#' class="activity-list">Actividad {{ activity.numberOf }}</a>
+          </nav>
+        </li>
+      </ul>
+  </mat-expansion-panel>
+</mat-accordion>

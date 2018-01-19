@@ -1,0 +1,35 @@
+.activity-header{
+  background: #006eca;
+  color: #fff;
+}
+
+.activity-containter{
+  margin: 20px;
+}
+
+.actions-container{
+  border: #ddd solid;
+  width: stretch;
+}
+
+mat-icon{
+  font-size: 27px;
+}
+
+p{
+  font-size: 20px;
+  padding: 0;
+  margin: 0
+}
+
+td{
+  text-align: center
+}
+
+.good-icon{
+  color: #00c108;
+}
+
+.fail-icon{
+  color: #c70202;
+}
