@@ -22,7 +22,7 @@
           <mat-icon>expand_more</mat-icon>
         </button>
         <mat-menu #menu="matMenu" [overlapTrigger]="false" yPosition="above">
-          <button mat-menu-item>
+          <button [routerLink]="['/register-therapist']" mat-menu-item>
             <mat-icon>home</mat-icon>
             <span>Inicio</span>
           </button>

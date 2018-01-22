@@ -14,6 +14,7 @@ import { PatientNavlistComponent } from './patient/navlist/patient-navlist.compo
 import { ActivityComponent } from './patient/activity/activity.component';
 import { RegisterPatientComponent } from './therapist/patient/register/register-patient.component';
 import { HomeComponent } from './home/home.component';
+import { RegisterTherapistComponent } from './admin/therapist/register/register-therapist.component';
 
 import { Routing } from './app.routing';
 
@@ -23,7 +24,8 @@ import { Routing } from './app.routing';
     PatientNavlistComponent,
     ActivityComponent,
     RegisterPatientComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterTherapistComponent
   ],
   imports: [
     BrowserModule,
