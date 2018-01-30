@@ -6,7 +6,7 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
       <ul>
-        <li [routerLink]="['/activity']" *ngFor="let activity of activities">
+        <li [routerLink]="['patient/activity']" *ngFor="let activity of activities">
           <nav *ngIf="activity.type == 'atencion'">
             <mat-icon matListIcon class="activity-icon">videogame_asset</mat-icon>
             <a matLine class="activity-list">Actividad {{ activity.numberOf }}</a>

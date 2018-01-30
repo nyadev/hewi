@@ -15,6 +15,9 @@ import { ActivityComponent } from './patient/activity/activity.component';
 import { RegisterPatientComponent } from './therapist/patient/register/register-patient.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterTherapistComponent } from './admin/therapist/register/register-therapist.component';
+import { TherapistNavlistComponent } from './therapist/navlist/therapist-navlist.component';
+import { AdminNavlistComponent } from './admin/navlist/admin-navlist.component';
+import { SessionComponent } from './therapist/diary/sessions/session.component';
 
 import { Routing } from './app.routing';
 
@@ -25,7 +28,10 @@ import { Routing } from './app.routing';
     ActivityComponent,
     RegisterPatientComponent,
     HomeComponent,
-    RegisterTherapistComponent
+    RegisterTherapistComponent,
+    TherapistNavlistComponent,
+    AdminNavlistComponent,
+    SessionComponent
   ],
   imports: [
     BrowserModule,

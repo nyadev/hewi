@@ -6,7 +6,7 @@
 
     <!-- Navlist content -->
 
-    <app-patient-navlist></app-patient-navlist>
+    <app-therapist-navlist></app-therapist-navlist>
 
     <!-- Navlist content end -->
   </mat-sidenav>
@@ -14,7 +14,7 @@
   <mat-sidenav-content>
     <mat-toolbar class="header-sidenav">
         <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
-        <span [routerLink]="['/']" class="title">Hewi</span>
+        <span class="title">Hewi</span>
         <span class="space"></span>
         <mat-icon class="user-icon">face</mat-icon>
         <span>Usuario</span>
@@ -22,7 +22,7 @@
           <mat-icon>expand_more</mat-icon>
         </button>
         <mat-menu #menu="matMenu" [overlapTrigger]="false" yPosition="above">
-          <button [routerLink]="['/register-therapist']" mat-menu-item>
+          <button mat-menu-item [routerLink]="['/']">
             <mat-icon>home</mat-icon>
             <span>Inicio</span>
           </button>
