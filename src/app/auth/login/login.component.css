@@ -1,10 +1,62 @@
-.example-card {
-  width: 400px;
-  margin: 10px;
 
+.content{
+  height: 800px;
+  width: 100%;
+  display: inline-flex;
 }
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
+.divider{
+  width: 25%;
+  height: 100%;
+}
+
+mat-card-header{
+  border-bottom: 1px solid white
+}
+
+mat-card{
+  color: white;
+  margin: 10px
+}
+
+.one{ background-color: #00bcd4}
+.two{ background-color: #9c27b0}
+.three{ background-color: #7eca26}
+.four{ background-color: #ff9800}
+.five{ background-color: #009688}
+.six{ background-color: #e91e63}
+.seven{ background-color: #21dea8}
+
+.two-size-card{
+  height: 43.4%;
+}
+
+.three-size-card{
+  height: 26.5%
+}
+
+.signup-button{
+  color: #3f51b5
+}
+
+.space{
+  flex: 1 1 auto;
+}
+
+.login-form{
+  margin: 0 auto;
+  width: 80%
+}
+
+mat-form-field{
+  width: 100%
+}
+
+@media screen and (max-width: 800px){
+    .content{
+      display: inline-block;
+    }
+    .divider{
+      width: 100%;
+    }
 }
