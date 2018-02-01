@@ -10,14 +10,15 @@ import { MaterialModule } from './material.module';
 import 'hammerjs';
 
 // Custom Components
-import { PatientNavlistComponent } from './patient/navlist/patient-navlist.component';
-import { ActivityComponent } from './patient/activity/activity.component';
-import { RegisterPatientComponent } from './therapist/patient/register/register-patient.component';
-import { HomeComponent } from './home/home.component';
-import { RegisterTherapistComponent } from './admin/therapist/register/register-therapist.component';
-import { TherapistNavlistComponent } from './therapist/navlist/therapist-navlist.component';
-import { AdminNavlistComponent } from './admin/navlist/admin-navlist.component';
-import { SessionComponent } from './therapist/diary/sessions/session.component';
+import { PatientNavlistComponent } from './users/patient/navlist/patient-navlist.component';
+import { ActivityComponent } from './users/patient/activity/activity.component';
+import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
+import { HomeComponent } from './users/home/home.component';
+import { RegisterTherapistComponent } from './users/admin/therapist/register/register-therapist.component';
+import { TherapistNavlistComponent } from './users/therapist/navlist/therapist-navlist.component';
+import { AdminNavlistComponent } from './users/admin/navlist/admin-navlist.component';
+import { SessionComponent } from './users/therapist/diary/sessions/session.component';
+import { LoginComponent } from './auth/login/login.component';
 
 import { Routing } from './app.routing';
 
@@ -31,7 +32,8 @@ import { Routing } from './app.routing';
     RegisterTherapistComponent,
     TherapistNavlistComponent,
     AdminNavlistComponent,
-    SessionComponent
+    SessionComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

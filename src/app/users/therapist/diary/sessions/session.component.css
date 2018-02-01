@@ -1,0 +1,18 @@
+.patient-table{
+  margin-left: 10px;
+  width: 100%;
+}
+
+mat-input-container{
+  display: table-row;
+  width: 100%;
+}
+
+.aligner{
+  display: inline-table;
+  width: auto;
+}
+
+.table-container{
+  width: 60%;
+}

@@ -8,6 +8,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
+import { MatSortModule } from '@angular/material/sort';
 
 const modules = [
   MatButtonModule,
@@ -19,7 +22,10 @@ const modules = [
   MatListModule,
   MatCardModule,
   MatExpansionModule,
-  MatInputModule
+  MatInputModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatSortModule
 ];
 
 @NgModule({

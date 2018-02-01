@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './session.component.html',
   styleUrls: ['./session.component.css']
 })
-export class SessionComponent {
-}
+export class SessionComponent { }
