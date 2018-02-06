@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 import { MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
 
 const modules = [
   MatButtonModule,
@@ -25,7 +26,8 @@ const modules = [
   MatInputModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatSortModule
+  MatSortModule,
+  MatSelectModule
 ];
 
 @NgModule({

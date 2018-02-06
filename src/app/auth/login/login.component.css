@@ -1,6 +1,5 @@
-
 .content{
-  height: 800px;
+  height: 80vh;
   width: 100%;
   display: inline-flex;
 }
@@ -32,7 +31,7 @@ mat-card{
 }
 
 .three-size-card{
-  height: 26.5%
+  height: 25.2%;
 }
 
 .signup-button{
@@ -43,9 +42,15 @@ mat-card{
   flex: 1 1 auto;
 }
 
+.login-title{
+  color: #3f51b5
+}
+
 .login-form{
   margin: 0 auto;
-  width: 80%
+  width: 80%;
+  margin-top: 32%;
+  text-align: center;
 }
 
 mat-form-field{

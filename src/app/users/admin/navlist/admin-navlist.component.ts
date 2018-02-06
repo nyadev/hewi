@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './admin-navlist.component.html',
   styleUrls: ['./admin-navlist.component.css']
 })
-export class AdminNavlistComponent {
-
-}
+export class AdminNavlistComponent { }

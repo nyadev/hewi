@@ -19,6 +19,7 @@ import { TherapistNavlistComponent } from './users/therapist/navlist/therapist-n
 import { AdminNavlistComponent } from './users/admin/navlist/admin-navlist.component';
 import { SessionComponent } from './users/therapist/diary/sessions/session.component';
 import { LoginComponent } from './auth/login/login.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 import { Routing } from './app.routing';
 
@@ -33,7 +34,8 @@ import { Routing } from './app.routing';
     TherapistNavlistComponent,
     AdminNavlistComponent,
     SessionComponent,
-    LoginComponent
+    LoginComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

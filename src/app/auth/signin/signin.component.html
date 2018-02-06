@@ -1,0 +1,258 @@
+<div class="toolbar">
+  <mat-toolbar color="primary">
+    <span>
+      HEWI</span>
+    <span class="space"></span>
+  </mat-toolbar>
+
+</div>
+<mat-card>
+  <form>
+    <mat-accordion>
+      <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Datos del paciente
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+            <h4>Nombre Completo</h4>
+            <mat-input-container>
+              <input
+               matInput
+               placeholder="Apellido Paterno"
+               formControlName="lastnameFatherPatient"
+               id="lastnameFatherPatient"
+               >
+            </mat-input-container>
+            <mat-input-container>
+              <input
+               matInput
+               placeholder="Apellido Materno"
+               formControlName="lastnameMotherPatient"
+               id="lastnameMotherPatient"
+               >
+            </mat-input-container>
+            <mat-input-container>
+              <input
+               matInput
+               placeholder="Nombre"
+               formControlName="nombrepatient"
+               id="nombrepatient"
+               >
+            </mat-input-container>
+            <h4>Cuenta</h4>
+            <mat-input-container>
+              <input
+               matInput
+               placeholder="Nombre de Usuario"
+               formControlName="username"
+               id="username"
+               >
+            </mat-input-container>
+            <mat-input-container>
+              <input
+               matInput
+               type="password"
+               placeholder="Contraseña"
+               formControlName="password"
+               id="password"
+               >
+            </mat-input-container>
+            <h4>Sexo</h4>
+            <mat-form-field>
+              <mat-select formControlName="sexo" placeholder="Escoge un sexo" disableRipple>
+              <mat-option value="masculino">Masculino</mat-option>
+              <mat-option value="femenino">Femenino</mat-option>
+            </mat-select>
+            </mat-form-field>
+            <h4>Fecha de nacimiento</h4>
+            <mat-form-field class="example-full-width">
+              <input matInput [matDatepicker]="picker" formControlName="dateborn" placeholder="Elige una fecha">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker touchUi="true" #picker></mat-datepicker>
+            </mat-form-field>
+            <h4>Edad</h4>
+            <mat-input-container>
+              <input
+               matInput
+               placeholder="Escribe tu edad"
+               formControlName="edad"
+               >
+            </mat-input-container>
+            <h4>Lateralitad</h4>
+            <mat-form-field>
+              <mat-select formControlName="lateralidad" placeholder="Selecciona una lateralidad" disableRipple>
+              <mat-option value="Zurdo">Zurdo</mat-option>
+              <mat-option value="Diestro">Diestro</mat-option>
+                <mat-option value="No_especificado">No especificado</mat-option>
+            </mat-select>
+            </mat-form-field>
+            <h4>Escolaridad</h4>
+            <h4>Diagnostico medico</h4>
+            <mat-form-field>
+              <mat-select formControlName="Diagnostico" placeholder="Seleccione el diagnostico" disableRipple>
+              <mat-option value="Genetica">Enfermedad genetica</mat-option>
+              <mat-option value="Neurológica">Neurológica principal</mat-option>
+              <mat-option value="otras">Otras patologias</mat-option>
+            </mat-select>
+            </mat-form-field>
+            <h4>Estudios realizados</h4>
+            <mat-form-field>
+              <mat-select formControlName="estudios" placeholder="Seleccione el estudio" disableRipple>
+              <mat-option value="Fish">Fish</mat-option>
+              <mat-option value="Cariotipo">Cariotipo</mat-option>
+            </mat-select>
+            </mat-form-field>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Datos del tutor
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-input-container>
+          <input
+           matInput
+           placeholder="Apellido Paterno"
+           formControlName="lastnameFatherTutor"
+           id="lastnameFatherTutor"
+           >
+        </mat-input-container>
+        <mat-input-container>
+          <input
+           matInput
+           placeholder="Apellido Materno"
+           formControlName="lastnameMotherTutor"
+           id="lastnameMotherTutor"
+           >
+        </mat-input-container>
+        <mat-input-container>
+          <input
+           matInput
+           placeholder="Nombre"
+           formControlName="nombretutor"
+           id="nombretutor"
+           >
+        </mat-input-container>
+        <h4>Domicilio</h4>
+        <mat-input-container>
+          <input
+           matInput
+           placeholder="Calle"
+           formControlName="address"
+           id="address"
+           >
+        </mat-input-container>
+        <mat-input-container class="inputnumber">
+          <input
+           matInput
+           type="number"
+           placeholder="No.Exterior"
+           formControlName="extnumber"
+           id="extnumber"
+           >
+        </mat-input-container>
+        <mat-input-container class="inputnumber">
+          <input
+           matInput
+           type="number"
+           placeholder="No.Interior"
+           formControlName="intnumber"
+           id="intnumber"
+           >
+        </mat-input-container>
+        <mat-input-container>
+          <input
+           matInput
+           placeholder="Colonia"
+           formControlName="colonia"
+           id="colonia"
+           >
+        </mat-input-container>
+        <mat-input-container>
+          <input
+           matInput
+           placeholder="Delegación o Municipio"
+           formControlName="delegacion"
+           id="delegacion"
+           >
+        </mat-input-container>
+        <mat-input-container>
+          <input
+           matInput
+           type="number"
+           placeholder="Código Postal"
+           formControlName="postalcode"
+           id="postalcode"
+           >
+        </mat-input-container>
+        <mat-input-container>
+          <input
+           matInput
+           placeholder="Estado"
+           formControlName="state"
+           id="state"
+           >
+        </mat-input-container>
+        <h4>Escolaridad</h4>
+        <mat-form-field>
+          <mat-select formControlName="escolaridad" placeholder="Seleccione su escolaridad" disableRipple>
+          <mat-option value="Primaria">Primaria</mat-option>
+          <mat-option value="Secundaria">Secundaria</mat-option>
+          <mat-option value="Bachillerato">Bachillerato</mat-option>
+          <mat-option value="Licenciatura">Licenciatura</mat-option>
+          <mat-option value="Posgrado">Posgrado</mat-option>
+        </mat-select>
+        </mat-form-field>
+        <h4>Edad</h4>
+        <mat-input-container>
+          <input
+           matInput
+           placeholder="Escribe tu edad"
+           formControlName="edadtutor"
+           id="edadtutor"
+           >
+        </mat-input-container>
+        <h4>Teléfonos</h4>
+        <mat-input-container>
+          <input
+           matInput
+           placeholder="Casa"
+           type="number"
+           formControlName="phone"
+           id="phone"
+           >
+        </mat-input-container>
+        <mat-input-container>
+          <input
+           matInput
+           placeholder="Celular"
+          type="number"
+           formControlName="cellphone"
+           id="cellphone"
+           >
+        </mat-input-container>
+        <h4>Correo electronico</h4>
+        <mat-input-container>
+          <input
+           matInput
+           placeholder="correo electronico"
+           type="email"
+           formControlName="email"
+           id="email"
+           >
+        </mat-input-container>
+
+
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-panel-title>
+    <button mat-raised-button class="signup-button" type="submit" >Registrar </button>
+    </mat-panel-title>
+
+
+  </form>
+</mat-card>
