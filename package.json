@@ -4,12 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:front": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:server": "set DEBUG=hewi* & babel-node server/index.js"
+    "start": "set DEBUG=hewi* & babel-node server/index.js"
   },
   "private": true,
   "dependencies": {
