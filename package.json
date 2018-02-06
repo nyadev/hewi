@@ -1,6 +1,6 @@
 {
   "name": "hewi",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -9,7 +9,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start": "set DEBUG=hewi* & babel-node server/index.js"
+    "start": "set DEBUG=hewi* & babel-node server/index.js",
+    "engines": {
+    "node": "9.5.0",
+    "npm": "5.6.x"
+  },
   },
   "private": true,
   "dependencies": {
