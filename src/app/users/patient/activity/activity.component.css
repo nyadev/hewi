@@ -4,16 +4,12 @@
 }
 
 .activity-containter{
-  margin: 20px;
+  margin: 20px 100px;
 }
 
 .actions-container{
   border: #ddd solid;
   width: stretch;
-}
-
-mat-icon{
-  font-size: 27px;
 }
 
 p{

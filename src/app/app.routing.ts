@@ -1,16 +1,13 @@
 import { Routes, RouterModule } from '@angular/router';
-import { ActivityComponent } from './users/patient/activity/activity.component';
-import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
-import { HomeComponent } from './users/home/home.component';
-import { RegisterTherapistComponent } from './users/admin/therapist/register/register-therapist.component';
-import { SessionComponent } from './users/therapist/diary/sessions/session.component';
+import { HomeComponent } from './users/home.component';
 import { LoginComponent } from './auth/login/login.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { USER_ROUTES } from './users/users.routing';
 
 const APP_ROUTES: Routes = [
-  { path: '', component: LoginComponent, pathMatch: 'full'},
-  { path: 'patient/activity', component: ActivityComponent},
-  { path: 'therapist/sessions', component: SessionComponent},
-  { path: 'admin/register-therapist', component: RegisterTherapistComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'signin', component: SigninComponent},
+  { path: 'user', children: USER_ROUTES}
 ];
 
 export const Routing = RouterModule.forRoot(APP_ROUTES);

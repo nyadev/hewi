@@ -2,14 +2,14 @@
   <mat-toolbar color="primary">
     <span>HEWI</span>
     <span class="space"></span>
-    <button mat-raised-button class="signup-button">Registrate</button>
+    <button [routerLink]="['/signin']" mat-raised-button class="signup-button">Registrate</button>
   </mat-toolbar>
 
 </div>
 <div class="content">
   <div class="divider form">
     <form class="login-form">
-      <h3 class="login-title">Inicia Sesión</h3>
+      <h3 class="login-title">Iniciar Sesión</h3>
       <mat-form-field class="example-full-width">
         <input matInput placeholder="Usuario" value="">
       </mat-form-field>

@@ -3,7 +3,6 @@
     <mat-toolbar class="activity-header">Actividad n</mat-toolbar>
   </mat-card-title>
   <mat-card-content>
-    La actividad carga aquí
   </mat-card-content>
   <mat-card-content>
     <table class="actions-container">
@@ -12,7 +11,7 @@
           <p><mat-icon class="good-icon">done</mat-icon>0</p>
         </td>
         <td>
-          <p><button mat-fab><mat-icon>play_arrow</mat-icon></button></p>
+          <p><button mat-fab onclick="hola()"><mat-icon>play_arrow</mat-icon></button></p>
         </td>
         <td>
           <p><mat-icon class="fail-icon">clear</mat-icon>0</p>
@@ -21,3 +20,8 @@
     </table>
   </mat-card-content>
 </mat-card>
+<script type="text/javascript">
+  function hola(){
+    console.log('hola')
+  }
+</script>
