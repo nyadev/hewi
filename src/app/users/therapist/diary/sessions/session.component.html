@@ -17,12 +17,12 @@
         <th mat-sort-header="protein">Observaciones</th>
       </tr>
 
-      <tr>
-        <td>a</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
+      <tr *ngFor="let session of sessions">
+        <td>{{session.curp}}</td>
+        <td>{{session.date}}</td>
+        <td>{{session.date}}</td>
+        <td>{{session.sessionnumber}}</td>
+        <td>{{session.notes}}</td>
       </tr>
     </table>
   </div>

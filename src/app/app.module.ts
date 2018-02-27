@@ -20,6 +20,7 @@ import { AdminNavlistComponent } from './users/admin/navlist/admin-navlist.compo
 import { SessionComponent } from './users/therapist/diary/sessions/session.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { NotFoundComponent } from './fail/notfound.component';
 
 import { Routing } from './app.routing';
 
@@ -35,7 +36,8 @@ import { Routing } from './app.routing';
     AdminNavlistComponent,
     SessionComponent,
     LoginComponent,
-    SigninComponent
+    SigninComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

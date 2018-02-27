@@ -4,12 +4,13 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently -r \"npm run start:server\" \"npm run start:client\" ",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:server": "set DEBUG=hewi* &nom babel-node server/index.js"
+    "start:server": "SET NODE_ENV=development DEBUG=platzi-overflow* & nodemon server/index.js --exec babel-node",
+    "start:client": "ng serve"
   },
   "private": true,
   "dependencies": {
