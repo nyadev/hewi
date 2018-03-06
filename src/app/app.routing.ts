@@ -6,7 +6,7 @@ import { NotFoundComponent } from './fail/notfound.component';
 import { USER_ROUTES } from './users/users.routing';
 
 const APP_ROUTES: Routes = [
-  { path: '', component: HomeComponent, children: USER_ROUTES},
+  { path: 'user', component: HomeComponent, children: USER_ROUTES},
   { path: 'login', component: LoginComponent},
   { path: 'signin', component: SigninComponent},
   { path: '**', component: NotFoundComponent}

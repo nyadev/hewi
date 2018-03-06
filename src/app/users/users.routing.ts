@@ -7,5 +7,7 @@ import { SessionComponent } from './therapist/diary/sessions/session.component';
 
 export const USER_ROUTES: Routes = [
   { path: '', component: PatientNavlistComponent, outlet: 'navlist'},
-  { path: '', component: SessionComponent, outlet: 'content'}
+  { path: '', component: SessionComponent, outlet: 'content'},
+  { path: 'patient', component: PatientNavlistComponent, outlet: 'navlist'},
+  { path: 'patient', component: SessionComponent, outlet: 'content'},
 ];
