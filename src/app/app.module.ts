@@ -10,13 +10,11 @@ import { MaterialModule } from './material.module';
 import 'hammerjs';
 
 // Custom Components
-import { PatientNavlistComponent } from './users/patient/navlist/patient-navlist.component';
+import { AdminHomeComponent } from './users/admin/admin-home.component'
 import { ActivityComponent } from './users/patient/activity/activity.component';
 import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
 import { HomeComponent } from './users/home.component';
 import { RegisterTherapistComponent } from './users/admin/therapist/register/register-therapist.component';
-import { TherapistNavlistComponent } from './users/therapist/navlist/therapist-navlist.component';
-import { AdminNavlistComponent } from './users/admin/navlist/admin-navlist.component';
 import { SessionComponent } from './users/therapist/diary/sessions/session.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SigninComponent } from './auth/signin/signin.component';
@@ -27,17 +25,15 @@ import { Routing } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
-    PatientNavlistComponent,
     ActivityComponent,
     RegisterPatientComponent,
     HomeComponent,
     RegisterTherapistComponent,
-    TherapistNavlistComponent,
-    AdminNavlistComponent,
     SessionComponent,
     LoginComponent,
     SigninComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AdminHomeComponent
   ],
   imports: [
     BrowserModule,

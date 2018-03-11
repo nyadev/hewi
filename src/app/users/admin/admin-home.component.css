@@ -1,0 +1,9 @@
+.aligner{
+  display: flex;
+}
+
+mat-card{
+  width: 50%;
+  margin: 1% 1%;
+  height: 100%;
+}

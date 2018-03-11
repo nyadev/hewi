@@ -1,28 +1,20 @@
+.content{
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+}
+
+.divider{
+  width: 25%;
+  height: 100%;
+}
+
 .space{
   flex: 1 1 auto;
 }
 
-.header-sidenav{
-  position: sticky;
-  top: 0px;
-  background: lightgray;
-  z-index: 5
-}
-
-.user-icon{
-  margin-right: 5px
-}
-
-.sidenav-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-
-.sidenav-content{
-  width: 250px;
-  background-color: whitesmoke;
+mat-card{
+  width: 100%;
+  margin: 1% 1%;
+  height: 70vh;
 }

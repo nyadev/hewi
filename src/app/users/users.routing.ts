@@ -1,13 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home.component';
 
-import { PatientNavlistComponent } from './patient/navlist/patient-navlist.component';
-import { SessionComponent } from './therapist/diary/sessions/session.component';
-
+import { AdminHomeComponent } from './admin/admin-home.component';
 
 export const USER_ROUTES: Routes = [
-  { path: '', component: PatientNavlistComponent, outlet: 'navlist'},
-  { path: '', component: SessionComponent, outlet: 'content'},
-  { path: 'patient', component: PatientNavlistComponent, outlet: 'navlist'},
-  { path: 'patient', component: SessionComponent, outlet: 'content'},
+  { path: 'admin', component: AdminHomeComponent, data: {title: 'Hola'}}
 ];
