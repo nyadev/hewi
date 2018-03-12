@@ -10,36 +10,41 @@ import { MaterialModule } from './material.module';
 import 'hammerjs';
 
 // Custom Components
-import { AdminHomeComponent } from './users/admin/admin-home.component'
-import { ActivityComponent } from './users/patient/activity/activity.component';
-import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
-import { HomeComponent } from './users/home.component';
+import { AdminHomeComponent } from './users/admin/admin-home.component';
 import { RegisterTherapistComponent } from './users/admin/therapist/register/register-therapist.component';
+
+import { PatientHomeComponent } from './users/patient/patient-home.component';
+import { ActivityComponent } from './users/patient/activity/activity.component';
+
+import { TherapistHomeComponent } from './users/therapist/therapist-home.component';
+import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
 import { SessionComponent } from './users/therapist/diary/sessions/session.component';
+
+import { HomeComponent } from './users/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { NotFoundComponent } from './fail/notfound.component';
 
 import { Routing } from './app.routing';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ActivityComponent,
-    RegisterPatientComponent,
     HomeComponent,
-    RegisterTherapistComponent,
-    SessionComponent,
+    AdminHomeComponent, RegisterTherapistComponent,
+    TherapistHomeComponent, RegisterPatientComponent, SessionComponent,
+    PatientHomeComponent, ActivityComponent,
     LoginComponent,
     SigninComponent,
-    NotFoundComponent,
-    AdminHomeComponent
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    Routing
+    Routing,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

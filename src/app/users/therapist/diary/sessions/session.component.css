@@ -13,6 +13,17 @@ mat-input-container{
   width: auto;
 }
 
+.aligner-horizontal{
+  display: flex;
+}
+
+button{
+  height:2%;
+  display: flex;
+  margin: auto;
+}
+
 .table-container{
-  width: 60%;
+  width: 90%;
+  margin: 1% 5%;
 }

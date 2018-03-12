@@ -1,36 +1,6 @@
 <mat-card>
-  <h3>Consultar sesiones por fecha</h3>
-  <div class="aligner">
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Fecha">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  </div>
-  <div class="aligner table-container">
-    <table matSort (matSortChange)="sortData($event)" class="patient-table">
-      <tr>
-        <th mat-sort-header="name">CURP</th>
-        <th mat-sort-header="calories">Fecha</th>
-        <th mat-sort-header="fat">Hora</th>
-        <th mat-sort-header="carbs">No de Sesión</th>
-        <th mat-sort-header="protein">Observaciones</th>
-      </tr>
-
-      <tr *ngFor="let session of sessions">
-        <td>{{session.curp}}</td>
-        <td>{{session.date}}</td>
-        <td>{{session.date}}</td>
-        <td>{{session.sessionnumber}}</td>
-        <td>{{session.notes}}</td>
-      </tr>
-    </table>
-  </div>
-</mat-card>
-
-<mat-card>
   <h3>Agenda una sesion</h3>
-  <div class="aligner">
+  <div class="aligner-horizontal">
     <mat-input-container>
       <input
        matInput
@@ -65,6 +35,17 @@
     </mat-input-container>
     <button mat-raised-button color="primary">Agendar</button>
   </div>
+</mat-card>
+
+<mat-card>
+  <h3>Consultar sesiones por fecha</h3>
+  <div class="aligner">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Fecha">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
   <div class="aligner table-container">
     <table matSort (matSortChange)="sortData($event)" class="patient-table">
       <tr>
@@ -75,12 +56,12 @@
         <th mat-sort-header="protein">Observaciones</th>
       </tr>
 
-      <tr>
-        <td>a</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
+      <tr *ngFor="let session of sessions">
+        <td>{{ session.curp }}</td>
+        <td>{{ session.date }}</td>
+        <td>{{ session.date }}</td>
+        <td>{{ session.sessionnumber }}</td>
+        <td>{{ session.notes }}</td>
       </tr>
     </table>
   </div>
