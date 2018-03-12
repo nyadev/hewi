@@ -16,9 +16,9 @@
         <mat-icon>settings</mat-icon>
         <span>Configuración</span>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item [routerLink]="['/login']">
         <mat-icon>exit_to_app</mat-icon>
-        <span [routerLink]="['/login']">Salir</span>
+        <span>Salir</span>
       </button>
     </mat-menu>
   </mat-toolbar>
