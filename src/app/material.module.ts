@@ -12,6 +12,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
+import {HttpModule} from '@angular/http';
 
 const modules = [
   MatButtonModule,
@@ -27,11 +28,12 @@ const modules = [
   MatDatepickerModule,
   MatNativeDateModule,
   MatSortModule,
-  MatSelectModule
+  MatSelectModule,
+
 ];
 
 @NgModule({
-  imports: modules,
+  imports: modules,HttpModule
   exports: modules
 })
 
