@@ -40,13 +40,14 @@
 <mat-card>
   <h3>Consultar sesiones por fecha</h3>
   <div class="aligner">
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Fecha">
+    <mat-form-field class="picker-">
+      <input matInput [matDatepicker]="picker" placeholder="Fecha" (dateChange)="addEvent($event)">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
   </div>
-  <div class="aligner table-container">
+  <mat-spinner *ngIf="loading"></mat-spinner>
+  <div class="aligner table-container" *ngIf="!loading">
     <table matSort (matSortChange)="sortData($event)" class="patient-table">
       <tr>
         <th mat-sort-header="name">CURP</th>
@@ -59,7 +60,7 @@
       <tr *ngFor="let session of sessions">
         <td>{{ session.curp }}</td>
         <td>{{ session.date }}</td>
-        <td>{{ session.date }}</td>
+        <td>{{ session.time }}</td>
         <td>{{ session.sessionnumber }}</td>
         <td>{{ session.notes }}</td>
       </tr>

@@ -4,11 +4,13 @@ import { Http } from '@angular/http';
 import { environment } from '../../../../../environments/environment';
 import urljoin from 'url-join';
 import 'rxjs/add/operator/toPromise';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 
 @Injectable()
 export class SessionService {
 
     private sessionUrl: string;
+    dateTest: string = new Date().toLocaleDateString();
 
     constructor(private http: Http) {
       this.sessionUrl = urljoin(environment.apiUrl, 'sessions');
@@ -21,11 +23,11 @@ export class SessionService {
         .catch(this.handleError);
     }
 
-    getSession(id): Promise<void | Session> {
-   const url = urljoin(this.sessionUrl, id);
-   return this.http.get(url)
+    getSession(date: MatDatepickerInputEvent<Date>): Promise<void | Session[]> {
+      console.log(date.value.toLocaleDateString());
+      return this.http.get(this.sessionUrl)
            .toPromise()
-           .then(response => response.json() as Session)
+           .then(response => response.json() as Session[])
            .catch(this.handleError);
  }
 
