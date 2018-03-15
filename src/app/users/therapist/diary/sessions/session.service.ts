@@ -23,8 +23,7 @@ export class SessionService {
         .catch(this.handleError);
     }
 
-    getSession(date: MatDatepickerInputEvent<Date>): Promise<void | Session[]> {
-      console.log(date.value.toLocaleDateString());
+    getSession(): Promise<void | Session[]> {
       return this.http.get(this.sessionUrl)
            .toPromise()
            .then(response => response.json() as Session[])

@@ -15,23 +15,29 @@ export class SessionComponent implements OnInit {
 
   }
     sessions: Session[];
+    sessionsDate: Session[];
     loading = true;
 
    ngOnInit() {
      this.sessionService
         .getSessions()
         .then((sessions: Session[]) => {
-          console.log(sessions[0].date);
           this.sessions = sessions;
           this.loading = false;
         });
    }
 
    addEvent(date: MatDatepickerInputEvent<Date>) {
+     this.loading = true;
      this.sessionService
-        .getSession(date)
+        .getSession()
         .then((sessions: Session[]) => {
-          this.sessions = sessions;
+          console.log(sessions[0].date);
+          console.log(date.value.toLocaleDateString('en-US'));
+          function compareDate(element, index, array) {
+            return (element.date === date.value.toLocaleDateString('en-US'));
+          }
+          this.sessions = sessions.filter(compareDate);
           this.loading = false;
         });
    }

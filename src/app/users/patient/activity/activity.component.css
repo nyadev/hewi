@@ -29,3 +29,13 @@ td{
 .fail-icon{
   color: #c70202;
 }
+
+.estimulo{
+	height: 50px;
+	width: auto;
+	display: none
+}
+
+.boton{
+	display: none
+}
