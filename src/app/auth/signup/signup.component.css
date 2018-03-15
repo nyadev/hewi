@@ -1,0 +1,43 @@
+body{
+  background-color: red
+}
+
+.signup-button{
+  color: #3f51b5
+}
+
+.space{
+  flex: 1 1 auto;
+}
+
+.content{
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+}
+
+.divider{
+  width: 50%;
+  height: auto;
+  margin: 1%
+}
+
+mat-card{
+  width: 90%;
+  height: 100%;
+}
+
+.signin-button{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+@media screen and (max-width: 800px){
+    .content{
+      display: inline-block;
+    }
+    .divider{
+      width: 100%;
+    }
+}

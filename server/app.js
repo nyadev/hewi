@@ -1,7 +1,11 @@
 import express from 'express'
-import { session } from './routes'
+import bodyParser from 'body-parser'
+import { session, auth } from './routes'
 
 const app = express()
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 if(process.env.NODE_ENV === 'development'){
   app.use((req,res,next)=>{
@@ -13,5 +17,7 @@ if(process.env.NODE_ENV === 'development'){
 }
 
 app.use('/api/sessions', session)
+
+app.use('/api/auth', auth)
 
 export default app

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -21,12 +22,13 @@ import { RegisterPatientComponent } from './users/therapist/patient/register/reg
 import { SessionComponent } from './users/therapist/diary/sessions/session.component';
 
 import { HomeComponent } from './users/home.component';
-import { LoginComponent } from './auth/login/login.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
 import { NotFoundComponent } from './fail/notfound.component';
 
 import { Routing } from './app.routing';
 import { HttpModule } from '@angular/http';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -35,8 +37,8 @@ import { HttpModule } from '@angular/http';
     AdminHomeComponent, RegisterTherapistComponent,
     TherapistHomeComponent, RegisterPatientComponent, SessionComponent,
     PatientHomeComponent, ActivityComponent,
-    LoginComponent,
     SigninComponent,
+    SignupComponent,
     NotFoundComponent
   ],
   imports: [
@@ -44,9 +46,11 @@ import { HttpModule } from '@angular/http';
     BrowserAnimationsModule,
     MaterialModule,
     Routing,
-    HttpModule
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
