@@ -1,0 +1,206 @@
+[33mcommit a9edc009807690c71a58cbc79c88a63bab5ef4d7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Merge: 21c8b28 10435bf
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Thu Mar 15 19:01:10 2018 -0600
+
+    Merge branch 'master' of https://github.com/nyadev/hewi
+
+[33mcommit 21c8b286e083256c10f2dec93fc81340bd6cda15[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Thu Mar 15 19:00:12 2018 -0600
+
+    15-03-18v4
+
+[33mcommit 10435bf4b3b99068226f6074c7d1621d6f211f66[m
+Author: Omar616 <30815256+Omar616@users.noreply.github.com>
+Date:   Thu Mar 15 18:47:49 2018 -0600
+
+    Revert "Merge branch 'master' of https://github.com/nyadev/hewi"
+    
+    This reverts commit ded8a72f2f86135af5528f20d9d78cd85ab717cb, reversing
+    changes made to a86e71ca3f425a25bc353b67344fc98347611c3a.
+
+[33mcommit 39996ddb5bdfe3ebb1235f1fbb26e54371326aa2[m
+Author: Omar616 <30815256+Omar616@users.noreply.github.com>
+Date:   Thu Mar 15 18:47:43 2018 -0600
+
+    Revert "Revert "Merge branch 'master' of https://github.com/nyadev/hewi""
+    
+    This reverts commit 48d69e539c0a4358f49c913bcc8e5a6780939ff6.
+
+[33mcommit 48d69e539c0a4358f49c913bcc8e5a6780939ff6[m
+Author: Omar616 <30815256+Omar616@users.noreply.github.com>
+Date:   Thu Mar 15 18:47:33 2018 -0600
+
+    Revert "Merge branch 'master' of https://github.com/nyadev/hewi"
+    
+    This reverts commit ded8a72f2f86135af5528f20d9d78cd85ab717cb, reversing
+    changes made to a86e71ca3f425a25bc353b67344fc98347611c3a.
+
+[33mcommit 987bc9cd7f649fa96d4779c279b50f1cca98ff96[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Thu Mar 15 18:41:12 2018 -0600
+
+    15-03-18v3
+
+[33mcommit ded8a72f2f86135af5528f20d9d78cd85ab717cb[m
+Merge: a86e71c 0cafc94
+Author: Omar616 <30815256+Omar616@users.noreply.github.com>
+Date:   Thu Mar 15 18:34:06 2018 -0600
+
+    Merge branch 'master' of https://github.com/nyadev/hewi
+
+[33mcommit 0cafc9449fd2b7fc699a8361f18d8e73b7bf8bb8[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Thu Mar 15 17:28:13 2018 -0600
+
+    15-03-18v2
+
+[33mcommit a86e71ca3f425a25bc353b67344fc98347611c3a[m
+Author: Omar616 <30815256+Omar616@users.noreply.github.com>
+Date:   Wed Mar 14 21:24:27 2018 -0600
+
+    servicio
+
+[33mcommit 4d9e3a1dfc223716e72df17700e0312f5d238f1a[m
+Author: Omar616 <30815256+Omar616@users.noreply.github.com>
+Date:   Wed Mar 14 19:39:12 2018 -0600
+
+    nani? ruta de signin
+
+[33mcommit f9f76593f8c47c1796c5d695c4940f2a72052888[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Wed Mar 14 19:01:04 2018 -0600
+
+    14-03-18v2
+    
+    Ya jala sesiones
+
+[33mcommit df0d459dcd5837f18241a267566fd0f92f9ebaaa[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Wed Mar 14 08:50:27 2018 -0600
+
+    14-03-18
+
+[33mcommit fd8e3dcf74cb900d8f30fce2498635647261af14[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Mon Mar 12 17:38:58 2018 -0600
+
+    12-03-18v2
+
+[33mcommit 3d633b26ada2f83b4099c0b7550506d584bd3384[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Mon Mar 12 08:14:11 2018 -0600
+
+    Revert "Fui yo: Batman"
+    
+    This reverts commit c2a66de78ed8c42c827c91a1c91f86f4314dce43.
+
+[33mcommit 58d62847acecefb2cb226ce6e0c16f7a97856a8a[m
+Merge: b57f9f2 c2a66de
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Mon Mar 12 08:12:35 2018 -0600
+
+    Merge branch 'master' of https://github.com/nyadev/hewi
+
+[33mcommit b57f9f2e34720a0551c4f9d90e470ab1e94d8ae5[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Mon Mar 12 08:12:19 2018 -0600
+
+    12-03-18
+
+[33mcommit c2a66de78ed8c42c827c91a1c91f86f4314dce43[m
+Author: Omar616 <30815256+Omar616@users.noreply.github.com>
+Date:   Sun Mar 11 11:55:06 2018 -0600
+
+    Fui yo: Batman
+
+[33mcommit a477ac7e549938d255db64878a7bea75b35063d4[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Sat Mar 10 18:35:01 2018 -0600
+
+    10-03-18
+
+[33mcommit 8ba5f2385154a5b87d7c2b631a61c17685bb2689[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Mon Mar 5 21:45:52 2018 -0600
+
+    march
+
+[33mcommit 39626e266eb93cecbd5604bcdadae29eb22ca13e[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Mon Feb 26 18:28:15 2018 -0600
+
+    26-02-18
+
+[33mcommit d39667ebfa53628978611a7f6896cb647f6fb34b[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Wed Feb 21 10:04:56 2018 -0600
+
+    21-02-18
+
+[33mcommit 88fd9e3b4e697d8601fe77446d45b1beb6238169[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Tue Feb 6 08:36:02 2018 -0600
+
+    v5
+
+[33mcommit e6238ab9ac1bdaabb96bc71d0d74a3e6e53ccf77[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Tue Feb 6 08:34:31 2018 -0600
+
+    v4
+
+[33mcommit 49f1bda47f80fda3f8b650d19f8c253182f42142[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Tue Feb 6 08:33:03 2018 -0600
+
+    v3
+
+[33mcommit 239026de7c479dd0e01d1a9f930cc7c71756fc62[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Tue Feb 6 08:29:22 2018 -0600
+
+    06-02-18v2
+
+[33mcommit 52f2e0f9a48490c3c12271c89c63c6f6e3c9f744[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Tue Feb 6 08:26:20 2018 -0600
+
+    06-02-18
+
+[33mcommit 45bb36316821798f23eaac5b510fa42f6fdbaf51[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Thu Feb 1 10:35:57 2018 -0600
+
+    1-2-18 v2
+
+[33mcommit c0428633c7183f62577176f873c632811a9db5a6[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Thu Feb 1 08:25:35 2018 -0600
+
+    1-2-18
+
+[33mcommit 46e18b6cd03fa9e3df231336772ef76127bd032f[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Tue Jan 30 08:48:37 2018 -0600
+
+    hewi 30-01-18
+
+[33mcommit 564a14a43143c2b34767e02f56f641595837b694[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Mon Jan 22 11:34:18 2018 -0600
+
+    hewi
+
+[33mcommit 30bddef6643545805035527b92ea0e635c884119[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Mon Jan 22 11:28:50 2018 -0600
+
+    hewi
+
+[33mcommit 902c0fbcb0e8d7a4b78db243bc86e31eda510055[m
+Author: nyadev <nyadev.ipn@gmail.com>
+Date:   Thu Jan 18 22:13:12 2018 -0600
+
+    hewi
