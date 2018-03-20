@@ -1,48 +1,48 @@
 <mat-card>
   <h3>Agenda una sesion</h3>
   <form [formGroup]="sessionForm" (ngSubmit)="onSubmit()">
-  <div class="aligner-horizontal">
-    <mat-input-container>
+  <div class="divider form">
+      <mat-form-field >
       <input
        matInput
        placeholder="CURP"
        formControlName="curp"
        id="curp"
        >
-    </mat-input-container>
-    <mat-input-container>
+     </mat-form-field>
+     <mat-form-field >
       <input
        matInput
        placeholder="Hora"
        formControlName="hora"
        id="hora"
        >
-    </mat-input-container>
-    <mat-input-container>
+     </mat-form-field>
+     <mat-form-field >
       <input
        matInput
        placeholder="Fecha"
        formControlName="fecha"
        id="fecha"
        >
-    </mat-input-container>
-    <mat-input-container>
+     </mat-form-field>
+    <mat-form-field>
       <input
        matInput
        placeholder="# de Sesión"
        formControlName="noSession"
        id="noSession"
        >
-    </mat-input-container>
-    <mat-input-container>
+    </mat-form-field>
+      <mat-form-field>
       <input
        matInput
        placeholder="Observaciones"
        formControlName="observaciones"
        id="observaciones"
        >
-    </mat-input-container>
-    <button mat-raised-button color="primary">Agendar</button>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Agendar</button>
   </div>
 </form>
 </mat-card>
