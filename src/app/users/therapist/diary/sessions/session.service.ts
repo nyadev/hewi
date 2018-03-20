@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Session } from './session.model';
-import { Http } from '@angular/http';
+import { Http, Headers, Response } from '@angular/http';
 import { environment } from '../../../../../environments/environment';
 import urljoin from 'url-join';
 import 'rxjs/add/operator/toPromise';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/Rx';
 
 @Injectable()
 export class SessionService {
@@ -28,6 +30,15 @@ export class SessionService {
            .toPromise()
            .then(response => response.json() as Session[])
            .catch(this.handleError);
+ }
+
+ addSession(session : Session){
+    const body=JSON.stringify(session);
+    const headers = new Headers({ 'Content-Type': 'application/json' })
+
+    return this.http.post(this.sessionUrl, body, { headers })
+    .map((response: Response) => response.json())
+    .catch((error: Response) => Observable.throw(error.json()))
  }
 
     handleError(error: any) {

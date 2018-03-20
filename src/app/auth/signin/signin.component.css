@@ -9,6 +9,12 @@
   height: 100%;
 }
 
+p{
+  display: inline-flex;
+}
+
+
+
 mat-card-header{
   border-bottom: 1px solid white
 }

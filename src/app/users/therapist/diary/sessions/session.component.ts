@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Session } from './session.model';
 import { SessionService } from './session.service';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
+import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-therapist-session',
@@ -11,6 +13,8 @@ import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 })
 export class SessionComponent implements OnInit {
 
+    sessionForm: FormGroup;
+
   constructor(private sessionService: SessionService) {
 
   }
@@ -19,12 +23,37 @@ export class SessionComponent implements OnInit {
     loading = true;
 
    ngOnInit() {
+     this.sessionForm = new FormGroup({
+       curp: new FormControl(null, Validators.required),
+       hora: new FormControl(null, Validators.required),
+       fecha: new FormControl(null, Validators.required),
+       noSession: new FormControl(null, Validators.required),
+       observaciones: new FormControl(null, Validators.required),
+     });
+
      this.sessionService
         .getSessions()
         .then((sessions: Session[]) => {
           this.sessions = sessions;
           this.loading = false;
         });
+   }
+
+   onSubmit(form : NgForm) {
+      const s = new Session(
+      +new Date(),
+      form.value.curp,
+      form.value.fecha,
+      form.value.hora,
+      form.value.noSession,
+      form.value.observaciones
+      );
+     this.sessionService.addSession(s)
+     .subscribe(
+       ({ _id }) => console.log(_id),
+       error => console.log(error)
+     );
+     form.resetForm();
    }
 
    addEvent(date: MatDatepickerInputEvent<Date>) {
