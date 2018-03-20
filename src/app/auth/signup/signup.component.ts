@@ -11,9 +11,11 @@ export class SignupComponent implements OnInit {
    signupForm: FormGroup;
 
    ngOnInit() {
-     this.signupForm = new FormGroup(
-
-     );
+     this.signupForm = new FormGroup({
+       pNameP: new FormControl(null, [
+         Validators.required
+       ])
+     });
    }
 
    setStep(index: number) {
