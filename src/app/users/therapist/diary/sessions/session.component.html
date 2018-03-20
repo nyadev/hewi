@@ -1,6 +1,6 @@
 <mat-card>
   <h3>Agenda una sesion</h3>
-  <form  [formGroup]="sessionForm" (ngSubmit)="onSubmit()">
+  <form  [formGroup]="sessionForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
   <div class="form-group">
       <mat-form-field >
       <input

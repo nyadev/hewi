@@ -40,7 +40,7 @@ export class AuthService {
     this.currentUser = new User(email, null, userId, username, firstName, pName, mName, curp, userType);
     localStorage.setItem('token', token);
     localStorage.setItem('user', JSON.stringify({ userId, email, firstName, pName, mName, curp, userType }));
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/admin');
   }
 
   isLoggedIn() {

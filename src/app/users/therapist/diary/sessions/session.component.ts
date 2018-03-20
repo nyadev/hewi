@@ -39,7 +39,7 @@ export class SessionComponent implements OnInit {
         });
    }
 
-   onSubmit(form : NgForm) {
+   onSubmit(form: NgForm) {
       const s = new Session(
       +new Date(),
       form.value.curp,

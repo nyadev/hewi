@@ -18,8 +18,8 @@ const sessions = new Array(10).fill(session)
 app.get('/', (req, res) => res.status(200).json(sessions))
 
 app.post('/',(req , res) =>{
-    const session =req.body
-    session._id = +new Date()
+    const session = req.body
+    session._id = new Date()
     session.user={
       _id: 123,
       email: 'ernestomoor@hewi.com',
@@ -35,4 +35,5 @@ app.post('/',(req , res) =>{
     sessions.push(session)
     res.status(201).json(session)
 })
+
 export default app
