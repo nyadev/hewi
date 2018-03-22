@@ -1,5 +1,13 @@
+.toolbar{
+  height: 8%
+}
+
+mat-toolbar{
+  height: 100%;
+}
+
 .content{
-  height: 80vh;
+  height: 92%;
   width: 100%;
   display: inline-flex;
 }
@@ -9,23 +17,10 @@
   height: 100%;
 }
 
-p{
-  margin: 0px 15px;
-}
-
-mat-card-content{
-  display: flex;
-  margin: auto;
-}
-
-mat-card-header{
-  border-bottom: 1px solid white;
-  font-size: 20px bold;
-}
-
 mat-card{
+  width: auto;
   color: white;
-  margin: 10px;
+  margin: 1% 1%;
 }
 
 .one{ background-color: #00bcd4}
@@ -37,11 +32,7 @@ mat-card{
 .seven{ background-color: #21dea8}
 
 .two-size-card{
-  height: 43.4%;
-}
-
-.three-size-card{
-  height: 25.2%;
+  height: 40%;
 }
 
 .signup-button{
@@ -68,9 +59,8 @@ mat-form-field{
 }
 
 .heart-image{
-  display: flex;
   margin: auto;
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 
@@ -80,5 +70,9 @@ mat-form-field{
     }
     .divider{
       width: 100%;
+      height: auto;
+    }
+    .form{
+      height: 100%;
     }
 }

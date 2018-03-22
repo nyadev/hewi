@@ -1,5 +1,13 @@
-.content{
+.toolbar{
+  height: 8%;
+}
+
+mat-toolbar{
   height: 100%;
+}
+
+.content{
+  height: 92%;
   width: 100%;
   display: inline-flex;
 }
