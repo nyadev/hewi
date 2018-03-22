@@ -11,6 +11,7 @@ var nCorrects;
 var stopCounting;
 var timelap;
 var lap;
+ var src = './assets/images/aat2/';
 
 function instructions(){
   swal("Instrucciones","Se mostrará una serie de estímulos aleatorios donde el niño deberá seleccionar con el cursor el estímulo indicado durante cierto tiempo");
@@ -23,8 +24,8 @@ function begin(){
     timelap = 0;
     lap = 1;
     nCorrects = 0;
-    images = [["nCirculo.png","nCirculoCirculo.png","nCirculoEstrella.png","nEstrella.png","nEstrella8.png", "nEstrella12.png","nTick.png"],
-    ["rCirculo.png","rCirculoCirculo.png","rCirculoEstrella.png","rEstrella.png","rEstrella8.png", "rEstrella12.png","rTick.png"]];
+    images = [["nCirculo.PNG","nCirculoCirculo.PNG","nCirculoEstrella.PNG","nEstrella.PNG","nEstrella8.PNG", "nEstrella12.PNG","nTick.PNG"],
+    ["rCirculo.PNG","rCirculoCirculo.PNG","rCirculoEstrella.PNG","rEstrella.PNG","rEstrella8.PNG", "rEstrella12.PNG","rTick.PNG"]];
 
     usedImages = null;
     document.getElementById("aciertos").innerHTML = 0;
@@ -64,14 +65,14 @@ function assingKey(){
 
     usedImages[0][imgcol] = images[imgrow][imgcol];
     //Asigna una src correcta de manera global
-    correctSrc = images[imgrow][imgcol];
+    correctSrc = src + images[imgrow][imgcol];
     document.getElementById("0").src = correctSrc;
     document.getElementById("0").style.display = "table";
 }
 
 function assign(i){
     var n = Math.floor(Math.random() * 7);
-    var assigned = usedImages[0][n];
+    var assigned = src + usedImages[0][n];
     document.getElementById(i).src = assigned;
     document.getElementById(i).style.display = "table";
     if(correctSrc == assigned)
@@ -94,7 +95,10 @@ function validate(id, src){
 
     //Si ya se acabaron los estimulos clave termina el ejercicio y despliega el boton "Guardar Resultados"
     //nCorrects lo asigna al empezar, son el numero de estimulos correctos
-    if((aciertos == nCorrects)&&(lap=="40")){
+    console.log(aciertos);
+    console.log(nCorrects);
+
+    if((aciertos == nCorrects)&&(lap == "40")){
         displaySave(true);
         stopCounting = true;
     }
@@ -129,7 +133,7 @@ function displaySave(bool){
 function saveResults(){
     //aquí es donde despliega los resultados
     swal("Aciertos: " + aciertos, "Errores: " + errores);
-    
+
     for(var i = 1; i<=40;i++){
         document.getElementById(i).src = "";
         document.getElementById(i).style.display = "none";

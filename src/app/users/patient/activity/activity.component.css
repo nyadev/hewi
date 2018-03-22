@@ -1,39 +1,58 @@
-.activity-header{
-  background: #006eca;
-  color: #fff;
+.divider{
+  width: 100%;
+  display: inline-flex;
 }
 
-.activity-containter{
-  margin: 1% 2%;
+mat-toolbar{
+  margin: 0;
 }
 
-.actions-container{
-  border: #ddd solid;
-  width: stretch;
+.space{
+  flex: 1 1 auto;
 }
 
-p{
-  font-size: 20px;
-  padding: 0;
-  margin: 0
+.spacer{
+  width: 20px;
 }
 
-td{
-  text-align: center
+.vertical{
+  display: inline-block;
 }
 
-.good-icon{
-  color: #00c108;
+.aciertos{
+  color: #15fc05;
 }
 
-.fail-icon{
-  color: #c70202;
+.errores{
+  color: #fc1d05;
+}
+
+mat-card{
+  height: auto;
+}
+
+.activity-container{
+  display: flex;
+  margin: auto;
+}
+
+.activity{
+  width: 70%;
+}
+
+.clave{
+  display: flex;
+  margin: auto;
 }
 
 .estimulo{
 	height: 50px;
 	width: auto;
 	display: none
+}
+
+.level{
+  width: 30%;
 }
 
 .boton{
