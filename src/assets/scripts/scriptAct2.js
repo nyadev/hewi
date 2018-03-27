@@ -75,6 +75,7 @@ function assign(i){
     var assigned = src + usedImages[0][n];
     document.getElementById(i).src = assigned;
     document.getElementById(i).style.display = "table";
+    console.log
     if(correctSrc == assigned)
         nCorrects++
 }

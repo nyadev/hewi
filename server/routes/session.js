@@ -19,7 +19,7 @@ app.get('/', (req, res) => res.status(200).json(sessions))
 
 app.post('/',(req , res) =>{
     const session = req.body
-    session._id = new Date()
+    session._id = 1
     session.user={
       _id: 123,
       email: 'ernestomoor@hewi.com',

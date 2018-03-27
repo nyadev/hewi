@@ -1,6 +1,6 @@
 <mat-card>
   <h3>Registro del Terapeuta</h3>
-  <form>
+  <form [formGroup]="registertherapistForm">
     <h4>Nombre</h4>
     <mat-input-container>
       <input
@@ -27,6 +27,45 @@
        >
     </mat-input-container>
     <h4>Horarios</h4>
+    <table>
+      <tr>
+        <th>
+
+        </th>
+        <th>
+          Lunes
+        </th>
+        <th>
+          Martes
+        </th>
+        <th>
+          Miércoles
+        </th>
+        <th>
+          Jueves
+        </th>
+        <th>
+          Viernes
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Entrada
+        </td>
+        <td>
+          <input
+          type="time"
+          matInput
+          formControlName="inMon"
+          id=inMon/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Salida
+        </td>
+      </tr>
+    </table>
     <h4>Teléfonos</h4>
     <mat-input-container>
       <input

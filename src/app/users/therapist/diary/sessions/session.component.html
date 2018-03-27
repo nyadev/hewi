@@ -8,7 +8,7 @@
        placeholder="CURP"
        formControlName="curp"
        id="curp"
-       >
+       />
      </mat-form-field>
      <mat-form-field >
       <input
@@ -16,31 +16,36 @@
        placeholder="Hora"
        formControlName="hora"
        id="hora"
-       >
+       />
      </mat-form-field>
-     <mat-form-field >
+     <mat-form-field>
       <input
-       matInput
-       placeholder="Fecha"
-       formControlName="fecha"
-       id="fecha"
-       >
-     </mat-form-field>
+      matInput
+      [matDatepicker]="pickerTo"
+      placeholder="Fecha"
+      formControlName="fecha"
+      id="fecha"/>
+      <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
+      <mat-datepicker #pickerTo></mat-datepicker>
+    </mat-form-field>
     <mat-form-field>
       <input
        matInput
        placeholder="# de Sesión"
        formControlName="noSession"
        id="noSession"
-       >
+       />
     </mat-form-field>
       <mat-form-field>
-      <input
-       matInput
-       placeholder="Observaciones"
-       formControlName="observaciones"
-       id="observaciones"
-       >
+        <textarea
+        matInput
+        placeholder="Observaciones"
+        matTextareaAutosize
+        matAutosizeMinRows="1"
+        matAutosizeMaxRows="4"
+        formControlName="observaciones"
+        id="observaciones">
+        </textarea>
     </mat-form-field>
     <button type="submit" mat-raised-button color="primary">Agendar</button>
   </div>
@@ -50,30 +55,32 @@
 <mat-card>
   <h3>Consultar sesiones por fecha</h3>
   <div class="aligner">
-    <mat-form-field class="picker-">
-      <input matInput [matDatepicker]="picker" placeholder="Fecha" (dateChange)="addEvent($event)">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  </div>
-  <mat-spinner *ngIf="loading"></mat-spinner>
-  <div class="aligner table-container" *ngIf="!loading">
-    <table matSort (matSortChange)="sortData($event)" class="patient-table">
-      <tr>
-        <th mat-sort-header="name">CURP</th>
-        <th mat-sort-header="calories">Fecha</th>
-        <th mat-sort-header="fat">Hora</th>
-        <th mat-sort-header="carbs">No de Sesión</th>
-        <th mat-sort-header="protein">Observaciones</th>
-      </tr>
+    <div class="picker">      
+      <mat-form-field class="datepicker-consult">
+        <input matInput [matDatepicker]="picker" placeholder="Fecha" (dateChange)="addEvent($event)"/>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <div class="table-container" *ngIf="!loading">
+      <table matSort (matSortChange)="sortData($event)" class="patient-table">
+        <tr>
+          <th mat-sort-header="name">CURP</th>
+          <th mat-sort-header="calories">Fecha</th>
+          <th mat-sort-header="fat">Hora</th>
+          <th mat-sort-header="carbs">No de Sesión</th>
+          <th mat-sort-header="protein">Observaciones</th>
+        </tr>
 
-      <tr *ngFor="let session of sessions">
-        <td>{{ session.curp }}</td>
-        <td>{{ session.date }}</td>
-        <td>{{ session.time }}</td>
-        <td>{{ session.sessionnumber }}</td>
-        <td>{{ session.notes }}</td>
-      </tr>
-    </table>
+        <tr *ngFor="let session of sessions">
+          <td>{{ session.curp }}</td>
+          <td>{{ session.date }}</td>
+          <td>{{ session.time }}</td>
+          <td>{{ session.sessionnumber }}</td>
+          <td>{{ session.notes }}</td>
+        </tr>
+      </table>
+    </div>
   </div>
 </mat-card>

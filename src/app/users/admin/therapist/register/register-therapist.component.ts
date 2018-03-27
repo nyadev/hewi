@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./register-therapist.component.css']
 })
 
-export class RegisterTherapistComponent  implements OnInit{
+export class RegisterTherapistComponent  implements OnInit {
   registertherapistForm: FormGroup;
 
   ngOnInit() {

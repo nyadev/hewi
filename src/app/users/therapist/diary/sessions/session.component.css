@@ -1,34 +1,22 @@
-.patient-table{
-  margin-left: 10px;
-  width: 100%;
-}
-
-mat-input-container{
-  display: table-row;
-  width: 100%;
-}
-
-.aligner{
-  display: inline-table;
-  width: auto;
-}
-
 .aligner-horizontal{
   display: flex;
 }
 
 button{
   height:2%;
-  display: flex;
   margin: auto;
-}
-
-.table-container{
-  width: 90%;
-  margin: 1% 5%;
 }
 
 mat-spinner{
   display: flex;
   margin: auto;
+}
+
+.aligner{
+  width: 100%;
+  display: inline-block;
+}
+
+.patient-table{
+  width: 100%;
 }

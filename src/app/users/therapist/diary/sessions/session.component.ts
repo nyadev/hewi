@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Session } from './session.model';
 import { SessionService } from './session.service';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-import {FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -41,7 +41,7 @@ export class SessionComponent implements OnInit {
 
    onSubmit(form: NgForm) {
       const s = new Session(
-      +new Date(),
+      1,
       form.value.curp,
       form.value.fecha,
       form.value.hora,
