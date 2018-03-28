@@ -1,5 +1,7 @@
 export class Session {
   id: number;
+  patient_id: number;
+  therapist_id: number;
   curp: string;
   date: Date;
   time: Date;
@@ -8,6 +10,8 @@ export class Session {
 
   constructor(
     id: number,
+    patient_id: number,
+    therapist_id: number,
     curp: string,
     date: Date,
     time: Date,
@@ -15,6 +19,8 @@ export class Session {
     notes: string
   ) {
     this.id = id;
+    this.patient_id = patient_id;
+    this.therapist_id = therapist_id;
     this.curp = curp;
     this.date = date;
     this.time = time;

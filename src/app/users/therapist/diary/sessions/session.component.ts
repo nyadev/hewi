@@ -42,6 +42,8 @@ export class SessionComponent implements OnInit {
    onSubmit(form: NgForm) {
       const s = new Session(
       1,
+      1,
+      1,
       form.value.curp,
       form.value.fecha,
       form.value.hora,
