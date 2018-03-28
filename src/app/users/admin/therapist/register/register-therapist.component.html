@@ -1,6 +1,6 @@
 <mat-card>
   <h3>Registro del Terapeuta</h3>
-  <form [formGroup]="registertherapistForm">
+  <form class="login-form" [formGroup]="registertherapistForm" (ngSubmit)="onSubmit()" >
     <h4>Nombre</h4>
     <mat-input-container>
       <input
@@ -26,47 +26,24 @@
        id="nome"
        >
     </mat-input-container>
+    <mat-input-container>
+      <input
+       matInput
+       placeholder="CURP"
+       formControlName="curp"
+       id="curp"
+       >
+    </mat-input-container>
     <h4>Horarios</h4>
-    <table>
-      <tr>
-        <th>
-
-        </th>
-        <th>
-          Lunes
-        </th>
-        <th>
-          Martes
-        </th>
-        <th>
-          Miércoles
-        </th>
-        <th>
-          Jueves
-        </th>
-        <th>
-          Viernes
-        </th>
-      </tr>
-      <tr>
-        <td>
-          Entrada
-        </td>
-        <td>
-          <input
-          type="time"
-          matInput
-          formControlName="inMon"
-          id=inMon/>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Salida
-        </td>
-      </tr>
-    </table>
-    <h4>Teléfonos</h4>
+    <h4>Contacto</h4>
+    <mat-input-container>
+      <input
+       matInput
+       placeholder="correo"
+       formControlName="email"
+       id="email"
+       >
+    </mat-input-container>
     <mat-input-container>
       <input
        matInput
