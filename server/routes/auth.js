@@ -46,7 +46,6 @@ app.post('/signin', (req, res, next) => {
     message: 'Login succeded',
     token,
     userId: user._id,
-    username: user.username,
     firstName: user.firstName,
     pName: user.pName,
     mName: user.mName,
@@ -58,26 +57,17 @@ app.post('/signin', (req, res, next) => {
 
 const createToken = (user) => jwt.sign({ user }, secret, { expiresIn: 86400 })
 
-app.post('/registertherapist', (req, res) => {
-  const { lNameF, lNameM, nome, phone, cellphone, username, password, address, extnumber, intnumber, colonia, delegacion, postalcode, state, career, posgrade } = req.body
+app.post('/signup', (req, res) => {
+  const { email, password, name, pName, mName, curp, userType } = req.body
   const user={
     _id : +new Date(),
-    lNameF,
-    lNameM,
-    nome,
-    phone,
-    cellphone,
-    username,
+    email,
     password,
-    address,
-    extnumber,
-    intnumber,
-    colonia,
-    delegacion,
-    postalcode,
-    state,
-    career,
-    posgrade,
+    name,
+    pName,
+    mName,
+    curp,
+    userType
   }
    debug(`Creating new user: ${user}`)
    users.push(user)
@@ -86,9 +76,9 @@ app.post('/registertherapist', (req, res) => {
      message: 'User saved',
      token,
      userId: user._Id,
-     lNameF,
-     nome,
-     username
+     pName: user.pName,
+     mName: user.mName,
+     name: user.name,
    })
 })
 

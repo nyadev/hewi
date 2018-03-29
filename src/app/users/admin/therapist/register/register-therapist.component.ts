@@ -11,7 +11,7 @@ import { User } from '../../../../auth/user.model';
 export class RegisterTherapistComponent  implements OnInit {
   registertherapistForm: FormGroup;
 
-  constructor(private AuthService: AuthService){
+  constructor(private authService: AuthService) {
 
   }
 
@@ -21,12 +21,11 @@ export class RegisterTherapistComponent  implements OnInit {
         Validators.required
       ]),
       lNameM: new FormControl(null, []),
-      nome: new FormControl(null, []),
+      name: new FormControl(null, []),
       curp: new FormControl(null, []),
       phone: new FormControl(null, []),
-      email: new FormControl(null, []),
       cellphone: new FormControl(null, []),
-      username: new FormControl(null, []),
+      email: new FormControl(null, []),
       password: new FormControl(null, []),
       address: new FormControl(null, []),
       extnumber: new FormControl(null, []),
@@ -40,15 +39,18 @@ export class RegisterTherapistComponent  implements OnInit {
     });
   }
 
-  onSubmit(){
-    if(this.registertherapistForm.valid){
-      const { lNameF, lNameM, nome,curp, phone, email, cellphone, username, password, address, extnumber, intnumber, colonia, delegacion, postalcode, state, career, posgrade}  = this.registertherapistForm.value;
-      const user = new User(email, password,username,nome , lNameF, lNameM, curp);
-      this.AuthService.signup(user)
+  onSubmit() {
+    if (this.registertherapistForm.valid) {
+      const { lNameF, lNameM, name, curp, phone,
+        cellphone, email, password, address, extnumber, intnumber, colonia, delegacion,
+        postalcode, state, career, posgrade}  = this.registertherapistForm.value;
+      const userType = 'therapist';
+      const user = new User(email, password, name , lNameF, lNameM, curp, userType);
+      this.authService.signup(user)
         .subscribe(
-          this.AuthService.login,
+          this.authService.login,
           err => console.log(err)
-        )
+        );
     }
   }
 }

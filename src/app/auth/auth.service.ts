@@ -16,12 +16,12 @@ export class AuthService {
   constructor(private http: Http, private router: Router) {
     this.usersUrl = urljoin(environment.apiUrl, 'auth');
     if (this.isLoggedIn()) {
-      const { userId, email, username, firstName, pName, mName, curp, userType } = JSON.parse(localStorage.getItem('user'));
-      this.currentUser = new User(email, null, userId, username, firstName, pName, mName, curp, userType);
+      const { userId, email, firstName, pName, mName, curp, userType } = JSON.parse(localStorage.getItem('user'));
+      this.currentUser = new User(email, null, userId, firstName, pName, mName, curp, userType);
     }
   }
 
-  signup (user: User){
+  signup (user: User) {
     const body = JSON.stringify(user);
     const headers = new Headers({ 'Content-Type': 'application/json'});
     return this.http.post(urljoin(this.usersUrl, 'signup'), body, { headers })
@@ -52,7 +52,7 @@ export class AuthService {
   }
 
   login = ({ token, userId, username, firstName, pName, mName, email, curp, userType }) => {
-    this.currentUser = new User(email, null, userId, username, firstName, pName, mName, curp, userType);
+    this.currentUser = new User(email, null, userId, firstName, pName, mName, curp, userType);
     localStorage.setItem('token', token);
     localStorage.setItem('user', JSON.stringify({ userId, email, firstName, pName, mName, curp, userType }));
     this.router.navigateByUrl('/admin');
