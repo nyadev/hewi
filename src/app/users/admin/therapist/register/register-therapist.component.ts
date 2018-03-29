@@ -17,11 +17,9 @@ export class RegisterTherapistComponent  implements OnInit {
 
   ngOnInit() {
     this.registertherapistForm = new FormGroup({
-      lNameF: new FormControl(null, [
-        Validators.required
-      ]),
-      lNameM: new FormControl(null, []),
-      name: new FormControl(null, []),
+      pName: new FormControl(null, []),
+      mName: new FormControl(null, []),
+      firstName: new FormControl(null, []),
       curp: new FormControl(null, []),
       phone: new FormControl(null, []),
       cellphone: new FormControl(null, []),
@@ -41,16 +39,17 @@ export class RegisterTherapistComponent  implements OnInit {
 
   onSubmit() {
     if (this.registertherapistForm.valid) {
-      const { lNameF, lNameM, name, curp, phone,
+      const { pName, mName, firstName, curp, phone,
         cellphone, email, password, address, extnumber, intnumber, colonia, delegacion,
         postalcode, state, career, posgrade}  = this.registertherapistForm.value;
       const userType = 'therapist';
-      const user = new User(email, password, name , lNameF, lNameM, curp, userType);
+      const user = new User(email, password, null, firstName , pName, mName, curp, userType);
       this.authService.signup(user)
         .subscribe(
-          this.authService.login,
+          null,
           err => console.log(err)
         );
+        this.registertherapistForm.reset();
     }
   }
 }

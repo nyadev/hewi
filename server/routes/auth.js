@@ -12,7 +12,6 @@ const users = [
     _id: 123,
     email: 'ernestomoor@hewi.com',
     password: '123456',
-    username: 'ernestomoor',
     firstName: 'Ernesto',
     pName: 'ApellidoPaterno',
     mName: 'ApellidoMaterno',
@@ -45,11 +44,11 @@ app.post('/signin', (req, res, next) => {
   res.status(200).json({
     message: 'Login succeded',
     token,
+    email: user.email,
     userId: user._id,
     firstName: user.firstName,
     pName: user.pName,
     mName: user.mName,
-    email: user.email,
     curp: user.curp,
     userType: user.userType
   })
@@ -58,12 +57,12 @@ app.post('/signin', (req, res, next) => {
 const createToken = (user) => jwt.sign({ user }, secret, { expiresIn: 86400 })
 
 app.post('/signup', (req, res) => {
-  const { email, password, name, pName, mName, curp, userType } = req.body
+  const { email, password, firstName, pName, mName, curp, userType } = req.body
   const user={
     _id : +new Date(),
     email,
     password,
-    name,
+    firstName,
     pName,
     mName,
     curp,
@@ -75,10 +74,13 @@ app.post('/signup', (req, res) => {
    res.status(201).json({
      message: 'User saved',
      token,
-     userId: user._Id,
+     email: user.email,
+     userId: user._id,
+     firstName: user.firstName,
      pName: user.pName,
      mName: user.mName,
-     name: user.name,
+     curp: user.curp,
+     userType: user.userType
    })
 })
 

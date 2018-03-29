@@ -27,7 +27,6 @@ export class AuthService {
     return this.http.post(urljoin(this.usersUrl, 'signup'), body, { headers })
     .map((response: Response) => {
       const json = response.json();
-      this.login(json);
       return json;
     })
     .catch((error: Response) => {
@@ -51,11 +50,11 @@ export class AuthService {
       });
   }
 
-  login = ({ token, userId, username, firstName, pName, mName, email, curp, userType }) => {
+  login = ({ token, email, userId, firstName, pName, mName, curp, userType }) => {
     this.currentUser = new User(email, null, userId, firstName, pName, mName, curp, userType);
     localStorage.setItem('token', token);
     localStorage.setItem('user', JSON.stringify({ userId, email, firstName, pName, mName, curp, userType }));
-    this.router.navigateByUrl('/admin');
+    this.router.navigateByUrl(urljoin('/', this.currentUser.userType));
   }
 
   isLoggedIn() {
