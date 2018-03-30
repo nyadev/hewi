@@ -1,0 +1,41 @@
+<div class="aligner">
+  <form  [formGroup]="sessionForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Pacientes
+        </mat-panel-title>
+        <mat-panel-description>
+          Paciente especifico
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+        <input matInput placeholder="Curp">
+      </mat-form-field>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+</form>
+<span class="example-spacer">
+
+</span>
+
+  <div class="table-container" if="!loading">
+
+    <table matSort (matSortChange)="sortData($event)" class="patient-table">
+      <tr>
+        <th mat-sort-header="curp">CURP</th>
+        <th mat-sort-header="nome">Nombre</th>
+        <th mat-sort-header="LNameP">Apellido paterno</th>
+          <th mat-sort-header="LNameM">Apellido materno</th>
+      </tr>
+
+     <tr *ngFor="let user of User">
+        <td>{{ User.curp }}</td>
+        <td>{{ User.curp }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -5,6 +5,7 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { NotFoundComponent } from './fail/notfound.component';
 import { RegisterTherapistComponent } from './users/admin/therapist/register/register-therapist.component';
+import { ConsultPatientComponent } from './users/therapist/patient/consult/consult-patient.component';
 
 import { USER_ROUTES } from './users/users.routing';
 

@@ -20,6 +20,7 @@ import { ActivityComponent } from './users/patient/activity/activity.component';
 import { TherapistHomeComponent } from './users/therapist/therapist-home.component';
 import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
 import { SessionComponent } from './users/therapist/diary/sessions/session.component';
+import { ConsultPatientComponent } from './users/therapist/patient/consult/consult-patient.component';
 
 import { HomeComponent } from './users/home.component';
 import { SigninComponent } from './auth/signin/signin.component';
@@ -35,7 +36,7 @@ import { AuthService } from './auth/auth.service';
     AppComponent,
     HomeComponent,
     AdminHomeComponent, RegisterTherapistComponent,
-    TherapistHomeComponent, RegisterPatientComponent, SessionComponent,
+    TherapistHomeComponent, RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
     PatientHomeComponent, ActivityComponent,
     SigninComponent,
     SignupComponent,
