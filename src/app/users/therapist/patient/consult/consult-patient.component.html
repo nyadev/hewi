@@ -1,5 +1,5 @@
 <div class="aligner">
-  <form  [formGroup]="sessionForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <form  [formGroup]="consultpatientForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
   <div class="form-group">
   <mat-accordion>
     <mat-expansion-panel>
@@ -33,8 +33,10 @@
       </tr>
 
      <tr *ngFor="let user of User">
-        <td>{{ User.curp }}</td>
-        <td>{{ User.curp }}</td>
+        <td>{{ patient.curp }}</td>
+        <td>{{ patient.firstName }}</td>
+        <td>{{ patient.pName }}</td>
+        <td>{{ patient.mName }}</td>
       </tr>
     </table>
   </div>

@@ -1,14 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+import { ConsultService } from './consult.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-consult-patient',
   templateUrl: './consult-patient.component.html',
-  styleUrls: ['./consult-patient.component.css']
+  styleUrls: ['./consult-patient.component.css'],
+  providers: [ ConsultService ]
 })
 
 export class ConsultPatientComponent implements OnInit {
+
+  constructor(private consultService: ConsultService) {
+
+  }
+
   consultpatientForm: FormGroup;
+  patient: Patients[];
+  loading = true;
+
+
+
 
   ngOnInit() {
     this.consultpatientForm = new FormGroup({
