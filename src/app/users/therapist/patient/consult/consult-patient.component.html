@@ -1,29 +1,17 @@
-<div class="aligner">
-  <form  [formGroup]="consultpatientForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
-  <div class="form-group">
-  <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Pacientes
-        </mat-panel-title>
-        <mat-panel-description>
-          Paciente especifico
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <mat-form-field>
-        <input matInput placeholder="Curp">
-      </mat-form-field>
-    </mat-expansion-panel>
-  </mat-accordion>
-</div>
-</form>
-<span class="example-spacer">
-
-</span>
-
-  <div class="table-container" if="!loading">
-
+<mat-card>
+  <form [formGroup]="consultpatientForm">
+    <mat-form-field>
+      <input
+      matInput
+      placeholder="CURP"
+      formControlName="curp"
+      id="curp"/>
+    </mat-form-field>
+  </form>
+</mat-card>
+<mat-card>
+  <mat-spinner *ngIf="loading"></mat-spinner>
+  <div *ngIf="loading">
     <table matSort (matSortChange)="sortData($event)" class="patient-table">
       <tr>
         <th mat-sort-header="curp">CURP</th>
@@ -32,7 +20,7 @@
           <th mat-sort-header="LNameM">Apellido materno</th>
       </tr>
 
-     <tr *ngFor="let user of User">
+     <tr *ngFor="let patient of patients">
         <td>{{ patient.curp }}</td>
         <td>{{ patient.firstName }}</td>
         <td>{{ patient.pName }}</td>
@@ -40,4 +28,4 @@
       </tr>
     </table>
   </div>
-</div>
+</mat-card>
