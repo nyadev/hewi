@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Activity } from './activity.model';
+import { Activity } from '../../activity.model';
 
 const url = './assets/scripts/atention/scriptAct2.js';
 
 @Component({
-  selector: 'app-activity',
-  templateUrl: './activity.component.html',
-  styleUrls: ['./activity.component.css']
+  selector: 'app-actn-type',
+  templateUrl: './actn.component.html',
+  styleUrls: ['./actn.component.css']
 })
 
-export class ActivityComponent implements OnInit {
+export class ActnTypeComponent implements OnInit {
 
     loadAPI: Promise<any>;
 

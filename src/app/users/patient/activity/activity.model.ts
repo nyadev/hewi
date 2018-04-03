@@ -1,21 +1,27 @@
 export class Activity {
-  type: string;
+  id_user: number;
+  type: number;
   numberOf: number;
   level?: number;
   corrects?: number;
   fails?: number;
+  ntry?: number;
 
   constructor(
-    type: string,
+    id_user: number,
+    type: number,
     numberOf: number,
     level?: number,
     corrects?: number,
-    fails?: number
+    fails?: number,
+    ntry?: number
   ) {
+    this.id_user = id_user;
     this.type = type;
     this.numberOf = numberOf;
-    this.level = 1;
-    this.corrects = 0;
-    this.fails = 0;
+    this.level = level;
+    this.corrects = corrects;
+    this.fails = fails;
+    this.ntry = ntry;
   }
 }
