@@ -11,7 +11,7 @@ var nCorrects;
 var stopCounting;
 var timelap;
 var lap;
- var src = './assets/images/aat2/';
+var src = './assets/images/aat2/';
 
 function instructions(){
   swal("Instrucciones","Se mostrará una serie de estímulos aleatorios donde el niño deberá seleccionar con el cursor el estímulo indicado durante cierto tiempo");
@@ -81,28 +81,32 @@ function assign(i){
 }
 
 function validate(id, src){
-    splitsrc = src.split("/");
-    //Hace un split porque originalmente la src que toma desde el html esta como file//:C//Documents...... y pues no coincide
-    justsrc = splitsrc[splitsrc.length-1];
-    //Compara los src de cada imagen
-    if(justsrc == correctSrc){
-        count(true);
-        makedisappear(id)
-    }
-    else{
-        count(false);
-        swal('Error');
-    }
+  console.log(src);
+  splitsrc = src.split('/');
+  //Hace un split porque originalmente la src que toma desde el html esta como file//:C//Documents...... y pues no coincide
+  justsrc = splitsrc[splitsrc.length-1];
+  //Compara los src de cada imagen
+  splitcrrct = correctSrc.split('/');
 
-    //Si ya se acabaron los estimulos clave termina el ejercicio y despliega el boton "Guardar Resultados"
-    //nCorrects lo asigna al empezar, son el numero de estimulos correctos
-    console.log(aciertos);
-    console.log(nCorrects);
+  justcrrct = splitcrrct[splitcrrct.length-1];
+  if(justsrc == justcrrct){
+      count(true);
+      makedisappear(id)
+  }
+  else{
+      count(false);
+      swal('Error');
+  }
 
-    if((aciertos == nCorrects)&&(lap == "40")){
-        displaySave(true);
-        stopCounting = true;
-    }
+  //Si ya se acabaron los estimulos clave termina el ejercicio y despliega el boton "Guardar Resultados"
+  //nCorrects lo asigna al empezar, son el numero de estimulos correctos
+  console.log(aciertos);
+  console.log(nCorrects);
+
+  if((aciertos == nCorrects)&&(lap == "40")){
+      displaySave(true);
+      stopCounting = true;
+  }
 
 }
 
@@ -126,7 +130,7 @@ function makedisappear(id){
 
 function displaySave(bool){
     if(bool)
-        document.getElementById("save-results").style.display = "table"
+        document.getElementById("save-results").style.display = "flex"
     else
         document.getElementById("save-results").style.display = "none"
 }

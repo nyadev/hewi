@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Activity } from './activity.model';
 
-const url = './assets/scripts/scriptAct2.js';
+const url = './assets/scripts/atention/scriptAct2.js';
 
 @Component({
   selector: 'app-activity',
@@ -15,13 +15,11 @@ export class ActivityComponent implements OnInit {
 
     public ngOnInit() {
         this.loadAPI = new Promise((resolve) => {
-            console.log('resolving promise...');
             this.loadScript();
         });
     }
 
     public loadScript() {
-        console.log('preparing to load...');
         const node = document.createElement('script');
         node.src = url;
         node.type = 'text/javascript';

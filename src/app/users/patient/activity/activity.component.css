@@ -46,7 +46,7 @@ mat-card{
 }
 
 .estimulo{
-	height: 50px;
+	height: 60px;
 	width: auto;
 	display: none
 }
@@ -56,5 +56,6 @@ mat-card{
 }
 
 .boton{
-	display: none
+	display: none;
+  margin: 0 auto;
 }
