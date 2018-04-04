@@ -1,16 +1,33 @@
 <div class="content">
   <div class="data">
-    <mat-card>
+    <mat-card color="primary">
       <mat-card-header>
-        <div mat-card-avatar><mat-icon>info</mat-icon></div>
+        <div mat-card-avatar><mat-icon>info_outline</mat-icon></div>
         <mat-card-title>Información</mat-card-title>
       </mat-card-header>
     </mat-card>
   </div>
   <div class="menu">
-    <div class="therapist">
-    </div>
-    <div class="patient">
-    </div>
+    <mat-card>
+      <div class="divider">
+        <mat-card-header>
+          <div mat-card-avatar><mat-icon>info_outline</mat-icon></div>
+          <mat-card-title>Terapeuta</mat-card-title>
+        </mat-card-header>
+        <mat-list>
+          <mat-list-item [routerLink]="['/admin/register']">Item 1</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Item 2</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Item 3</mat-list-item>
+        </mat-list>
+      </div>
+      <div class="divider">
+        <mat-card-header>
+          <div mat-card-avatar><mat-icon>info_outline</mat-icon></div>
+          <mat-card-title>Paciente</mat-card-title>
+        </mat-card-header>
+      </div>
+    </mat-card>
   </div>
 </div>

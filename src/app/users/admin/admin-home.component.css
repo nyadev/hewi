@@ -1,7 +1,11 @@
 mat-card{
-  padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 93%;
+}
+
+mat-list-item:hover{
+  background-color: lightgray;
+  cursor: pointer;
 }
 
 .content{
@@ -20,12 +24,19 @@ mat-card{
   height: 100%;
 }
 
-.therapist{
+.divider{
   width: 100%;
   height: 50%;
 }
 
-.patient{
-  width: 100%;
-  height: 50%;
+@media screen and (max-width: 800px){
+    .content{
+      display: inline-block;
+    }
+    .data, .menu{
+      width: 90%;
+    }
+    .data{
+      height: auto;
+    }
 }

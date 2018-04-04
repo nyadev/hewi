@@ -3,20 +3,24 @@
     <span>HEWI</span>
     <span class="space"></span>
     <mat-icon class="user-icon">face</mat-icon>
-    <span>Usuario</span>
+    <span>{{ getName() }}</span>
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>expand_more</mat-icon>
     </button>
     <mat-menu #menu="matMenu" [overlapTrigger]="false" yPosition="above">
-      <button mat-menu-item [routerLink]="['/']">
+      <button mat-menu-item [routerLink]="['/admin']" *ngIf="getUserType() === 'admin'">
         <mat-icon>home</mat-icon>
         <span>Inicio</span>
       </button>
-      <button mat-menu-item>
-        <mat-icon>settings</mat-icon>
-        <span>Configuración</span>
+      <button mat-menu-item [routerLink]="['/therapist']" *ngIf="getUserType() === 'therapist'">
+        <mat-icon>home</mat-icon>
+        <span>Inicio</span>
       </button>
-      <button mat-menu-item [routerLink]="['/signin']">
+      <button mat-menu-item [routerLink]="['/patient']" *ngIf="getUserType() === 'patient'">
+        <mat-icon>home</mat-icon>
+        <span>Inicio</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
         <mat-icon>exit_to_app</mat-icon>
         <span>Salir</span>
       </button>
