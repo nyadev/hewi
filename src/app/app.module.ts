@@ -11,16 +11,11 @@ import { MaterialModule } from './material.module';
 import 'hammerjs';
 
 // Custom Components
-import { AdminHomeComponent } from './users/admin/admin-home.component';
 import { RegisterTherapistComponent } from './users/admin/therapist/register/register-therapist.component';
 
-import { PatientHomeComponent } from './users/patient/patient-home.component';
-
 // Actividades
-
 import { Act2AtentionComponent } from './users/patient/activity/atention/act2/act2.component';
 
-import { TherapistHomeComponent } from './users/therapist/therapist-home.component';
 import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
 import { SessionComponent } from './users/therapist/diary/sessions/session.component';
 import { ConsultPatientComponent } from './users/therapist/patient/consult/consult-patient.component';
@@ -38,9 +33,9 @@ import { AuthService } from './auth/auth.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    AdminHomeComponent, RegisterTherapistComponent,
-    TherapistHomeComponent, RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
-    PatientHomeComponent, Act2AtentionComponent,
+    RegisterTherapistComponent,
+    RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
+    Act2AtentionComponent,
     SigninComponent,
     SignupComponent,
     NotFoundComponent
