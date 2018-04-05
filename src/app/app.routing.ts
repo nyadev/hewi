@@ -10,9 +10,10 @@ import { ConsultPatientComponent } from './users/therapist/patient/consult/consu
 import { USER_ROUTES } from './users/users.routing';
 
 const APP_ROUTES: Routes = [
-  { path: '', component: HomeComponent, children: USER_ROUTES},
+  { path: '', component: HomeComponent, pathMatch: 'full'},
   { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
+  { path: 'admin', children: USER_ROUTES},
   { path: '**', component: NotFoundComponent}
 ];
 

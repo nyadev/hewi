@@ -1,34 +1,35 @@
-<div class="toolbar">
-  <mat-toolbar color="primary">
-    <span>HEWI</span>
-    <span class="space"></span>
-    <mat-icon class="user-icon">face</mat-icon>
-    <span>{{ getName() }}</span>
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>expand_more</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu" [overlapTrigger]="false" yPosition="above">
-      <button mat-menu-item [routerLink]="['/admin']" *ngIf="getUserType() === 'admin'">
-        <mat-icon>home</mat-icon>
-        <span>Inicio</span>
-      </button>
-      <button mat-menu-item [routerLink]="['/therapist']" *ngIf="getUserType() === 'therapist'">
-        <mat-icon>home</mat-icon>
-        <span>Inicio</span>
-      </button>
-      <button mat-menu-item [routerLink]="['/patient']" *ngIf="getUserType() === 'patient'">
-        <mat-icon>home</mat-icon>
-        <span>Inicio</span>
-      </button>
-      <button mat-menu-item (click)="logout()">
-        <mat-icon>exit_to_app</mat-icon>
-        <span>Salir</span>
-      </button>
-    </mat-menu>
-  </mat-toolbar>
-</div>
 <div class="content">
-  <div class='router'>
-    <router-outlet></router-outlet>
+  <div class="admin" *ngIf="getUserType() === 'admin'">
+    <div class="data">
+      <mat-card color="primary">
+        <mat-card-header>
+          <div mat-card-avatar><mat-icon>info_outline</mat-icon></div>
+          <mat-card-title>Información</mat-card-title>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <div class="menu">
+      <mat-card>
+        <div class="divider">
+          <mat-card-header>
+            <div mat-card-avatar><mat-icon>face</mat-icon></div>
+            <mat-card-title>Terapeuta</mat-card-title>
+          </mat-card-header>
+          <mat-list>
+            <mat-list-item [routerLink]="['admin', 'register-therapist']">Registro</mat-list-item>
+            <mat-list-item [routerLink]="['admin', 'consult-therapist']">Consulta</mat-list-item>
+          </mat-list>
+        </div>
+        <div class="divider">
+          <mat-card-header>
+            <div mat-card-avatar><mat-icon>child_care</mat-icon></div>
+            <mat-card-title>Paciente</mat-card-title>
+          </mat-card-header>
+          <mat-list>
+            <mat-list-item [routerLink]="['admin', 'register-therapist']">Confirmación</mat-list-item>
+          </mat-list>
+        </div>
+      </mat-card>
+    </div>
   </div>
 </div>

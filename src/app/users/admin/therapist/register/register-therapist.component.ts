@@ -43,7 +43,7 @@ export class RegisterTherapistComponent  implements OnInit {
         cellphone, email, password, address, extnumber, intnumber, colonia, delegacion,
         postalcode, state, career, posgrade}  = this.registertherapistForm.value;
       const userType = 'therapist';
-      const user = new User(email, password, null, firstName , pName, mName, curp, userType);
+      const user = new User(email, password, firstName , pName, mName, curp, userType);
       this.authService.signup(user)
         .subscribe(
           null,

@@ -13,12 +13,5 @@ import { PatientHomeComponent } from './patient/patient-home.component';
 import { Act2AtentionComponent } from './patient/activity/atention/act2/act2.component';
 
 export const USER_ROUTES: Routes = [
-  { path: 'admin', component: AdminHomeComponent},
-  { path: 'admin/register', component: RegisterTherapistComponent},
-  { path: 'therapist', component: TherapistHomeComponent },
-  { path: 'therapist/sessions', component: SessionComponent},
-  { path: 'therapist/consultPatient', component: ConsultPatientComponent },
-  { path: 'patient', component: PatientHomeComponent},
-  // { path: 'patient/act1at', component: Act1AtentionComponent },
-  { path: 'patient/act2at', component: Act2AtentionComponent },
+  { path: 'register-therapist', component: RegisterTherapistComponent},
 ];

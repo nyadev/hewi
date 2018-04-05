@@ -9,7 +9,6 @@ const secret = 'miclavesecreta';
 
 const users = [
   {
-    _id: 123,
     email: 'ernestomoor@hewi.com',
     password: '123456',
     firstName: 'Ernesto',
@@ -45,7 +44,6 @@ app.post('/signin', (req, res, next) => {
     message: 'Login succeded',
     token,
     email: user.email,
-    userId: user._id,
     firstName: user.firstName,
     pName: user.pName,
     mName: user.mName,
@@ -59,7 +57,6 @@ const createToken = (user) => jwt.sign({ user }, secret, { expiresIn: 86400 })
 app.post('/signup', (req, res) => {
   const { email, password, firstName, pName, mName, curp, userType } = req.body
   const user={
-    _id : +new Date(),
     email,
     password,
     firstName,
@@ -75,7 +72,6 @@ app.post('/signup', (req, res) => {
      message: 'User saved',
      token,
      email: user.email,
-     userId: user._id,
      firstName: user.firstName,
      pName: user.pName,
      mName: user.mName,

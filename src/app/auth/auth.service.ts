@@ -16,8 +16,8 @@ export class AuthService {
   constructor(private http: Http, private router: Router) {
     this.usersUrl = urljoin(environment.apiUrl, 'auth');
     if (this.isLoggedIn()) {
-      const { userId, email, firstName, pName, mName, curp, userType } = JSON.parse(localStorage.getItem('user'));
-      this.currentUser = new User(email, null, userId, firstName, pName, mName, curp, userType);
+      const { email, firstName, pName, mName, curp, userType } = JSON.parse(localStorage.getItem('user'));
+      this.currentUser = new User(email, null, firstName, pName, mName, curp, userType);
     }
   }
 
@@ -51,10 +51,10 @@ export class AuthService {
   }
 
   login = ({ token, email, userId, firstName, pName, mName, curp, userType }) => {
-    this.currentUser = new User(email, null, userId, firstName, pName, mName, curp, userType);
+    this.currentUser = new User(email, null, firstName, pName, mName, curp, userType);
     localStorage.setItem('token', token);
     localStorage.setItem('user', JSON.stringify({ userId, email, firstName, pName, mName, curp, userType }));
-    this.router.navigateByUrl(urljoin('/', this.currentUser.userType));
+    this.router.navigateByUrl('/');
   }
 
   isLoggedIn() {

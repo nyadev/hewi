@@ -1,28 +1,51 @@
-.toolbar{
-  height: 8%;
+.admin{
+  display: contents;
 }
 
-mat-toolbar{
-  height: 100%;
+mat-card{
+  width: 94.5%;
+  height: 91%;
+}
+
+mat-list-item{
+  background-color: lightgray;
+}
+
+mat-list-item:hover{
+  background-color: #930085;
+  color: white;
+  cursor: pointer;
 }
 
 .content{
-  height: 92%;
   width: 100%;
-  display: inline-flex;
+  height: 100%;
+  display: flex
 }
 
-.divider{
-  width: 25%;
+.data{
+  width: 30%;
   height: 100%;
 }
 
-.space{
-  flex: 1 1 auto;
+.menu{
+  width: 70%;
+  height: 100%;
 }
 
-.router{
+.divider{
   width: 100%;
-  margin: 1% 1%;
-  height: auto;
+  height: 50%;
+}
+
+@media screen and (max-width: 800px){
+    .content{
+      display: inline-block;
+    }
+    .data, .menu{
+      width: 95%;
+    }
+    .data{
+      height: auto;
+    }
 }

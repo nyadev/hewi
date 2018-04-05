@@ -1,11 +1,3 @@
-<div class="toolbar">
-  <mat-toolbar color="primary">
-    <span>
-      HEWI</span>
-    <span class="space"></span>
-    <button [routerLink]="['/signin']" mat-raised-button class="signup-button">Iniciar Sesión</button>
-  </mat-toolbar>
-</div>
 <div class="content">
   <form [formGroup]="signupForm">
     <div class="divider">
@@ -255,6 +247,10 @@
           </mat-input-container>
           <br />
           <button mat-raised-button color="primary" class="signin-button">Registrar</button>
+          <p style="text-align: left">
+            ¿Ya tienes una cuenta?
+            <a md-button color="primary" [routerLink]="['/signin']">Inicia Sesión</a>
+          </p>
         </mat-card-content>
       </mat-card>
     </div>

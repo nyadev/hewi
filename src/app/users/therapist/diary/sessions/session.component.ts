@@ -4,6 +4,7 @@ import { SessionService } from './session.service';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../../auth/auth.service';
 
 @Component({
   selector: 'app-therapist-session',
@@ -15,7 +16,7 @@ export class SessionComponent implements OnInit {
 
     sessionForm: FormGroup;
 
-  constructor(private sessionService: SessionService) {
+  constructor(private sessionService: SessionService, private authService: AuthService) {
 
   }
     sessions: Session[];
@@ -41,11 +42,10 @@ export class SessionComponent implements OnInit {
 
    onSubmit(form: NgForm) {
       const s = new Session(
-      1,
-      1,
-      1,
+      null,
+      this.authService.currentUser.curp,
       form.value.curp,
-      form.value.fecha,
+      form.value.fecha.toLocaleDateString('en-US'),
       form.value.hora,
       form.value.noSession,
       form.value.observaciones

@@ -1,32 +1,47 @@
-.space{
-  flex: 1 1 auto;
+.all{
+  width: 100%;
+  height: 100%;
 }
 
-.header-sidenav{
-  position: sticky;
-  top: 0px;
-  background: lightgray;
-  z-index: 5
+.toolbar{
+  height: 10%;
+}
+
+mat-toolbar{
+  height: 100%;
+}
+
+.header_image{
+  height: 80%;
+  width: auto;
+  margin: 10% 1%;
+}
+
+.header_image:hover{
+  cursor: pointer;
+}
+
+.header_image:focus{
+  outline: none;
+}
+
+.space{
+  flex: 1 1 auto;
 }
 
 .title{
   font-size: 30px
 }
 
-.user-icon{
-  margin-right: 5px
+.content{
+  height: 90%;
+  width: 100%;
 }
 
-.sidenav-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.signup-button{
+  color: #3f51b5
 }
 
-
-.sidenav-content{
-  width: 250px;
-  background-color: whitesmoke;
+.usermenu{
+  display: contents;
 }

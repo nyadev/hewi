@@ -1,1 +1,31 @@
-<router-outlet></router-outlet>
+<div class="all">
+  <div class="toolbar">
+    <mat-toolbar color="primary">
+      <img src="./assets/images/resource/logo_header.png" class="header_image" [routerLink]="['/']" *ngIf="isLoggedIn()"/>
+      <img src="./assets/images/resource/logo_header.png" class="header_image" [routerLink]="['/signin']" *ngIf="!isLoggedIn()"/>
+      <span>HEWI</span>
+      <span class="space"></span>
+      <div class="usermenu" *ngIf="isLoggedIn()">
+        <mat-icon class="user-icon">person</mat-icon>
+        <span>{{ getName() }}</span>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>expand_more</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false" yPosition="above">
+          <button mat-menu-item [routerLink]="['/']">
+            <mat-icon>home</mat-icon>
+            <span>Inicio</span>
+          </button>
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Salir</span>
+          </button>
+        </mat-menu>
+      </div>
+
+    </mat-toolbar>
+  </div>
+  <div class="content">
+      <router-outlet></router-outlet>
+  </div>
+</div>
