@@ -3,7 +3,7 @@
 }
 
 mat-card{
-  width: 94.5%;
+  width: 90%;
   height: 91%;
 }
 
@@ -33,6 +33,19 @@ mat-list-item:hover{
   height: 100%;
 }
 
+.aat, .avs{
+  width: 35%;
+}
+
+.acontainer{
+  width: 100%;
+  display: flex;
+}
+
+.adivider{
+  width: 50%;
+}
+
 .divider{
   width: 100%;
   height: 50%;
@@ -42,10 +55,10 @@ mat-list-item:hover{
     .content{
       display: inline-block;
     }
-    .data, .menu{
+    .data, .aat, .avs{
       width: 95%;
     }
-    .data{
+    .data, .aat, .avs{
       height: auto;
     }
 }

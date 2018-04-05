@@ -11,18 +11,17 @@ import { MaterialModule } from './material.module';
 import 'hammerjs';
 
 // Custom Components
-import { AdminHomeComponent } from './users/admin/admin-home.component';
 import { RegisterTherapistComponent } from './users/admin/therapist/register/register-therapist.component';
 
-import { PatientHomeComponent } from './users/patient/patient-home.component';
-
 // Actividades
+<<<<<<< HEAD
 // Atencion
+=======
+>>>>>>> 3f46817a09d267500dd055b3847740a848cc9861
 import { Act2AtentionComponent } from './users/patient/activity/atention/act2/act2.component';
 // visioespaciales
 import { Act1vsComponent } from './users/patient/activity/visiospacial/act1vs/act1_vs.component';
 
-import { TherapistHomeComponent } from './users/therapist/therapist-home.component';
 import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
 import { SessionComponent } from './users/therapist/diary/sessions/session.component';
 import { ConsultPatientComponent } from './users/therapist/patient/consult/consult-patient.component';
@@ -40,9 +39,15 @@ import { AuthService } from './auth/auth.service';
   declarations: [
     AppComponent,
     HomeComponent,
+<<<<<<< HEAD
     AdminHomeComponent, RegisterTherapistComponent,
     TherapistHomeComponent, RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
     PatientHomeComponent, Act2AtentionComponent, Act1vsComponent,
+=======
+    RegisterTherapistComponent,
+    RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
+    Act2AtentionComponent,
+>>>>>>> 3f46817a09d267500dd055b3847740a848cc9861
     SigninComponent,
     SignupComponent,
     NotFoundComponent

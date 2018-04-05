@@ -43,3 +43,5 @@ Thumbs.db
 src/assets/corazon.png
 package-lock.json
 package.json
+src/app/app.module.ts
+src/app/users/admin/admin-home.component.html
