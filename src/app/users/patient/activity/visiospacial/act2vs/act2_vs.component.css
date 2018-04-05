@@ -1,0 +1,10 @@
+.clave{
+  display: flex;
+  margin: auto;
+}
+
+.estimulo{
+	height: 60px;
+	width: auto;
+	display: none
+}

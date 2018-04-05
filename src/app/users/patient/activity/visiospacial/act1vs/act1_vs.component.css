@@ -28,6 +28,7 @@
 
 mat-toolbar{
   margin: 0;
+
 }
 
 .space{
@@ -44,23 +45,26 @@ mat-card{
 }
 
 .activity-content{
-  display: flex;
   align-items: center;
   margin: auto;
-  align-self:center;
+
 }
 
 .activity{
-  width: 70%;
+  width: 100%;
+  align-items: center;
+}
+.yaacomodate{
+  margin: auto;
+  display: flex;
 }
 
 .estimulo{
 	height: 60px;
 	width: auto;
-	display:flex;
+	align-self: center;
 }
 
-width: 30%;
 .level{
 }
 

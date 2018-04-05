@@ -1,0 +1,35 @@
+<div class="divider">
+  <mat-card class="activity">
+    <mat-card-header>
+      <mat-toolbar color="primary">
+        <span>Actividad n</span>
+        <span class="space"></span>
+        <button mat-mini-fab id="begin" onclick="begin()"><mat-icon>play_arrow</mat-icon></button>
+        <span class="spacer"></span>
+        <img src="" id="0" name="figure" class="estimulo clave">
+        <span class="spacer"></span>
+        <div id="aciertos" class="aciertos">0</div><mat-icon class="aciertos">done</mat-icon>
+        <span class="spacer"></span>
+        <div id="errores" class="errores">0</div><mat-icon class="errores">clear</mat-icon>
+      </mat-toolbar>
+    </mat-card-header>
+    <div class="activity-container">
+      <span class="space"></span>
+      <div class="activity-content">
+        <!-- Actividad aquí -->
+        <button mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
+      </div>
+      <span class="space"></span>
+    </div>
+  </mat-card>
+  <mat-card class="level">
+    <mat-card-header>
+      <mat-toolbar color="primary">
+        <span>Nivel: </span><span id="level">1</span>
+      </mat-toolbar>
+    </mat-card-header>
+    <div class="nivel">
+      <!-- Aquí van los niveles -->
+    </div>
+  </mat-card>
+</div>

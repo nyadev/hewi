@@ -14,10 +14,7 @@ import 'hammerjs';
 import { RegisterTherapistComponent } from './users/admin/therapist/register/register-therapist.component';
 
 // Actividades
-<<<<<<< HEAD
 // Atencion
-=======
->>>>>>> 3f46817a09d267500dd055b3847740a848cc9861
 import { Act2AtentionComponent } from './users/patient/activity/atention/act2/act2.component';
 // visioespaciales
 import { Act1vsComponent } from './users/patient/activity/visiospacial/act1vs/act1_vs.component';
@@ -39,15 +36,11 @@ import { AuthService } from './auth/auth.service';
   declarations: [
     AppComponent,
     HomeComponent,
-<<<<<<< HEAD
-    AdminHomeComponent, RegisterTherapistComponent,
-    TherapistHomeComponent, RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
-    PatientHomeComponent, Act2AtentionComponent, Act1vsComponent,
-=======
     RegisterTherapistComponent,
     RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
-    Act2AtentionComponent,
->>>>>>> 3f46817a09d267500dd055b3847740a848cc9861
+    Act2AtentionComponent, Act1vsComponent,
+    RegisterTherapistComponent,
+    RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
     SigninComponent,
     SignupComponent,
     NotFoundComponent
