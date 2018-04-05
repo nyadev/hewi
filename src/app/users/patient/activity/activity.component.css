@@ -1,0 +1,61 @@
+.divider{
+  width: 100%;
+  display: inline-flex;
+}
+
+mat-toolbar{
+  margin: 0;
+}
+
+.space{
+  flex: 1 1 auto;
+}
+
+.spacer{
+  width: 20px;
+}
+
+.vertical{
+  display: inline-block;
+}
+
+.aciertos{
+  color: #15fc05;
+}
+
+.errores{
+  color: #fc1d05;
+}
+
+mat-card{
+  height: auto;
+}
+
+.activity-container{
+  display: flex;
+  margin: auto;
+}
+
+.activity{
+  width: 70%;
+}
+
+.clave{
+  display: flex;
+  margin: auto;
+}
+
+.estimulo{
+	height: 60px;
+	width: auto;
+	display: none
+}
+
+.level{
+  width: 30%;
+}
+
+.boton{
+	display: none;
+  margin: 0 auto;
+}

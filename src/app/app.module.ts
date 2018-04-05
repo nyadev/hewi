@@ -17,8 +17,10 @@ import { RegisterTherapistComponent } from './users/admin/therapist/register/reg
 import { PatientHomeComponent } from './users/patient/patient-home.component';
 
 // Actividades
-
+// Atencion
 import { Act2AtentionComponent } from './users/patient/activity/atention/act2/act2.component';
+// visioespaciales
+import { Act1vsComponent } from './users/patient/activity/visiospacial/act1vs/act1_vs.component';
 
 import { TherapistHomeComponent } from './users/therapist/therapist-home.component';
 import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
@@ -40,7 +42,7 @@ import { AuthService } from './auth/auth.service';
     HomeComponent,
     AdminHomeComponent, RegisterTherapistComponent,
     TherapistHomeComponent, RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
-    PatientHomeComponent, Act2AtentionComponent,
+    PatientHomeComponent, Act2AtentionComponent, Act1vsComponent,
     SigninComponent,
     SignupComponent,
     NotFoundComponent
