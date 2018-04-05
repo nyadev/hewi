@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Activity } from '../../activity.model';
 
-const url = './assets/scripts/atention/scriptAct2.js';
+const url = './assets/scripts/atention/nombredeJS.js';
 
 @Component({
   selector: 'app-actn-type',
@@ -13,18 +13,23 @@ export class ActnTypeComponent implements OnInit {
 
     loadAPI: Promise<any>;
 
-    public ngOnInit() {
+    ngOnInit() {
         this.loadAPI = new Promise((resolve) => {
             this.loadScript();
         });
     }
 
-    public loadScript() {
+    loadScript() {
         const node = document.createElement('script');
         node.src = url;
         node.type = 'text/javascript';
         node.async = true;
         node.charset = 'utf-8';
         document.getElementsByTagName('head')[0].appendChild(node);
+    }
+
+    instructions() {
+      swal('Instrucciones',
+      'Pegar aquí las instrucciones');
     }
 }

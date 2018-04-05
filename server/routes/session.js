@@ -10,7 +10,7 @@ const session = {
   curpp: 'CURP',
   date: totalDate.toLocaleDateString('en-US'),
   time: totalDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
-  number: 3,
+  sessionnumber: 3,
   notes: 'Esto sólo son observaciones de prueba para ver como es que se acomoda en la tabla',
 }
 

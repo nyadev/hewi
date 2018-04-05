@@ -13,11 +13,7 @@ var timelap;
 var lap;
 var src = './assets/images/aat2/';
 
-function instructions(){
-  swal("Instrucciones","Se mostrará una serie de estímulos aleatorios donde el niño deberá seleccionar con el cursor el estímulo indicado durante cierto tiempo");
-}
-
-function begin(){
+function begin() {
     document.getElementById("begin").style.display = "none"
     stopCounting = false;
     displaySave(false);
@@ -75,13 +71,11 @@ function assign(i){
     var assigned = src + usedImages[0][n];
     document.getElementById(i).src = assigned;
     document.getElementById(i).style.display = "table";
-    console.log
-    if(correctSrc == assigned)
+    if (correctSrc == assigned)
         nCorrects++
 }
 
-function validate(id, src){
-  console.log(src);
+function validate(id, src) {
   splitsrc = src.split('/');
   //Hace un split porque originalmente la src que toma desde el html esta como file//:C//Documents...... y pues no coincide
   justsrc = splitsrc[splitsrc.length-1];
@@ -98,12 +92,10 @@ function validate(id, src){
       swal('Error');
   }
 
-  //Si ya se acabaron los estimulos clave termina el ejercicio y despliega el boton "Guardar Resultados"
-  //nCorrects lo asigna al empezar, son el numero de estimulos correctos
-  console.log(aciertos);
-  console.log(nCorrects);
+  // Si ya se acabaron los estimulos clave termina el ejercicio y despliega el boton "Guardar Resultados"
+  // nCorrects lo asigna al empezar, son el numero de estimulos correctos
 
-  if((aciertos == nCorrects)&&(lap == "40")){
+  if ((aciertos == nCorrects)&&(lap == "40")) {
       displaySave(true);
       stopCounting = true;
   }

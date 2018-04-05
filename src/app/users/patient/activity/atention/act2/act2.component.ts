@@ -15,11 +15,12 @@ export class Act2AtentionComponent implements OnInit {
     loadAPI: Promise<any>;
     activityForm: FormGroup;
 
-    public ngOnInit() {
+    ngOnInit() {
         this.loadAPI = new Promise((resolve) => {
             this.loadScript();
         });
 
+        this.instructions();
         // this.activityForm = new FormGroup({
         //   corrects: new FormControl(null, []),
         //   fails: new FormControl(null, []),
@@ -27,7 +28,7 @@ export class Act2AtentionComponent implements OnInit {
         // });
     }
 
-    public loadScript() {
+    loadScript() {
         const node = document.createElement('script');
         node.src = url;
         node.type = 'text/javascript';
@@ -36,6 +37,10 @@ export class Act2AtentionComponent implements OnInit {
         document.getElementsByTagName('head')[0].appendChild(node);
     }
 
+    instructions() {
+      swal('Instrucciones',
+      'Se mostrará una serie de estímulos aleatorios donde deberás seleccionar con el cursor el estímulo indicado durante cierto tiempo');
+    }
     // public Save() {
     //   if (this.activityForm.valid) {
     //     const { corrects, fails, level } = this.activityForm.value;
