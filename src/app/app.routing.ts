@@ -7,13 +7,15 @@ import { NotFoundComponent } from './fail/notfound.component';
 import { RegisterTherapistComponent } from './users/admin/therapist/register/register-therapist.component';
 import { ConsultPatientComponent } from './users/therapist/patient/consult/consult-patient.component';
 
-import { USER_ROUTES } from './users/users.routing';
+import { ADMIN_ROUTES } from './users/admin/admin.routing';
+import { PATIENT_ROUTES } from './users/patient/patient.routing';
 
 const APP_ROUTES: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
   { path: 'signin', component: SigninComponent},
   { path: 'signup', component: SignupComponent},
-  { path: 'admin', children: USER_ROUTES},
+  { path: 'admin', children: ADMIN_ROUTES},
+  { path: 'patient', children: PATIENT_ROUTES},
   { path: '**', component: NotFoundComponent}
 ];
 

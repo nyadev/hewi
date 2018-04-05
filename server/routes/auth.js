@@ -15,7 +15,7 @@ const users = [
     pName: 'ApellidoPaterno',
     mName: 'ApellidoMaterno',
     curp: 'CURP',
-    userType: 'admin'
+    userType: 'patient'
   }
 ]
 
