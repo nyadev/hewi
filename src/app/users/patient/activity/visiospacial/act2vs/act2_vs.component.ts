@@ -13,18 +13,25 @@ export class Act2vsComponent implements OnInit {
 
     loadAPI: Promise<any>;
 
-    public ngOnInit() {
+    ngOnInit() {
         this.loadAPI = new Promise((resolve) => {
             this.loadScript();
         });
+
+        this.instructions();
     }
 
-    public loadScript() {
+    loadScript() {
         const node = document.createElement('script');
         node.src = url;
         node.type = 'text/javascript';
         node.async = true;
         node.charset = 'utf-8';
         document.getElementsByTagName('head')[0].appendChild(node);
+    }
+
+    instructions() {
+      swal('Instrucciones',
+      'Aquí se mostrarán  las instrucciones, estoy en el component ts');
     }
 }

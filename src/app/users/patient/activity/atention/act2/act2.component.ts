@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Activity } from '../../activity.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import swal from 'sweetalert';
 
 const url = './assets/scripts/atention/scriptAct2.js';
 
@@ -10,7 +11,7 @@ const url = './assets/scripts/atention/scriptAct2.js';
   styleUrls: ['./act2.component.css', '../../activity.component.css']
 })
 
-export class Act2AtentionComponent implements OnInit {
+export class Act2AtComponent implements OnInit {
 
     loadAPI: Promise<any>;
     activityForm: FormGroup;
