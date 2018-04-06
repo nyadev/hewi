@@ -4,10 +4,12 @@
       <mat-toolbar color="primary">
         <span>Actividad n</span>
         <span class="space"></span>
-        <button mat-mini-fab id="begin" onclick="begin()"><mat-icon>play_arrow</mat-icon></button>
+        <button mat-mini-fab id="comienzo" onclick="iniciarEjercicio()"><mat-icon>play_arrow</mat-icon></button>
         <span class="spacer"></span>
         <img src="" id="0" name="figure" class="estimulo clave">
         <span class="spacer"></span>
+        Parte del cuerpo &nbsp;<span class="badge"><div id="parte">...</div></span>
+          <span class="spacer"></span>
         <div id="aciertos" class="aciertos">0</div><mat-icon class="aciertos">done</mat-icon>
         <span class="spacer"></span>
         <div id="errores" class="errores">0</div><mat-icon class="errores">clear</mat-icon>
@@ -17,8 +19,32 @@
       <span class="space"></span>
       <div class="activity-content">
         <!-- Actividad aquí -->
+        <div id="imagen" style="display:none;">
+										<img src = "../../../../../assets/images/avs2/Ash.jpg" usemap="#Partes"/>
+										<map name = "Partes">
+											<area onclick="validarResultados('Mano')" alt="Ash"  shape=rect coords="27, 165, 71, 227"/>
+											<area onclick="validarResultados('Cabeza')" alt="Ash"  shape=rect coords="119, 69, 207, 111"/>
+											<area onclick="validarResultados('Pierna')" alt="Ash"  shape=rect coords="35, 355, 94, 512"/>
+											<area onclick="validarResultados('Pie')" alt="Ash"  shape=rect coords="7, 517, 94, 562"/>
+											<area onclick="validarResultados('Pie')" alt="Ash"  shape=rect coords="222, 537,, 309, 604"/>
+											<area onclick="validarResultados('Dedos')" alt="Ash"  shape=rect coords="307, 5, 362, 22"/>
+											<area onclick="validarResultados('Dedos')" alt="Ash"  shape=rect coords="328, 4, 339, 21"/>
+											<area onclick="validarResultados('Dedos')" alt="Ash"  shape=rect coords="346, 16, 355, 29"/>
+											<area onclick="validarResultados('Dedos')" alt="Ash"  shape=rect coords="295, 29, 317, 43"/>
+											<area onclick="validarResultados('Cuello')" alt="Ash"  shape=rect coords="129, 180, 155, 199"/>
+											<area onclick="validarResultados('Pecho')" alt="Ash"  shape=rect coords="87, 197, 176, 258"/>
+											<area onclick="validarResultados('Rodilla')" alt="Ash"  shape=rect coords="68, 443, 225, 471"/>
+											<area onclick="validarResultados('Orejas')" alt="Ash"  shape=rect coords="108, 126, 116, 150"/>
+											<area onclick="validarResultados('Orejas')" alt="Ash"  shape=rect coords="192, 146, 199, 160"/>
+											<area onclick="validarResultados('Ojos')" alt="Ash"  shape=rect coords="128, 113, 144, 136"/>
+											<area onclick="validarResultados('Ojos')" alt="Ash"  shape=rect coords="172, 124, 188, 146"/>
+											<area onclick="validarResultados('Nariz')" alt="Ash"  shape=rect coords="155, 132, 166, 145"/>
+										</map>
+									</div>
+                  <div id="resultadosBox">
         <button mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
-      </div>
+                  </div>
+        </div>
       <span class="space"></span>
     </div>
   </mat-card>
@@ -29,7 +55,32 @@
       </mat-toolbar>
     </mat-card-header>
     <div class="nivel">
-      <!-- Aquí van los niveles -->
+      <div class="radio">
+            <label>
+                <input type="radio" name="niveles" onclick="setNivel(1);" value="1" checked/>
+                Nivel 1: La tarea tiene 3 preguntas
+            </label>
+  									<br>
+            <label>
+                <input type="radio" name="niveles" onclick="setNivel(2);" value="2"/>
+                Nivel 2: La tarea tiene 5 preguntas
+            </label>
+  									<br>
+            <label>
+                <input type="radio" name="niveles" onclick="setNivel(3);" value="3"/>
+                Nivel 3: La tarea tiene 10 preguntas
+            </label>
+  									<br>
+            <label>
+                <input type="radio" name="niveles" onclick="setNivel(4);"  value="4"/>
+                Nivel 4: La tarea tiene 15 preguntas
+            </label>
+  									<br>
+            <label>
+                <input type="radio" name="niveles" onclick="setNivel(5);" value="5"/>
+                Nivel 5: La tarea tiene 25 preguntas
+            </label>
+        </div>
     </div>
   </mat-card>
 </div>

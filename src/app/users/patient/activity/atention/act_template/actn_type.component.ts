@@ -29,7 +29,7 @@ export class ActnTypeComponent implements OnInit {
     }
 
     instructions() {
-      swal('Instrucciones',
-      'Pegar aquí las instrucciones');
+      // swal('Instrucciones',
+      // 'Pegar aquí las instrucciones');
     }
 }

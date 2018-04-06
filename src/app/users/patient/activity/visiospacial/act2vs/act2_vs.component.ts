@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Activity } from '../../activity.model';
 
-const url = './assets/scripts/atention/scriptAct2.js';
+const url = './assets/scripts/visiospacial/scriptAct2.js';
 
 @Component({
-  selector: 'app-actn-type',
-  templateUrl: './actn.component.html',
-  styleUrls: ['./actn.component.css', '../../activity.component.css']
+  selector: 'app-act2-vs',
+  templateUrl: './act2_vs.component.html',
+  styleUrls: ['./act2_vs.component.css', '../../activity.component.css']
 })
 
-export class ActnTypeComponent implements OnInit {
+export class Act2vsComponent implements OnInit {
 
     loadAPI: Promise<any>;
 
