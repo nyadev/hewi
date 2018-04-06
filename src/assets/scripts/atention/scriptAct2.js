@@ -24,8 +24,8 @@ function begin() {
     ["rCirculo.PNG","rCirculoCirculo.PNG","rCirculoEstrella.PNG","rEstrella.PNG","rEstrella8.PNG", "rEstrella12.PNG","rTick.PNG"]];
 
     usedImages = null;
-    document.getElementById("aciertos").innerHTML = 0;
-    document.getElementById("errores").innerHTML = 0;
+    document.getElementById("aciertos").value = 0;
+    document.getElementById("errores").value = 0;
     aciertos = 0;
     errores = 0;
     assingKey();
@@ -111,8 +111,8 @@ function count(r){
             errores++
     }
 
-    document.getElementById("aciertos").innerHTML = aciertos;
-    document.getElementById("errores").innerHTML = errores;
+    document.getElementById("aciertos").value = aciertos;
+    document.getElementById("errores").value = errores;
 }
 
 function makedisappear(id){
@@ -138,7 +138,7 @@ function saveResults(){
     document.getElementById("0").style.display = "none";
     document.getElementById("begin").style.display = "table";
     document.getElementById("save-results").style.display = "none";
-    document.getElementById("aciertos").innerHTML = "0";
-    document.getElementById("errores").innerHTML = "0";
+    document.getElementById("aciertos").value = "0";
+    document.getElementById("errores").value = "0";
     return;
 }
