@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Activity } from '../../activity.model';
+import swal from 'sweetalert';
 
 const url = './assets/scripts/atention/nombredeJS.js';
 

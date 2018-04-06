@@ -1,32 +1,26 @@
 <div class="divider">
-<mat-card class="activity">
-    <mat-card-header>
-      <mat-toolbar color="primary">
-        <span>Actividad 1 Visio Espacial</span>
-        <span class="space"></span>
-        <button mat-mini-fab id="comienzo" onclick="iniciarEjercicio();"><mat-icon>play_arrow</mat-icon></button>
-        <button mat-mini-fab id="fin" onclick="finalizarEjercicio();"><mat-icon>stop_arrow</mat-icon></button>
-        <span class="spacer"></span>
-        <img src="" id="0" name="figure" class="estimulo clave">
-        <span class="spacer"></span>
-        <div id="tabla">
-        Periodo del ciclo: <input id="tiempo" type="number" min="10" max="60" value="30">
-      </div>
-      </mat-toolbar>
-    </mat-card-header>
-      <span class="space"></span>
-        <!-- Actividad aquí -->
-      <!--PANEL PARA UN NIVEL 1 DE UNA ACTIVIDAD 3-->
-        <div>
-					<div id="Est" style="visibility:visible">
-						<table height="360px">
-						<tr>
-							<td>
-								<div id="estimulo"><img src = "../../../../../assets/images/avs1/icono.png" height="60px"/></div>
-							</td>
-						</tr>
-					</table>
-				</div>
-      </div>
-      </mat-card>
+  <mat-card>
+      <mat-card-header>
+        <mat-toolbar color="primary">
+          <span>Actividad 1 Visio Espacial</span>
+          <span class="space"></span>
+          <button mat-mini-fab id="comienzo" onclick="iniciarEjercicio();"><mat-icon>play_arrow</mat-icon></button>
+          <span class="spacer"></span>
+          <button mat-mini-fab id="fin" onclick="finalizarEjercicio();"><mat-icon>stop_arrow</mat-icon></button>
+          <span class="spacer"></span>
+          <div id="tabla">
+            Periodo del ciclo: <mat-form-field><input matInput id="tiempo" type="number" min="10" max="60" value="30"/></mat-form-field>
+          </div>
+        </mat-toolbar>
+      </mat-card-header>
+			<div id="Est" class="div-estimulo">
+				<table class=tabla-estimulo>
+					<tr>
+						<td>
+							<div id="estimulo"><img src = "../../../../../assets/images/avs1/icono.png" height="60px"/></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+  </mat-card>
 </div>
