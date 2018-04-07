@@ -68,7 +68,7 @@ function saveResults(){
 
  function setNivel(unNivel){
 	nivel = unNivel;
-//	document.getElementById("level").innerHTML = nivel;
+    document.getElementById("level").innerHTML = "Nivel"+" "+nivel;
     if(unNivel === 1){
 		cantidad = 3;
     }

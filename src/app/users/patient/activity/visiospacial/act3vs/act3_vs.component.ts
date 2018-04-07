@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Activity } from '../../activity.model';
 import swal from 'sweetalert';
 
-const url = './assets/scripts/visiospacial/scriptAct1.js';
+const url = './assets/scripts/visiospacial/scriptAct3vs.js';
 
 @Component({
-  selector: 'app-act1-vs',
-  templateUrl: './act1_vs.component.html',
-  styleUrls: ['./act1_vs.component.css', '../../activity.component.css']
+  selector: 'app-act3-vs',
+  templateUrl: './act3_vs.component.html',
+  styleUrls: ['./act3_vs.component.css', '../../activity.component.css']
 })
 
-export class Act1VsComponent implements OnInit {
+export class Act3VsComponent implements OnInit {
 
     loadAPI: Promise<any>;
 
@@ -18,6 +18,7 @@ export class Act1VsComponent implements OnInit {
         this.loadAPI = new Promise((resolve) => {
             this.loadScript();
         });
+
         this.instructions();
     }
 
@@ -32,6 +33,7 @@ export class Act1VsComponent implements OnInit {
 
     instructions() {
       swal('Instrucciones',
-      'Presiona el boton para iniciar la animación, puedes incrementar la velocidad de la animacion');
+      'Se muestra una imagen del cuerpo humano, se podra interactuar con ella, al momento de dar ' +
+      'click con el  mouse encima de cada parte del cuerpo, y aparecerá el nombre de dicha parte.');
     }
 }

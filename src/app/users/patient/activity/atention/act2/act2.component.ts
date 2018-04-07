@@ -21,12 +21,7 @@ export class Act2AtComponent implements OnInit {
             this.loadScript();
         });
 
-      //  this.instructions();
-        // this.activityForm = new FormGroup({
-        //   corrects: new FormControl(null, []),
-        //   fails: new FormControl(null, []),
-        //   level: new FormControl(null, [])
-        // });
+       this.instructions();
     }
 
     loadScript() {
@@ -38,14 +33,8 @@ export class Act2AtComponent implements OnInit {
         document.getElementsByTagName('head')[0].appendChild(node);
     }
 
-    // instructions() {
-    //  swal('Instrucciones',
-    // }
-    //  'Se mostrará una serie de estímulos aleatorios donde deberás seleccionar con el cursor el estímulo indicado durante cierto tiempo');
-    // public Save() {
-    //   if (this.activityForm.valid) {
-    //     const { corrects, fails, level } = this.activityForm.value;
-    //     console.log(`${corrects} ${fails} ${level}`);
-    //   }
-    // }
+     instructions() {
+       swal('Instrucciones',
+       'Se mostrará una serie de estímulos aleatorios donde deberás seleccionar con el cursor el estímulo indicado durante cierto tiempo');
+     }
 }

@@ -19,6 +19,7 @@ import { Act2AtComponent } from './users/patient/activity/atention/act2/act2.com
 // visioespaciales
 import { Act1VsComponent } from './users/patient/activity/visiospacial/act1vs/act1_vs.component';
 import { Act2VsComponent } from './users/patient/activity/visiospacial/act2vs/act2_vs.component';
+import { Act3VsComponent } from './users/patient/activity/visiospacial/act3vs/act3_vs.component';
 
 import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
 import { SessionComponent } from './users/therapist/diary/sessions/session.component';
@@ -39,7 +40,7 @@ import { AuthService } from './auth/auth.service';
     HomeComponent,
     RegisterTherapistComponent,
     RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
-    Act2AtComponent, Act1VsComponent, Act2VsComponent,
+    Act2AtComponent, Act1VsComponent, Act2VsComponent, Act3VsComponent,
     RegisterTherapistComponent,
     RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
     SigninComponent,

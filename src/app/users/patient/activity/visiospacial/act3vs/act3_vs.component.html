@@ -1,0 +1,75 @@
+<div class="div-estimulo">
+  <mat-card>
+    <mat-card-header>
+      <mat-toolbar color="primary">
+        <span>Actividad 3 Visio Espacial</span>
+        <span class="space"></span>
+        <span class="spacer"></span>
+      </mat-toolbar>
+    </mat-card-header>
+    <div class="activity-container">
+      <span class="space"></span>
+      <div class="activity-content">
+        <div id="opcionesBox" style="position: absolute; left: 320px; background:white; visibility:hidden;">
+                  <canvas id="canvasOpcion" width="200" height="200" style=" border: 0px solid #000000"></canvas>
+                      <br><button class="btn btn-default" name="btn1" onClick="validarIguales()">Igual</button>
+                      <button class="btn btn-default" name="btn2" onClick="validarDiferentes()">Diferente</button>
+                </div>
+
+                  <div id="estimuloBox" style="position: relative; background: white; visibility:visible;">
+
+                  <h2 id="encabezado">Parte del cuerpo</h2>
+                  <img src="../../../../../assets/images/avs3/cuerpoN.jpg" width="350" height="301" usemap="#Map" border="0">
+                      <map name="Map">
+                      <area shape="circle" coords="240,73,10"  onclick="mensaje2()">
+                      <area shape="circle" coords="283,73,10"  onclick="mensaje1()">
+                      <area shape="circle" coords="53,68,10"  onclick="mensaje2()">
+                      <area shape="circle" coords="100,68,10"  onclick="mensaje1()">
+                      <area shape="rect" coords="210,20,320,65" onclick="mensaje5()">
+                      <area shape="rect" coords="20,15,125,55"  onclick="mensaje5()">
+                      <!--Manos-->
+                      <area shape="circle" coords="18,187,15"  onclick="mensaje4()">
+                      <area shape="circle" coords="205,187,15"  onclick="mensaje4()">
+                      <area shape="circle" coords="130,187,15" onclick="mensaje3()">
+                      <area shape="circle" coords="325,187,15"  onclick="mensaje3()">
+                      <!--Piernas-->
+                      <area shape="rect" coords="80,220,105,265"  onclick="mensaje6()">
+                      <area shape="rect" coords="270,230,290,265"onclick="mensaje6()">
+                      <area shape="rect" coords="50,220,75,265"  onclick="mensaje7()">
+                      <area shape="rect" coords="240,230,260,265" onclick="mensaje7()">
+
+                      <!--Brazos-->
+                      <area shape="rect" coords="15,140,35,175"  onclick="mensaje15()">
+                      <area shape="rect" coords="113,140,133,175"  onclick="mensaje14()">
+                      <area shape="rect" coords="205,130,227,175" onclick="mensaje15()">
+                      <area shape="rect" coords="300,130,322,175"  onclick="mensaje14()">
+
+                      <area shape="circle" coords="45,280,20"  onclick="mensaje8()">
+                      <area shape="circle" coords="240,280,20"  onclick="mensaje8()">
+                      <area shape="circle" coords="105,280,20"  onclick="mensaje9()">
+                      <area shape="circle" coords="295,280,20" onclick="mensaje9()">
+                      <!--Rodillas-->
+                      <area shape="circle" coords="295,250,10"  onclick="mensaje10()">
+                      <area shape="circle" coords="235,250,10" onclick="mensaje10()">
+                      <area shape="circle" coords="110,233,10" onclick="mensaje10()">
+                      <area shape="circle" coords="45,233,10"  onclick="mensaje10()">
+                      <!--Abdomen-->
+                       <area shape="circle" coords="75,165,23" onclick="mensaje11()">
+                       <area shape="circle" coords="265,165,23"onclick="mensaje11()">
+                      <!--Cuello-->
+                       <area shape="circle" coords="75,110,10"  onclick="mensaje16()">
+                       <area shape="circle" coords="265,115,10" onclick="mensaje16()">
+                      <!--Boca-->
+                       <area shape="circle" coords="75,93,5"   onclick="mensaje12()">
+                       <area shape="circle" coords="263,98,5"  onclick="mensaje12()">
+                      <!--Nariz-->
+                       <area shape="circle" coords="75,83,5"  onclick="mensaje13()">
+                       <area shape="circle" coords="263,88,5" onclick="mensaje13()">
+                    </map>
+									</div>
+        <button mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
+      </div>
+      <span class="space"></span>
+    </div>
+  </mat-card>
+</div>
