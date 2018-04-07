@@ -9,7 +9,7 @@ var retardo;
 var parte = new Array('Cabeza', 'Mano', 'Pierna', 'Pie', 'Dedos', 'Cuello', 'Pecho', 'Rodilla', 'Orejas', 'Ojos', 'Nariz');
 var radioBotones = document.getElementsByName("niveles");
 
-function Instrucciones(){  
+function Instrucciones(){
    swal("Instrucciones",
     "Se muestra un texto con el nombre de una parte del cuerpo. El paciente deberá hacer click sobre la parte del cuerpo correspondiente sobre el dibujo del cuerpo.");
 }
@@ -59,7 +59,7 @@ function saveResults(){
 	preguntas = -1;
     document.getElementById("aciertos").innerHTML = 0;
     document.getElementById("errores").innerHTML = 0;
-	document.getElementById("comienzo").style.visibility = "visible"; 
+	document.getElementById("comienzo").style.visibility = "visible";
 	for(var i = 0; i<radioBotones.length; i++){
 		radioBotones[i].disabled = false;
 	}
@@ -68,7 +68,7 @@ function saveResults(){
 
  function setNivel(unNivel){
 	nivel = unNivel;
-	document.getElementById("nivel").innerHTML = nivel;
+//	document.getElementById("level").innerHTML = nivel;
     if(unNivel === 1){
 		cantidad = 3;
     }
@@ -83,9 +83,9 @@ function saveResults(){
     }
     if(unNivel === 5){
 		cantidad = 25;
-    } 
+    }
  }
- 
+
  function validarResultados(respuesta){
 	if (res === respuesta){
 		aciertos++;

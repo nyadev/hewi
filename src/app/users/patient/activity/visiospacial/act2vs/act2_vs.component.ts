@@ -9,7 +9,7 @@ const url = './assets/scripts/visiospacial/scriptAct2.js';
   styleUrls: ['./act2_vs.component.css', '../../activity.component.css']
 })
 
-export class Act2vsComponent implements OnInit {
+export class Act2VsComponent implements OnInit {
 
     loadAPI: Promise<any>;
 
