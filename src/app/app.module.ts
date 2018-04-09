@@ -15,10 +15,12 @@ import { RegisterTherapistComponent } from './users/admin/therapist/register/reg
 
 // Actividades
 // Atencion
-import { Act2AtComponent } from './users/patient/activity/atention/act2/act2.component';
+import { Act2AtComponent } from './users/patient/activity/atention/act2at/act2_at.component';
 // visioespaciales
 import { Act1VsComponent } from './users/patient/activity/visiospacial/act1vs/act1_vs.component';
 import { Act2VsComponent } from './users/patient/activity/visiospacial/act2vs/act2_vs.component';
+import { Act3VsComponent } from './users/patient/activity/visiospacial/act3vs/act3_vs.component';
+import { Act4VsComponent } from './users/patient/activity/visiospacial/act4vs/act4_vs.component';
 
 import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
 import { SessionComponent } from './users/therapist/diary/sessions/session.component';
@@ -39,12 +41,8 @@ import { AuthService } from './auth/auth.service';
     HomeComponent,
     RegisterTherapistComponent,
     RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
-<<<<<<< HEAD
-    Act2AtComponent, Act1VsComponent, Act2VsComponent,
-=======
-    Act2AtComponent, Act1VsComponent, Act2VsComponent, Act3VsComponent,
-    Act4VsComponent,
->>>>>>> 3cd65901d995e283df63db69e4d79b8721d9be15
+    Act2AtComponent,
+    Act1VsComponent, Act2VsComponent, Act3VsComponent, Act4VsComponent,
     RegisterTherapistComponent,
     RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
     SigninComponent,

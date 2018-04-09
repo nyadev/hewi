@@ -7,8 +7,8 @@ const url = './assets/scripts/atention/scriptAct2.js';
 
 @Component({
   selector: 'app-act2-at',
-  templateUrl: './act2.component.html',
-  styleUrls: ['./act2.component.css', '../../activity.component.css']
+  templateUrl: './act2_at.component.html',
+  styleUrls: ['./act2_at.component.css', '../../activity.component.css']
 })
 
 export class Act2AtComponent implements OnInit {
