@@ -39,7 +39,12 @@ import { AuthService } from './auth/auth.service';
     HomeComponent,
     RegisterTherapistComponent,
     RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
+<<<<<<< HEAD
     Act2AtComponent, Act1VsComponent, Act2VsComponent,
+=======
+    Act2AtComponent, Act1VsComponent, Act2VsComponent, Act3VsComponent,
+    Act4VsComponent,
+>>>>>>> 3cd65901d995e283df63db69e4d79b8721d9be15
     RegisterTherapistComponent,
     RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
     SigninComponent,

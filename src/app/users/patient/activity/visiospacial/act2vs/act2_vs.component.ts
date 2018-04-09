@@ -32,6 +32,7 @@ export class Act2VsComponent implements OnInit {
 
     instructions() {
       swal('Instrucciones',
-      'Aquí se mostrarán  las instrucciones, estoy en el component ts');
+    'Se muestra un texto con el nombre de una parte del cuerpo.' +
+    'El paciente deberá hacer click sobre la parte del cuerpo correspondiente sobre el dibujo del cuerpo.');
     }
 }

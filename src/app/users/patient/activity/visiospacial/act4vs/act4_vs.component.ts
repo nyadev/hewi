@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Activity } from '../../activity.model';
 import swal from 'sweetalert';
 
-const url = './assets/scripts/visiospacial/scriptAct1.js';
+const url = './assets/scripts/visiospacial/scriptAct4.js';
 
 @Component({
-  selector: 'app-act1-vs',
-  templateUrl: './act1_vs.component.html',
-  styleUrls: ['./act1_vs.component.css', '../../activity.component.css']
+  selector: 'app-act4-vs',
+  templateUrl: './act4_vs.component.html',
+  styleUrls: ['./act4_vs.component.css', '../../activity.component.css']
 })
 
-export class Act1VsComponent implements OnInit {
+export class Act4VsComponent implements OnInit {
 
     loadAPI: Promise<any>;
 
@@ -31,7 +31,9 @@ export class Act1VsComponent implements OnInit {
     }
 
     instructions() {
-      swal('Instrucciones',
-      'Presiona el boton para iniciar la animación, puedes incrementar la velocidad de la animacion');
+       swal('Instrucciones',
+       'Aparece una letra grande (H o S) conformada por otras más pequeñas (H o S), el objetivo es identificar' +
+       'la mayor cantidad de letras grandes (H o S) indicada ' +
+       'antes de iniciar la actividad, haciendo click en el botón Correcto de lo contrario dar click en el botón Incorrecto');
     }
 }

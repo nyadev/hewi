@@ -1,0 +1,56 @@
+<div class="divider">
+  <mat-card class="activity">
+    <mat-card-header>
+      <mat-toolbar color="primary">
+        <span>Actividad 4 Visio espacial</span>
+        <span class="space"></span>
+        <button mat-mini-fab id="comienzo" onclick="iniciarEjercicio()"><mat-icon>play_arrow</mat-icon></button>
+        <span class="spacer"></span>
+        <img src="" id="0" name="figure" class="estimulo clave">
+        <span class="spacer"></span>
+        <div id="aciertos" class="aciertos">0</div><mat-icon class="aciertos">done</mat-icon>
+        <span class="spacer"></span>
+        <div id="errores" class="errores">0</div><mat-icon class="errores">clear</mat-icon>
+      </mat-toolbar>
+    </mat-card-header>
+    <div class="activity-container">
+      <span class="space"></span>
+      <div class="activity-content">
+        <div id="opcionesBox" style="background:red; visibility:hidden;">
+        </div>
+        <div id="estimuloBox" style="background: white; visibility:visible;">
+        <canvas id="canvasEstimulo" width="200" height="150" style=" border: 0px solid #000000"></canvas>
+            <div style=" background:white;">
+        <button mat-raised-button name="btn1" onclick="validarIguales(0)" id="btnCorrecto" style="display:none"><i class="icon-star"> </i>Correcto</button>
+        <button mat-raised-button name="btn2" onclick="validarIguales(1)" id="btnIncorrecto" style="display:none">Incorrecto</button>
+            </div>
+        </div>
+        <div id="resultadosBox" style="top:0px;  background: white; visibility: hidden;">
+        <button mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
+        </div>
+      </div>
+      <span class="space"></span>
+    </div>
+  </mat-card>
+  <mat-card class="level">
+    <mat-card-header>
+      <mat-toolbar color="primary">
+        <span>Nivel: </span><span id="level">1</span>
+      </mat-toolbar>
+    </mat-card-header>
+    <div class="nivel">
+      <div class="radio">
+            <label>
+                <input type="radio" name="niveles" onclick="setNivel(1);" value="1" checked/>
+                Nivel 1. Marca correcto cada que aparezca una H grande sin importar con que letras este formada.
+                <br>
+            </label>
+            <label>
+                <input type="radio" name="niveles" onclick="setNivel(2);" value="2"/>
+                Nivel 2. Marca correcto cada que aparezca una S grande sin importar con que letras este formada.
+                <br>
+            </label>
+        </div>
+    </div>
+  </mat-card>
+</div>
