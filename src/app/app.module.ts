@@ -21,6 +21,10 @@ import { Act1VsComponent } from './users/patient/activity/visiospacial/act1vs/ac
 import { Act2VsComponent } from './users/patient/activity/visiospacial/act2vs/act2_vs.component';
 import { Act3VsComponent } from './users/patient/activity/visiospacial/act3vs/act3_vs.component';
 import { Act4VsComponent } from './users/patient/activity/visiospacial/act4vs/act4_vs.component';
+import { Act5VsComponent } from './users/patient/activity/visiospacial/act5vs/act5_vs.component';
+import { Act6VsComponent } from './users/patient/activity/visiospacial/act6vs/act6_vs.component';
+import { Act7VsComponent } from './users/patient/activity/visiospacial/act7vs/act7_vs.component';
+import { Act8VsComponent } from './users/patient/activity/visiospacial/act8vs/act8_vs.component';
 
 import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
 import { SessionComponent } from './users/therapist/diary/sessions/session.component';
@@ -43,6 +47,7 @@ import { AuthService } from './auth/auth.service';
     RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
     Act2AtComponent,
     Act1VsComponent, Act2VsComponent, Act3VsComponent, Act4VsComponent,
+    Act5VsComponent, Act6VsComponent, Act7VsComponent, Act8VsComponent,
     RegisterTherapistComponent,
     RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
     SigninComponent,
