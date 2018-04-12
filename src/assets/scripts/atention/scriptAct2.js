@@ -43,7 +43,7 @@ function begin() {
 
 function setLevel(n){
     level = n;
-    document.getElementById("level").innerHTML = n;
+    document.getElementById("level").value = n;
 }
 
 function assingKey(){
@@ -144,5 +144,8 @@ function saveResults(){
     document.getElementById("save-results").style.display = "none";
     document.getElementById("aciertos").value = "0";
     document.getElementById("errores").value = "0";
+    for(var i = 0; i < radioBotones.length; i++){
+      radioBotones[i].disabled = false;
+    }
     return;
 }

@@ -1,112 +1,115 @@
-<div class="divider">
-  <mat-card class="activity">
-    <mat-card-header>
-      <mat-toolbar color="primary">
-        <span>Actividad</span>
+<button type="button" mat-mini-fab id="begin" onclick="begin()"><mat-icon>play_arrow</mat-icon></button>
+<form [formGroup]="activityForm" class="activity-form" (ngSubmit)="onSubmit()">
+  <div class="divider">
+    <mat-card class="activity">
+      <mat-card-header>
+        <mat-toolbar color="primary">
+          <span>Actividad <input matInput formControlName="number" id="number" type="number" value="2" readonly /></span>
+          <span class="space"></span>
+
+          <span class="spacer"></span>
+          <img src="" id="0" name="figure" class="estimulo clave">
+          <span class="spacer"></span>
+          <mat-input-container><input matInput formControlName="aciertos" id="aciertos" class="aciertos" type="number" value="0" readonly /></mat-input-container>
+          <span class="spacer"></span>
+          <mat-input-container><input matInput formControlName="errores" id="errores" class="errores" type="number" value="0" readonly /></mat-input-container>
+
+        </mat-toolbar>
+      </mat-card-header>
+      <div class="activity-container">
         <span class="space"></span>
-        <button mat-mini-fab id="begin" onclick="begin()"><mat-icon>play_arrow</mat-icon></button>
-        <span class="spacer"></span>
-        <img src="" id="0" name="figure" class="estimulo clave">
-        <span class="spacer"></span>
-        <mat-input-container><input matInput id="aciertos" class="aciertos" type="number" value="0" readonly /></mat-input-container>
-        <span class="spacer"></span>
-        <mat-input-container><input matInput id="errores" class="errores" type="number" value="0" readonly /></mat-input-container>
-
-      </mat-toolbar>
-    </mat-card-header>
-    <div class="activity-container">
-      <span class="space"></span>
-      <div class="activity-content">
-        <table>
-          <tr>
-              <td><a><img src="" id="1" class="estimulo" onclick="validate(id,src)"></a></td>
-              <td><img src="" id="2" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="3" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="4" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="5" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="6" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="7" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="8" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-          </tr>
-          <!---->
-          <tr>
-              <td><img src="" id="9" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="10" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="11" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="12" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="13" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="14" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="15" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="16" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-          </tr>
-          <!---->
-          <tr>
-              <td><img src="" id="17" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="18" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="19" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="20" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="21" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="22" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="23" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="24" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-          </tr>
-          <!---->
-          <tr>
-              <td><img src="" id="25" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="26" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="27" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="28" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="29" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="30" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="31" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="32" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-          </tr>
-          <!---->
-          <tr>
-              <td><img src="" id="33" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="34" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="35" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="36" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="37" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="38" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="39" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-              <td><img src="" id="40" name="figure" class="estimulo" onclick="validate(id,src)"></td>
-          </tr>
-        </table>
-        <button mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
+        <div class="activity-content">
+          <table>
+            <tr>
+                <td><a><img src="" id="1" class="estimulo" onclick="validate(id,src)"></a></td>
+                <td><img src="" id="2" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="3" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="4" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="5" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="6" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="7" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="8" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td><img src="" id="9" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="10" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="11" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="12" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="13" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="14" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="15" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="16" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td><img src="" id="17" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="18" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="19" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="20" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="21" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="22" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="23" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="24" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td><img src="" id="25" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="26" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="27" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="28" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="29" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="30" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="31" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="32" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+            </tr>
+            <!---->
+            <tr>
+                <td><img src="" id="33" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="34" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="35" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="36" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="37" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="38" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="39" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+                <td><img src="" id="40" name="figure" class="estimulo" onclick="validate(id,src)"></td>
+            </tr>
+          </table>
+          <button mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
+        </div>
+        <span class="space"></span>
       </div>
-      <span class="space"></span>
-    </div>
-  </mat-card>
-  <mat-card class="level">
-    <mat-card-header>
-      <mat-toolbar color="primary">
-        <span>Nivel: </span><span id="level">1</span>
-      </mat-toolbar>
-    </mat-card-header>
-    <div class="nivel">
-      <label>
-          <input type="radio" name="nivel" onclick="setLevel(1);" value="1" checked/>
-          Nivel 1:  Los estímulos irán apareciendo uno por uno de derecha a izquierda y de arriba abajo, el estímulo clave se encontrará de color rojo.
-      </label>
-      <br><label>
-          <input type="radio" name="nivel" onclick="setLevel(2);" value="2"/>
-          Nivel 2: Los estímulos irán apareciendo uno por uno de derecha a izquierda y de arriba abajo, el estímulo aparecerá del mismo color (Negro)
+    </mat-card>
+    <mat-card class="level">
+      <mat-card-header>
+        <mat-toolbar color="primary">
+          <mat-input-container>Nivel: <input matInput formControlName="level" id="level" type="number" value="1" readonly /></mat-input-container>
+        </mat-toolbar>
+      </mat-card-header>
+      <div class="nivel">
+        <label>
+            <input type="radio" name="nivel" onclick="setLevel(1);" value="1" checked/>
+            Nivel 1:  Los estímulos irán apareciendo uno por uno de derecha a izquierda y de arriba abajo, el estímulo clave se encontrará de color rojo.
+        </label>
+        <br><label>
+            <input type="radio" name="nivel" onclick="setLevel(2);" value="2"/>
+            Nivel 2: Los estímulos irán apareciendo uno por uno de derecha a izquierda y de arriba abajo, el estímulo aparecerá del mismo color (Negro)
 
-      </label>
-      <br><label>
-          <input type="radio" name="nivel" onclick="setLevel(3);" value="3"/>
-          Nivel 3: Los estímulos aparecerán al mismo tiempo como la muestra de abajo pero el estímulo clave será Rojo
+        </label>
+        <br><label>
+            <input type="radio" name="nivel" onclick="setLevel(3);" value="3"/>
+            Nivel 3: Los estímulos aparecerán al mismo tiempo como la muestra de abajo pero el estímulo clave será Rojo
 
-      </label>
-      <br><label>
-          <input type="radio" name="nivel" onclick="setLevel(4);"  value="4"/>
-          Nivel 4: Los estímulos aparecerán al mismo tiempo como la muestra de abajo pero el estímulo clave será del mismo color y el niño tendrá 2 minutos para realizar la actividad.
-      </label>
-      <br><label>
-          <input type="radio" name="nivel" onclick="setLevel(5);" value="5"/>
-          Nivel 5: Los estímulos aparecerán al mismo tiempo como la muestra de abajo pero el estímulo clave será del mismo color y tendrá solo un minuto para encontrar todos.
-      </label>
-    </div>
-  </mat-card>
-</div>
+        </label>
+        <br><label>
+            <input type="radio" name="nivel" onclick="setLevel(4);"  value="4"/>
+            Nivel 4: Los estímulos aparecerán al mismo tiempo como la muestra de abajo pero el estímulo clave será del mismo color y el niño tendrá 2 minutos para realizar la actividad.
+        </label>
+        <br><label>
+            <input type="radio" name="nivel" onclick="setLevel(5);" value="5"/>
+            Nivel 5: Los estímulos aparecerán al mismo tiempo como la muestra de abajo pero el estímulo clave será del mismo color y tendrá solo un minuto para encontrar todos.
+        </label>
+      </div>
+    </mat-card>
+  </div>
+</form>

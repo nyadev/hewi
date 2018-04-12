@@ -51,6 +51,10 @@ mat-list-item:hover{
   height: 50%;
 }
 
+.name{
+  color: #d80fc4;
+}
+
 @media screen and (max-width: 800px){
     .content{
       display: inline-block;

@@ -1,0 +1,15 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div *ngIf="!loading" class="patient-detail">
+  <mat-card>
+    <h1>{{ patient.firstName }} {{ patient.pName }} {{ patient.mName }}</h1>
+    <h3 class="curp">{{ patient.curp }}</h3>
+    <h3>Paciente</h3>
+  </mat-card>
+  <h1>Expediente</h1>
+  <mat-card *ngFor="let activity of activities">
+    <h2>Actividad {{ activity.numberOf }}</h2>
+    <h3>Aciertos: {{ activity.corrects }}</h3>
+    <h3>Errores: {{ activity.fails }}</h3>
+    <h3>Nivel: {{ activity.level }}</h3>
+  </mat-card>
+</div>

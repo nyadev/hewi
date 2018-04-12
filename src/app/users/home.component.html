@@ -6,6 +6,11 @@
           <div mat-card-avatar><mat-icon>info_outline</mat-icon></div>
           <mat-card-title>Información</mat-card-title>
         </mat-card-header>
+        <h2 class="name">{{ currentUser.firstName }} {{ currentUser.pName }} {{ currentUser.mName }}</h2>
+        <br />
+        <h3>Administrador</h3>
+        <br />
+        <h3>email: {{ currentUser.email }}</h3>
       </mat-card>
     </div>
     <div class="menu">
@@ -26,7 +31,7 @@
             <mat-card-title>Paciente</mat-card-title>
           </mat-card-header>
           <mat-list>
-            <mat-list-item [routerLink]="['admin', 'register-therapist']">Confirmación</mat-list-item>
+            <mat-list-item [routerLink]="['admin', 'confirm-patient']">Confirmación</mat-list-item>
           </mat-list>
         </div>
       </mat-card>
@@ -39,6 +44,11 @@
           <div mat-card-avatar><mat-icon>info_outline</mat-icon></div>
           <mat-card-title>Información</mat-card-title>
         </mat-card-header>
+        <h2 class="name">{{ currentUser.firstName }} {{ currentUser.pName }} {{ currentUser.mName }}</h2>
+        <br />
+        <h3>Terapeuta</h3>
+        <br />
+        <h3>email: {{ currentUser.email }}</h3>
       </mat-card>
     </div>
     <div class="menu">
@@ -71,6 +81,11 @@
           <div mat-card-avatar><mat-icon>info_outline</mat-icon></div>
           <mat-card-title>Información</mat-card-title>
         </mat-card-header>
+        <h2 class="name">{{ currentUser.firstName }} {{ currentUser.pName }} {{ currentUser.mName }}</h2>
+        <br />
+        <h3>Paciente</h3>
+        <br />
+        <h3>email: {{ currentUser.email }}</h3>
       </mat-card>
     </div>
     <div class="aat">

@@ -6,14 +6,32 @@ const debug = new Debug('Hewi:auth')
 
 export const users = [
   {
-    email: 'ernestomoor@hewi.com',
+    email: 'ernestomoor@email.com',
     password: '123456',
     firstName: 'Ernesto',
-    pName: 'ApellidoPaterno',
-    mName: 'ApellidoMaterno',
+    pName: 'Morales',
+    mName: 'Ortega',
     curp: 'CURP',
+    userType: 'admin'
+  },
+  {
+    email: 'axel_cuevaso@hotmail.com',
+    password: '123456',
+    firstName: 'Axel',
+    pName: 'Cuevas',
+    mName: 'Olvera',
+    curp: 'CUOI001111HDFVLNA5',
     userType: 'therapist'
-  }
+  },
+  {
+    email: 'axelcuevas321@gmail.com',
+    password: '123456',
+    firstName: 'Andrés',
+    pName: 'Lopez',
+    mName: 'Esquivel',
+    curp: 'CURPNOREALPRUEBAA',
+    userType: 'patient'
+  },
 ]
 
 export const findUserByEmail = e => users.find(({ email }) => email === e)
@@ -24,7 +42,7 @@ export const required = (req, res, next) => {
       debug('JWTF was not encrypted with our secret')
       return res.status(401).json({
         message: 'Unauthorized',
-        errror: err
+        error: err
       })
     }
 

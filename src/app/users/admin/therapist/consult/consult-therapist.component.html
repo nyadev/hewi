@@ -1,5 +1,5 @@
 <mat-card class="centered">
-  <h1 class="title">Pacientes</h1>
+  <h1 class="title">Terapeutas</h1>
 </mat-card>
 <mat-card>
   <mat-spinner *ngIf="loading"></mat-spinner>
@@ -12,11 +12,11 @@
           <th mat-sort-header="LNameM">Apellido materno</th>
       </tr>
 
-     <tr *ngFor="let patient of patients">
-        <td><a md-button color="primary" [routerLink]="['/therapist', 'consult', patient.curp]">{{ patient.curp }}</a></td>
-        <td>{{ patient.firstName }}</td>
-        <td>{{ patient.pName }}</td>
-        <td>{{ patient.mName }}</td>
+     <tr *ngFor="let therapist of therapists">
+        <td><a md-button color="primary" [routerLink]="['/admin', 'consult', therapist.curp]">{{ therapist.curp }}</a></td>
+        <td>{{ therapist.firstName }}</td>
+        <td>{{ therapist.pName }}</td>
+        <td>{{ therapist.mName }}</td>
       </tr>
     </table>
   </div>

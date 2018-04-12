@@ -11,21 +11,21 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ConsultService {
 
-    private patientUrl: string;
+    private therapistUrl: string;
 
     constructor(private http: Http) {
-      this.patientUrl = urljoin(environment.apiUrl, 'user/patients');
+      this.therapistUrl = urljoin(environment.apiUrl, 'user/therapists');
     }
 
-    getPatients(): Promise<void | User[] > {
-      return this.http.get(this.patientUrl)
+    getTherapists(): Promise<void | User[] > {
+      return this.http.get(this.therapistUrl)
         .toPromise()
         .then(response => response.json() as User[])
         .catch(this.handleError);
     }
 
-    getPatient(curp): Promise<void | User > {
-      const url = urljoin(this.patientUrl, curp);
+    getTherapist(curp): Promise<void | User > {
+      const url = urljoin(this.therapistUrl, curp);
       return this.http.get(url)
         .toPromise()
         .then(response => response.json() as User)

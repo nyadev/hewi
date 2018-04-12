@@ -1,5 +1,5 @@
 export class Activity {
-  id_user: number;
+  curp: string;
   type: number;
   numberOf: number;
   level?: number;
@@ -8,7 +8,7 @@ export class Activity {
   date?: Date;
 
   constructor(
-    id_user: number,
+    curp: string,
     type: number,
     numberOf: number,
     level?: number,
@@ -16,7 +16,7 @@ export class Activity {
     fails?: number,
     date?: Date
   ) {
-    this.id_user = id_user;
+    this.curp = curp;
     this.type = type;
     this.numberOf = numberOf;
     this.level = level;

@@ -1,0 +1,9 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div *ngIf="!loading" class="therapist-detail">
+  <mat-card>
+    <h1>{{ therapist.firstName }} {{ therapist.pName }} {{ therapist.mName }}</h1>
+    <h3 class="curp">{{ therapist.curp }}</h3>
+    <h3>Terapeuta</h3>
+    <h3 class="email">{{ therapist.email }}</h3>
+  </mat-card>
+</div>

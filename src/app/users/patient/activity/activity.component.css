@@ -59,11 +59,15 @@ mat-card{
 }
 
 mat-input-container{
-  width: 4%;
+  width: 40px;
 }
 
 ::ng-deep .mat-input-underline {
     display: none;
+}
+
+.activity-form{
+  display: contents;
 }
 
 @media screen and (max-width: 800px){

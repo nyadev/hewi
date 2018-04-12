@@ -5,23 +5,31 @@ import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../../auth/auth.service';
+import { ConsultService } from '../../patient/consult/consult.service';
+import { User } from '../../../../auth/user.model';
 
 @Component({
   selector: 'app-therapist-session',
   templateUrl: './session.component.html',
   styleUrls: ['./session.component.css'],
-  providers: [ SessionService ]
+  providers: [ SessionService, ConsultService ]
 })
 export class SessionComponent implements OnInit {
 
     sessionForm: FormGroup;
 
-  constructor(private sessionService: SessionService, private authService: AuthService, private router: Router) {
+  constructor(
+    private sessionService: SessionService,
+    private authService: AuthService,
+    private consultService: ConsultService,
+    private router: Router) {
 
   }
     sessions: Session[];
+    patients: User[];
     sessionsDate: Session[];
     loading = true;
+    today: Date = new Date();
 
    ngOnInit() {
      this.sessionForm = new FormGroup({
@@ -38,6 +46,13 @@ export class SessionComponent implements OnInit {
           this.sessions = sessions;
           this.loading = false;
         });
+
+        this.consultService
+           .getPatients()
+           .then((patients: User[]) => {
+             this.patients = patients;
+             this.loading = false;
+           });
    }
 
    onSubmit(form: NgForm) {
@@ -72,9 +87,5 @@ export class SessionComponent implements OnInit {
           this.sessions = sessions.filter(compareDate);
           this.loading = false;
         });
-   }
-
-   getToday() {
-     return '2018-04-10';
    }
 }

@@ -6,7 +6,8 @@ import urljoin from 'url-join';
 import 'rxjs/add/operator/toPromise';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/Rx';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class SessionService {

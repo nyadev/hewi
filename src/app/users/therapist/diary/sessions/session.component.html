@@ -3,16 +3,16 @@
   <form  [formGroup]="sessionForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
   <div class="form-group">
       <mat-form-field >
-      <input
-       matInput
-       placeholder="CURP"
-       formControlName="curp"
-       id="curp"
-       />
+        <mat-select placeholder="CURP" formControlName="curp" id="curp">
+          <mat-option *ngFor="let patient of patients" [value]="patient.curp">
+            {{ patient.curp }}
+          </mat-option>
+        </mat-select>
      </mat-form-field>
      <mat-form-field >
       <input
        matInput
+       type="time"
        placeholder="Hora"
        formControlName="hora"
        id="hora"
@@ -24,14 +24,16 @@
       [matDatepicker]="pickerTo"
       placeholder="Fecha"
       formControlName="fecha"
-      min="getToday()"
-      id="fecha"/>
+      [min]="today"
+      id="fecha"
+      readonly/>
       <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
       <mat-datepicker #pickerTo></mat-datepicker>
     </mat-form-field>
     <mat-form-field>
       <input
        matInput
+       type="number"
        placeholder="# de Sesión"
        formControlName="noSession"
        id="noSession"

@@ -11,7 +11,16 @@ import { MaterialModule } from './material.module';
 import 'hammerjs';
 
 // Custom Components
+//Administrador
 import { RegisterTherapistComponent } from './users/admin/therapist/register/register-therapist.component';
+import { ConsultTherapistComponent } from './users/admin/therapist/consult/consult-therapist.component';
+import { TherapistDetailComponent } from './users/admin/therapist/detail/therapist-detail.component';
+
+// Terapeuta
+import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
+import { SessionComponent } from './users/therapist/diary/sessions/session.component';
+import { ConsultPatientComponent } from './users/therapist/patient/consult/consult-patient.component';
+import { PatientDetailComponent } from './users/therapist/patient/detail/patient-detail.component';
 
 // Actividades
 // Atencion
@@ -29,10 +38,6 @@ import { Act10VsComponent } from './users/patient/activity/visiospacial/act10vs/
 import { Act11VsComponent } from './users/patient/activity/visiospacial/act11vs/act11_vs.component';
 import { Act16VsComponent } from './users/patient/activity/visiospacial/act16vs/act16_vs.component';
 
-import { RegisterPatientComponent } from './users/therapist/patient/register/register-patient.component';
-import { SessionComponent } from './users/therapist/diary/sessions/session.component';
-import { ConsultPatientComponent } from './users/therapist/patient/consult/consult-patient.component';
-
 import { HomeComponent } from './users/home.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
@@ -46,8 +51,8 @@ import { AuthService } from './auth/auth.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    RegisterTherapistComponent,
-    RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
+    RegisterTherapistComponent,ConsultTherapistComponent, TherapistDetailComponent,
+    PatientDetailComponent, ConsultPatientComponent, SessionComponent,
     Act2AtComponent,
     Act1VsComponent, Act2VsComponent, Act3VsComponent, Act4VsComponent,
     Act5VsComponent, Act6VsComponent, Act7VsComponent, Act8VsComponent,

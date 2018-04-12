@@ -5,31 +5,31 @@ import { Router } from '@angular/router';
 import { User } from '../../../../auth/user.model';
 
 @Component({
-  selector: 'app-consult-patient',
-  templateUrl: './consult-patient.component.html',
-  styleUrls: ['./consult-patient.component.css'],
+  selector: 'app-consult-therapist',
+  templateUrl: './consult-therapist.component.html',
+  styleUrls: ['./consult-therapist.component.css'],
   providers: [ ConsultService ]
 })
 
-export class ConsultPatientComponent implements OnInit {
+export class ConsultTherapistComponent implements OnInit {
 
   constructor(private consultService: ConsultService) {
 
   }
 
-  consultpatientForm: FormGroup;
-  patients: User[];
+  consulttherapistForm: FormGroup;
+  therapists: User[];
   loading = true;
 
   ngOnInit() {
-    this.consultpatientForm = new FormGroup({
+    this.consulttherapistForm = new FormGroup({
       curp: new FormControl(null, Validators.required),
     });
 
     this.consultService
-       .getPatients()
-       .then((patients: User[]) => {
-         this.patients = patients;
+       .getTherapists()
+       .then((therapists: User[]) => {
+         this.therapists = therapists;
          this.loading = false;
        });
   }
