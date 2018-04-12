@@ -10,9 +10,10 @@ import { Router } from '@angular/router';
 })
 
 export class HomeComponent {
+  currentUser: User = this.authService.currentUser;
   constructor(private authService: AuthService, private router: Router) {}
 
   getUserType() {
-    return this.authService.currentUser.userType + '';
+    return this.authService.currentUser.userType;
   }
 }

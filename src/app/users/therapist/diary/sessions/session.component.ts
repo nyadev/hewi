@@ -16,7 +16,7 @@ export class SessionComponent implements OnInit {
 
     sessionForm: FormGroup;
 
-  constructor(private sessionService: SessionService, private authService: AuthService) {
+  constructor(private sessionService: SessionService, private authService: AuthService, private router: Router) {
 
   }
     sessions: Session[];
@@ -41,7 +41,7 @@ export class SessionComponent implements OnInit {
    }
 
    onSubmit(form: NgForm) {
-      const s = new Session(
+      const session = new Session(
       null,
       this.authService.currentUser.curp,
       form.value.curp,
@@ -50,9 +50,10 @@ export class SessionComponent implements OnInit {
       form.value.noSession,
       form.value.observaciones
       );
-     this.sessionService.addSession(s)
+     this.sessionService
+     .addSession(session)
      .subscribe(
-       ({ _id }) => console.log(_id),
+       s => this.sessions.push(s),
        error => console.log(error)
      );
      form.resetForm();
@@ -71,5 +72,9 @@ export class SessionComponent implements OnInit {
           this.sessions = sessions.filter(compareDate);
           this.loading = false;
         });
+   }
+
+   getToday() {
+     return '2018-04-10';
    }
 }

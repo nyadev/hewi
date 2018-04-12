@@ -1,27 +1,17 @@
 import express from 'express'
+import {
+  required,
+  sessionMiddleware,
+} from '../middleware';
 
 const app = express.Router()
 
-const totalDate = new Date();
+app.get('/', sessionMiddleware, (req, res) => res.status(200).json(req.sessions))
 
-const session = {
-  id: 1,
-  curpt: 'CURPT',
-  curpp: 'CURP',
-  date: totalDate.toLocaleDateString('en-US'),
-  time: totalDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
-  sessionnumber: 3,
-  notes: 'Esto sólo son observaciones de prueba para ver como es que se acomoda en la tabla',
-}
-
-const sessions = new Array(2).fill(session)
-
-app.get('/', (req, res) => res.status(200).json(sessions))
-
-app.post('/',(req , res) =>{
+app.post('/', required, sessionMiddleware, (req , res) =>{
     const session = req.body
     session.id = 2
-    sessions.push(session)
+    req.sessions.push(session)
     res.status(201).json(session)
 })
 

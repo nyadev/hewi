@@ -9,7 +9,7 @@ const activity = {
   level: 4,
   corrects: 10,
   fails: 2,
-  ntry: 1
+  date: new Date
 }
 
 const activities = new Array(10).fill(activity)

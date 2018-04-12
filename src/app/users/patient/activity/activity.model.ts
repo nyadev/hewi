@@ -5,7 +5,7 @@ export class Activity {
   level?: number;
   corrects?: number;
   fails?: number;
-  ntry?: number;
+  date?: Date;
 
   constructor(
     id_user: number,
@@ -14,7 +14,7 @@ export class Activity {
     level?: number,
     corrects?: number,
     fails?: number,
-    ntry?: number
+    date?: Date
   ) {
     this.id_user = id_user;
     this.type = type;
@@ -22,6 +22,6 @@ export class Activity {
     this.level = level;
     this.corrects = corrects;
     this.fails = fails;
-    this.ntry = ntry;
+    this.date = date;
   }
 }

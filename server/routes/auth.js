@@ -1,25 +1,11 @@
 import express from 'express'
 import Debug from 'debug'
 import jwt from 'jsonwebtoken'
+import { secret } from '../config'
+import { findUserByEmail, users } from '../middleware'
 
 const app = express.Router()
 const debug = new Debug('Hewi:auth')
-
-const secret = 'miclavesecreta';
-
-const users = [
-  {
-    email: 'ernestomoor@hewi.com',
-    password: '123456',
-    firstName: 'Ernesto',
-    pName: 'ApellidoPaterno',
-    mName: 'ApellidoMaterno',
-    curp: 'CURP',
-    userType: 'patient'
-  }
-]
-
-const findUserByEmail = e => users.find(({ email }) => email === e)
 
 function comparePasswords(providedPassword, userPassword) {
   return providedPassword === userPassword

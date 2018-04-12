@@ -35,8 +35,9 @@ export class SessionService {
    addSession(session: Session) {
       const body = JSON.stringify(session);
       const headers = new Headers({ 'Content-Type': 'application/json' });
+      const token = this.getToken();
 
-      return this.http.post(this.sessionUrl, body, { headers })
+      return this.http.post(this.sessionUrl + token, body, { headers })
       .map((response: Response) => response.json())
       .catch((error: Response) => Observable.throw(error.json()));
     }
@@ -45,5 +46,10 @@ export class SessionService {
       const errMsg = error.message ? error.message :
       error.status ? `${error.status}-${error.statusText}` : 'Server error';
       console.log(errMsg);
+    }
+
+    getToken() {
+      const token = localStorage.getItem('token');
+      return `?token=${token}`;
     }
 }

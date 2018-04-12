@@ -24,6 +24,7 @@
       [matDatepicker]="pickerTo"
       placeholder="Fecha"
       formControlName="fecha"
+      min="getToday()"
       id="fecha"/>
       <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
       <mat-datepicker #pickerTo></mat-datepicker>
@@ -74,7 +75,7 @@
         </tr>
 
         <tr *ngFor="let session of sessions">
-          <td>{{ session.curpp }}</td>
+          <td><a md-button color="primary" [routerLink]="['therapist', 'consult', session.curpp]">{{ session.curpp }}</a></td>
           <td>{{ session.date }}</td>
           <td>{{ session.time }}</td>
           <td>{{ session.sessionnumber }}</td>

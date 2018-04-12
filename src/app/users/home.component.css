@@ -55,8 +55,8 @@ mat-list-item:hover{
     .content{
       display: inline-block;
     }
-    .data, .aat, .avs{
-      width: 95%;
+    .data, .aat, .avs, .menu{
+      width: 100%;
     }
     .data, .aat, .avs{
       height: auto;

@@ -32,8 +32,37 @@
       </mat-card>
     </div>
   </div>
-  <div class="therapsit" *ngIf="getUserType() === 'therapsit'">
-
+  <div class="therapsit" *ngIf="getUserType() === 'therapist'">
+    <div class="data">
+      <mat-card color="primary">
+        <mat-card-header>
+          <div mat-card-avatar><mat-icon>info_outline</mat-icon></div>
+          <mat-card-title>Información</mat-card-title>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <div class="menu">
+      <mat-card>
+        <div class="divider">
+          <mat-card-header>
+            <div mat-card-avatar><mat-icon>date_range</mat-icon></div>
+            <mat-card-title>Agenda</mat-card-title>
+          </mat-card-header>
+          <mat-list>
+            <mat-list-item [routerLink]="['therapist', 'sessions']">Sesiones</mat-list-item>
+          </mat-list>
+        </div>
+        <div class="divider">
+          <mat-card-header>
+            <div mat-card-avatar><mat-icon>child_care</mat-icon></div>
+            <mat-card-title>Paciente</mat-card-title>
+          </mat-card-header>
+          <mat-list>
+            <mat-list-item [routerLink]="['therapist', 'register-therapist']">Consulta</mat-list-item>
+          </mat-list>
+        </div>
+      </mat-card>
+    </div>
   </div>
   <div class="patient" *ngIf="getUserType() === 'patient'">
     <div class="data">
