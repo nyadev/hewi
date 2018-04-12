@@ -10,6 +10,7 @@ import { Act5VsComponent } from './activity/visiospacial/act5vs/act5_vs.componen
 import { Act6VsComponent } from './activity/visiospacial/act6vs/act6_vs.component';
 import { Act7VsComponent } from './activity/visiospacial/act7vs/act7_vs.component';
 import { Act8VsComponent } from './activity/visiospacial/act8vs/act8_vs.component';
+import { Act16VsComponent } from './activity/visiospacial/act16vs/act16_vs.component';
 
 export const PATIENT_ROUTES: Routes = [
   //Atención
@@ -23,4 +24,5 @@ export const PATIENT_ROUTES: Routes = [
   { path: 'avs6', component: Act6VsComponent},
   { path: 'avs7', component: Act7VsComponent},
   { path: 'avs8', component: Act8VsComponent},
+  { path: 'avs16', component: Act16VsComponent},
 ]

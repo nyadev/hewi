@@ -5,6 +5,7 @@
         <span>Actividad 8</span>
         <span class="space"></span>
         <img src="" id="0" name="figure" class="estimulo clave">
+          <button mat-mini-fab id="jugarBtn" onclick="jugar()"><mat-icon>play_arrow</mat-icon></button>
         <span class="spacer"></span>
         <div id="aciertos" class="aciertos">0</div><mat-icon class="aciertos">done</mat-icon>
         <span class="spacer"></span>
@@ -22,7 +23,7 @@
               <tr>
                   <td>
 						 <button mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
-						<button mat-raised-button onclick="jugar();" id="jugarBtn" style="display:none">Jugar de nuevo</button>
+						 <button mat-raised-button onclick="jugar()" id="jugarBtn" style="display:none">Jugar de nuevo</button>
                       </td>
                   </tr>
               </table>
