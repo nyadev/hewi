@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { User } from '../user.model';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -10,6 +12,8 @@ export class SignupComponent implements OnInit {
    step = 0;
    signupForm: FormGroup;
 
+   constructor (private authService: AuthService) {}
+
    ngOnInit() {
      this.signupForm = new FormGroup({
        pNameP: new FormControl(null, [
@@ -17,8 +21,7 @@ export class SignupComponent implements OnInit {
        ]),
        mNameP: new FormControl(null, []),
        nameP: new FormControl(null, []),
-       username: new FormControl(null, []),
-       password: new FormControl(null, []),
+       curp: new FormControl(null, []),
        genderP: new FormControl(null, []),
        datebornP: new FormControl(null, []),
        ageP: new FormControl(null, []),
@@ -41,7 +44,24 @@ export class SignupComponent implements OnInit {
        phone: new FormControl(null, []),
        cellphone: new FormControl(null, []),
        email: new FormControl(null, []),
+       password: new FormControl(null, [])
      });
+   }
+
+   onSubmit() {
+     if (this.signupForm.valid) {
+       const { pNameP, mNameP, nameP, curp, phone,
+         cellphone, email, password, address, extnumber, intnumber, colonia, delegacion,
+         postalcode, state}  = this.signupForm.value;
+       const userType = 'patient';
+       const user = new User(email, password, nameP , pNameP, mNameP, curp, userType);
+       this.authService.signup(user)
+         .subscribe(
+           null,
+           err => console.log(err)
+         );
+         this.signupForm.reset();
+     }
    }
 
    setStep(index: number) {

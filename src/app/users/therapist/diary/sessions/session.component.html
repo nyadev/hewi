@@ -75,7 +75,7 @@
         </tr>
 
         <tr *ngFor="let session of sessions">
-          <td><a md-button color="primary" [routerLink]="['therapist', 'consult', session.curpp]">{{ session.curpp }}</a></td>
+          <td><a md-button color="primary" [routerLink]="['/therapist', 'consult', session.curpp]">{{ session.curpp }}</a></td>
           <td>{{ session.date }}</td>
           <td>{{ session.time }}</td>
           <td>{{ session.sessionnumber }}</td>

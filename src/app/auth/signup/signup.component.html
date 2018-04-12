@@ -1,5 +1,5 @@
 <div class="content">
-  <form [formGroup]="signupForm">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
     <div class="divider">
       <mat-card class="">
         <mat-card-header>
@@ -36,18 +36,9 @@
           <mat-input-container>
             <input
              matInput
-             placeholder="Nombre de Usuario"
-             formControlName="username"
-             id="username"
-             >
-          </mat-input-container>
-          <mat-input-container>
-            <input
-             matInput
-             type="password"
-             placeholder="Contraseña"
-             formControlName="password"
-             id="password"
+             placeholder="CURP"
+             formControlName="curp"
+             id="curp"
              >
           </mat-input-container>
           <br />
@@ -243,6 +234,15 @@
              type="email"
              formControlName="email"
              id="email"
+             >
+          </mat-input-container>
+          <mat-input-container>
+            <input
+             matInput
+             type="password"
+             placeholder="Contraseña"
+             formControlName="password"
+             id="password"
              >
           </mat-input-container>
           <br />

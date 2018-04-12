@@ -12,7 +12,7 @@ const session = {
 
 const sessions = new Array(2).fill(session)
 
-export const  sessionMiddleware = (req, res, next) => {
+export const sessionMiddleware = (req, res, next) => {
   req.sessions = sessions
   next()
 }

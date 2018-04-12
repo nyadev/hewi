@@ -20,16 +20,20 @@ export class ConsultPatientComponent implements OnInit {
   }
 
   consultpatientForm: FormGroup;
-  patients: User[] = new Array(20).fill(paciente);
+  patients: User[];
   loading = true;
-
-
-
 
   ngOnInit() {
     this.consultpatientForm = new FormGroup({
       curp: new FormControl(null, Validators.required),
     });
-  }
 
+    this.consultService
+       .getPatients()
+       .then((patients: User[]) => {
+         this.patients = patients;
+         console.log(patients);
+         this.loading = false;
+       });
+  }
 }

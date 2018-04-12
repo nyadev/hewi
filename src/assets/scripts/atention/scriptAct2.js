@@ -12,6 +12,7 @@ var stopCounting;
 var timelap;
 var lap;
 var src = './assets/images/aat2/';
+var radioBotones = document.getElementsByName("nivel");
 
 function begin() {
     document.getElementById("begin").style.display = "none"
@@ -33,7 +34,10 @@ function begin() {
         (function(ind) {
                 setTimeout(function(){assign(ind);lap=ind;}, timelap *ind);
         })(i);
+    }
 
+    for(var i = 0; i < radioBotones.length; i++){
+      radioBotones[i].disabled = true;
     }
 }
 

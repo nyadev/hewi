@@ -16,21 +16,13 @@ export class ConsultService {
     constructor(private http: Http) {
       this.patientUrl = urljoin(environment.apiUrl, 'patient');
     }
-/*
-    getPatients(): Promise<void | Patients[] > {
+
+    getPatients(): Promise<void | User[] > {
       return this.http.get(this.patientUrl)
         .toPromise()
-        .then(response => response.json() as Patients[])
+        .then(response => response.json() as User[])
         .catch(this.handleError);
     }
-*/
-    /*getPatient(): Promise<void | User[] > {
-      return this.http.get(this.patientUrl)
-         .toPromise()
-         .then(response => response.json() as User[])
-         .catch(this.handleError);
-    }*/
-
 
     handleError(error: any) {
       const errMsg = error.message ? error.message :

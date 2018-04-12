@@ -11,7 +11,7 @@
 </mat-card>
 <mat-card>
   <mat-spinner *ngIf="loading"></mat-spinner>
-  <div *ngIf="loading">
+  <div *ngIf="!loading">
     <table matSort (matSortChange)="sortData($event)" class="patient-table">
       <tr>
         <th mat-sort-header="curp">CURP</th>
