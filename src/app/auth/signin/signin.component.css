@@ -15,6 +15,10 @@ mat-card{
   margin: 1% 1%;
 }
 
+mat-card-header{
+  
+}
+
 .one{ background-color: #00bcd4}
 .two{ background-color: #9c27b0}
 .three{ background-color: #7eca26}
@@ -51,17 +55,26 @@ mat-form-field{
   width: 90%;
   height: auto;
 }
+
 .loguito{
-  margin: auto;
-  width: 80%;
-  height: 70%;
+  width: 100%;
+  height: auto;
   display: flex;
+  margin: auto;
 }
+
 .tera{
   margin: auto;
   width: 80%;
   height: 100%;
   display: flex;
+}
+
+
+.justified{
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 800px){

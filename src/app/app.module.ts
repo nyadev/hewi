@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -72,7 +72,7 @@ import { AuthService } from './auth/auth.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService],
+  providers: [Title, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

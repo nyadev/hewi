@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angula
 import { ConsultService } from './consult.service';
 import { Router } from '@angular/router';
 import { User } from '../../../../auth/user.model';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-consult-patient',
@@ -13,7 +14,9 @@ import { User } from '../../../../auth/user.model';
 
 export class ConsultPatientComponent implements OnInit {
 
-  constructor(private consultService: ConsultService) {
+  constructor(
+    private consultService: ConsultService,
+    private title: Title) {
 
   }
 
@@ -22,6 +25,7 @@ export class ConsultPatientComponent implements OnInit {
   loading = true;
 
   ngOnInit() {
+    this.title.setTitle('Pacientes');
     this.consultpatientForm = new FormGroup({
       curp: new FormControl(null, Validators.required),
     });

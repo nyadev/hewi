@@ -9,8 +9,8 @@ export const users = [
     email: 'ernestomoor@email.com',
     password: '123456',
     firstName: 'Ernesto',
-    pName: 'Morales',
-    mName: 'Ortega',
+    pName: 'Moreno',
+    mName: 'Soto',
     curp: 'CURP',
     userType: 'admin'
   },

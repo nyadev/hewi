@@ -6,6 +6,7 @@ import { ConsultService } from '../consult/consult.service';
 import { ActivatedRoute } from '@angular/router';
 import { Activity } from '../../../patient/activity/activity.model';
 import { ActivityService } from '../../../patient/activity/activity.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-patient-detail',
@@ -25,10 +26,12 @@ export class PatientDetailComponent implements OnInit, OnDestroy {
     private consultService: ConsultService,
     private route: ActivatedRoute,
     private activityService: ActivityService,
-    private authService: AuthService
+    private authService: AuthService,
+    private title: Title
   ) { }
 
   ngOnInit() {
+    this.title
     this.sub = this.route.params.subscribe(params => {
       this.consultService
       .getPatient(params.curpp)

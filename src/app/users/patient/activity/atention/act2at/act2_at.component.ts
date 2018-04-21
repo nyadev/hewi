@@ -4,6 +4,7 @@ import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 import swal from 'sweetalert';
 import { AuthService } from '../../../../../auth/auth.service';
 import { ActivityService } from '../../activity.service';
+import { Title } from '@angular/platform-browser';
 
 const url = './assets/scripts/atention/scriptAct2.js';
 
@@ -19,9 +20,13 @@ export class Act2AtComponent implements OnInit {
     loadAPI: Promise<any>;
     activityForm: FormGroup;
 
-    constructor (private authService: AuthService, private activityService: ActivityService) {}
+    constructor (
+      private authService: AuthService,
+      private activityService: ActivityService,
+      private title: Title) {}
 
     ngOnInit() {
+        this.title.setTitle('Actividad 2 Atención');
         this.loadAPI = new Promise((resolve) => {
             this.loadScript();
         });

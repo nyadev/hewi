@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../../../auth/auth.service';
 import { ConsultService } from '../../patient/consult/consult.service';
 import { User } from '../../../../auth/user.model';
+import { MatSnackBar } from '@angular/material';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-therapist-session',
@@ -22,7 +24,9 @@ export class SessionComponent implements OnInit {
     private sessionService: SessionService,
     private authService: AuthService,
     private consultService: ConsultService,
-    private router: Router) {
+    private router: Router,
+    private snackBar: MatSnackBar,
+    private title: Title) {
 
   }
     sessions: Session[];
@@ -32,6 +36,8 @@ export class SessionComponent implements OnInit {
     today: Date = new Date();
 
    ngOnInit() {
+     this.title.setTitle('Hewi - Sesiones');
+
      this.sessionForm = new FormGroup({
        curp: new FormControl(null, Validators.required),
        hora: new FormControl(null, Validators.required),
@@ -47,31 +53,46 @@ export class SessionComponent implements OnInit {
           this.loading = false;
         });
 
-        this.consultService
-           .getPatients()
-           .then((patients: User[]) => {
-             this.patients = patients;
-             this.loading = false;
-           });
+      this.consultService
+         .getPatients()
+         .then((patients: User[]) => {
+           this.patients = patients;
+           this.loading = false;
+         });
    }
 
-   onSubmit(form: NgForm) {
-      const session = new Session(
-      null,
-      this.authService.currentUser.curp,
-      form.value.curp,
-      form.value.fecha.toLocaleDateString('en-US'),
-      form.value.hora,
-      form.value.noSession,
-      form.value.observaciones
-      );
-     this.sessionService
-     .addSession(session)
-     .subscribe(
-       s => this.sessions.push(s),
-       error => console.log(error)
-     );
-     form.resetForm();
+    onSubmit(form: NgForm) {
+      if (!this.authService.isLoggedIn()) {
+        this.router.navigateByUrl('/signin');
+      }
+
+      if (this.sessionForm.valid) {
+        const session = new Session(
+        null,
+        this.authService.currentUser.curp,
+        form.value.curp,
+        form.value.fecha.toLocaleDateString('en-US'),
+        form.value.hora,
+        form.value.noSession,
+        form.value.observaciones
+        );
+       this.sessionService
+       .addSession(session)
+       .subscribe(
+         s => {
+           this.sessions.push(s);
+           this.snackBar.open('Se ha creado la sesión correctamente', 'x', { duration: 2000});
+         },
+          this.authService.handleError
+       );
+
+
+
+       form.resetForm();
+
+     }else {
+       this.snackBar.open('Debes llenar todos los campos', 'x', { duration: 2000});
+     }
    }
 
    addEvent(date: MatDatepickerInputEvent<Date>) {

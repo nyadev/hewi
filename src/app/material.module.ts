@@ -13,6 +13,7 @@ import { MatNativeDateModule } from '@angular/material';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const modules = [
   MatButtonModule,
@@ -29,7 +30,8 @@ const modules = [
   MatNativeDateModule,
   MatSortModule,
   MatSelectModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

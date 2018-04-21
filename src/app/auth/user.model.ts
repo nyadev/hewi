@@ -9,7 +9,7 @@ export class User {
     public userType?: string,
   ) {  }
 
-  fullName() {
+  public fullName() {
     return `${this.firstName} ${this.pName} ${this.mName}`;
   }
 }

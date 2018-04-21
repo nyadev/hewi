@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from '../user.model';
 import { AuthService } from '../auth.service';
+import { MatSnackBar } from '@angular/material';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-signin',
@@ -13,9 +15,13 @@ export class SigninComponent implements OnInit {
 
   signinForm: FormGroup;
 
-  constructor(private authServie: AuthService) { }
+  constructor(
+    private authServie: AuthService,
+    private snackBar: MatSnackBar,
+    private title: Title) { }
 
   ngOnInit() {
+    this.title.setTitle('Hewi - Iniciar Sesión');
    this.signinForm = new FormGroup({
      email: new FormControl(null, [
        Validators.required,
@@ -32,8 +38,10 @@ export class SigninComponent implements OnInit {
      this.authServie.signin(user)
       .subscribe(
         this.authServie.login,
-        err => console.log(err)
+        this.authServie.handleError
       );
+   }else {
+     this.snackBar.open('Por favor completa los campos', 'x', {duration: 2000});
    }
  }
 }

@@ -1,9 +1,10 @@
 <div class="all">
   <div class="toolbar">
     <mat-toolbar color="primary">
-      <img src="./assets/images/resource/logo_header.png" class="header_image" [routerLink]="['/']" *ngIf="isLoggedIn()"/>
-      <img src="./assets/images/resource/logo_header.png" class="header_image" [routerLink]="['/signin']" *ngIf="!isLoggedIn()"/>
       <span>HEWI</span>
+      <img src="./assets/images/resource/logo_header.png" class="header_image" [routerLink]="['/']" *ngIf="isLoggedIn()" alt="Inicio"/>
+      <img src="./assets/images/resource/logo_header.png" class="header_image" [routerLink]="['/signin']" *ngIf="!isLoggedIn()" alt="Inicio"/>
+      <span class="sydrome">Sistema de intervención neuropsicológica para personas con Síndrome de Williams</span>
       <span class="space"></span>
       <div class="usermenu" *ngIf="isLoggedIn()">
         <mat-icon class="user-icon">person</mat-icon>

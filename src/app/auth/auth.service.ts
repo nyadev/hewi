@@ -7,13 +7,18 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
 
 @Injectable()
 export class AuthService {
   usersUrl: string;
   currentUser?: User;
 
-  constructor(private http: Http, private router: Router) {
+  constructor(
+    private http: Http,
+    private router: Router,
+    private snackBar: MatSnackBar) {
+
     this.usersUrl = urljoin(environment.apiUrl, 'auth');
     if (this.isLoggedIn()) {
       const { email, firstName, pName, mName, curp, userType } = JSON.parse(localStorage.getItem('user'));
@@ -65,5 +70,21 @@ export class AuthService {
     localStorage.clear();
     this.currentUser = null;
     this.router.navigateByUrl('/signin');
+  }
+
+  showError(message) {
+    this.snackBar.open(message, 'x', { duration: 2000 });
+  }
+
+  public handleError = (error: any) => {
+    const { error: { name }, message } = error;
+    if ( name === 'TokenExpiredError') {
+      this.showError('Tu sesión ha expirado');
+    } else if ( name === 'JsonWebTokenError' ) {
+      this.showError('Ha habido un problema con tu sesión');
+    } else {
+      this.showError(message || 'Ha ocurrido un error. Inténtalo nuevamente');
+    }
+    this.logout();
   }
 }
