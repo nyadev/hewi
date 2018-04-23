@@ -14,6 +14,8 @@ var lap;
 var src = './assets/images/aat2/';
 var radioBotones = document.getElementsByName("nivel");
 
+document.getElementById("ngLevel").value = 1;
+
 function begin() {
     document.getElementById("begin").style.display = "none"
     stopCounting = false;
@@ -44,6 +46,7 @@ function begin() {
 function setLevel(n){
     level = n;
     document.getElementById("level").value = n;
+    document.getElementById("ngLevel").value = n;
 }
 
 function assingKey(){
@@ -116,7 +119,9 @@ function count(r){
     }
 
     document.getElementById("aciertos").value = aciertos;
+    document.getElementById("ngAciertos").value = aciertos;
     document.getElementById("errores").value = errores;
+    document.getElementById("ngErrores").value = errores;
 }
 
 function makedisappear(id){

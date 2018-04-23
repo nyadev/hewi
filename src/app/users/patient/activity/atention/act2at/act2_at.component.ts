@@ -34,7 +34,6 @@ export class Act2AtComponent implements OnInit {
         this.instructions();
 
         this.activityForm = new FormGroup({
-          number: new FormControl(null, []),
           aciertos: new FormControl(null, []),
           errores: new FormControl(null, []),
           level: new FormControl(null, [])
@@ -42,15 +41,16 @@ export class Act2AtComponent implements OnInit {
     }
 
     onSubmit() {
-      const { number, aciertos, errores, level } = this.activityForm.value;
-      console.log(this.activityForm.value.number);
+      const { aciertos, errores, level } = this.activityForm.value;
+      console.log(this.activityForm.value);
       const activity = new Activity(
         this.authService.currentUser.curp,
         0,
         2,
-        2,
-        2,
-        2,
+        +level,
+        null,
+        +aciertos,
+        +errores,
         null
       );
 
@@ -77,16 +77,3 @@ export class Act2AtComponent implements OnInit {
      'Se mostrará una serie de estímulos aleatorios donde deberás seleccionar con el cursor el estímulo indicado durante cierto tiempo');
     }
 }
-
-// public Save() {
-//   if (this.activityForm.valid) {
-//     const { corrects, fails, level } = this.activityForm.value;
-//     console.log(`${corrects} ${fails} ${level}`);
-//   }
-// }
-
-// this.activityForm = new FormGroup({
-//   corrects: new FormControl(null, []),
-//   fails: new FormControl(null, []),
-//   level: new FormControl(null, [])
-// });

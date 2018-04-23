@@ -3,7 +3,7 @@
     <mat-card class="activity">
       <mat-card-header>
         <mat-toolbar color="primary">
-          <span>Actividad <input matInput formControlName="number" id="number" type="number" value="2" readonly /></span>
+          <span>Actividad <input matInput id="number" type="number" value="2" readonly /></span>
           <span class="space"></span>
           <button type="button" mat-mini-fab id="begin" onclick="begin()"><mat-icon>play_arrow</mat-icon></button>
           <span class="spacer"></span>
@@ -74,7 +74,12 @@
                 <td><img src="" id="40" name="figure" class="estimulo" onclick="validate(id,src)"></td>
             </tr>
           </table>
-          <button mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
+          <form [formGroup]="activityForm" (ngSubmit)="onSubmit()">
+            <mat-form-field><input id="ngAciertos" matInput formControlName="aciertos" class="invisible-input" readonly/></mat-form-field>
+            <mat-form-field><input id="ngErrores" matInput formControlName="errores" class="invisible-input" readonly/></mat-form-field>
+            <mat-form-field><input id="ngLevel" matInput formControlName="level"  class="invisible-input" readonly/></mat-form-field>
+            <button type="submit" mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
+          </form>
         </div>
         <span class="space"></span>
       </div>
