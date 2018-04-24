@@ -42,7 +42,6 @@ export class Act2AtComponent implements OnInit {
 
     onSubmit() {
       const { aciertos, errores, level } = this.activityForm.value;
-      console.log(this.activityForm.value);
       const activity = new Activity(
         this.authService.currentUser.curp,
         0,

@@ -11,7 +11,7 @@
         <mat-form-field >
           <mat-select placeholder="CURP" formControlName="curp" id="curp">
             <mat-option *ngFor="let patient of patients" [value]="patient.curp">
-              {{ patient.firstName }} {{ patient.pName}} {{ patient.mName }} - {{ patient.curp }}
+              {{ patient.firstName }} {{ patient.pName }} {{ patient.mName }} - {{ patient.curp }}
             </mat-option>
           </mat-select>
        </mat-form-field>

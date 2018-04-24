@@ -14,6 +14,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 
 const modules = [
   MatButtonModule,
@@ -31,7 +32,8 @@ const modules = [
   MatSortModule,
   MatSelectModule,
   MatProgressSpinnerModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  ScrollDispatchModule
 ];
 
 @NgModule({

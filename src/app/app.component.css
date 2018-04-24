@@ -30,7 +30,7 @@ mat-toolbar{
 }
 
 .title{
-  font-size: 30px
+  font-size: auto
 }
 
 .content{
@@ -48,4 +48,10 @@ mat-toolbar{
 
 .sydrome{
   font-size: 20px;
+}
+
+@media screen and (max-width: 800px){
+    .sydrome{
+      display: none;
+    }
 }

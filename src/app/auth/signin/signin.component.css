@@ -15,10 +15,6 @@ mat-card{
   margin: 1% 1%;
 }
 
-mat-card-header{
-  
-}
-
 .one{ background-color: #00bcd4}
 .two{ background-color: #9c27b0}
 .three{ background-color: #7eca26}
@@ -71,10 +67,17 @@ mat-form-field{
 }
 
 
+mat-card-content{
+  overflow-y: auto;
+  height: 85%;
+}
+
 .justified{
-  margin-top: 10px;
-  text-align: justify;
-  font-size: 18px;
+  text-align: left;
+  font-size: 14px;
+  padding: 5px;
+  width: auto;
+  float: left;
 }
 
 @media screen and (max-width: 800px){
