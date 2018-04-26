@@ -47,3 +47,4 @@ src/app/app.module.ts
 src/app/users/admin/admin-home.component.html
 src/app/users/patient/patient.routing.ts
 src/app/app.module.ts
+package-lock.json
