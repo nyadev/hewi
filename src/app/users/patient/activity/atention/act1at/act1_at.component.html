@@ -1,0 +1,69 @@
+<div class="divider">
+  <mat-card class="activity">
+    <mat-card-header>
+      <mat-toolbar color="primary">
+        <span>Actividad 1</span> &nbsp; &nbsp;
+        Atención sostenida y selectiva &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <span class="spacer"></span>   <span class="spacer"></span>
+        Nivel: <span id="nivel">1</span>
+        <button mat-mini-fab id="comienzo" onclick="iniciarEjercicio()"><mat-icon>play_arrow</mat-icon></button>
+        <span class="spacer"></span>
+        <img src="" id="0" name="figure" class="estimulo clave">
+        <span class="spacer"></span>
+        <div id="aciertos" class="aciertos">0</div><mat-icon class="aciertos">done</mat-icon>
+        <span class="spacer"></span>
+        <div id="errores" class="errores">0</div><mat-icon class="errores">clear</mat-icon>
+      </mat-toolbar>
+    </mat-card-header>
+    <div class="activity-container">
+      <span class="space"></span>
+      <div class="activity-content">
+        <!-- Actividad aquí -->
+        <br>
+				<div id="div0" style="visibility:hidden" height="250px" onclick="validarRespuesta();">
+					<img src="" height="250px" id="img0">
+				</div>
+				<br>
+        <button mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
+      </div>
+      <span class="space"></span>
+    </div>
+  </mat-card>
+  <mat-card class="level">
+    <mat-card-header>
+      <mat-toolbar color="primary">
+        <span>Nivel: </span><span id="nivel">1</span>
+
+      </mat-toolbar>
+    </mat-card-header>
+    <div class="nivel">
+      <!-- Aquí van los niveles -->
+      <div class="radio">
+        <label>
+            <input type="radio" name="niveles" onclick="setNivel(1);" value="1" checked/>
+            Nivel 1: El estímulo durará 5 segundos, y toda la tarea 60 segundos.
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="niveles" onclick="setNivel(2);" value="2"/>
+            Nivel 2: El estímulo durará 5 segundos, y toda la tarea 120 segundos.
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="niveles" onclick="setNivel(3);" value="3"/>
+            Nivel 3: El estímulo durará 3 segundos, y toda la tarea 180 segundos.
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="niveles" onclick="setNivel(4);" value="4"/>
+            Nivel 4: El estímulo durará 3 segundos, y toda la tarea 240 segundos.
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="niveles" onclick="setNivel(5);" value="5"/>
+            Nivel 5: El estímulo durará 2 segundos, y toda la tarea 300 segundos.
+        </label>
+    </div>
+    </div>
+  </mat-card>
+</div>
