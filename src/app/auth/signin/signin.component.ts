@@ -16,7 +16,7 @@ export class SigninComponent implements OnInit {
   signinForm: FormGroup;
 
   constructor(
-    private authServie: AuthService,
+    private authService: AuthService,
     private snackBar: MatSnackBar,
     private title: Title) { }
 
@@ -35,11 +35,12 @@ export class SigninComponent implements OnInit {
    if (this.signinForm.valid) {
      const { email, password } = this.signinForm.value;
      const user = new User(email, password);
-     this.authServie.signin(user)
+     this.authService.signin(user)
       .subscribe(
-        this.authServie.login,
-        this.authServie.handleError
+        this.authService.login,
+        this.authService.handleError
       );
+      this.snackBar.open(`Bienvenido a HEWI!!`, 'x', {duration: 2000});
    }else {
      this.snackBar.open('Por favor completa los campos', 'x', {duration: 2000});
    }

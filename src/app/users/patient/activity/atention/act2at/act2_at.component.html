@@ -74,10 +74,7 @@
                 <td><img src="" id="40" name="figure" class="estimulo" onclick="validate(id,src)"></td>
             </tr>
           </table>
-          <form [formGroup]="activityForm" (ngSubmit)="onSubmit(f)" #f="ngForm">
-            <mat-form-field><input matInput formControlName="aciertos" id="ngAciertos" class="invisible-input" /></mat-form-field>
-            <mat-form-field><input matInput formControlName="errores" id="ngErrores" class="invisible-input" /></mat-form-field>
-            <mat-form-field><input matInput formControlName="level" id="ngLevel" class="invisible-input" /></mat-form-field>
+          <form (ngSubmit)="onSubmit()">
             <button type="submit" mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
           </form>
         </div>

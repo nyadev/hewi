@@ -3,7 +3,7 @@
 </mat-card>
 <mat-card>
   <mat-spinner *ngIf="loading"></mat-spinner>
-  <div *ngIf="!loading">
+  <div class="table-container" *ngIf="!loading">
     <table matSort (matSortChange)="sortData($event)" class="patient-table">
       <tr>
         <th mat-sort-header="curp">CURP</th>
@@ -13,7 +13,7 @@
       </tr>
 
      <tr *ngFor="let patient of patients">
-        <td><a md-button color="primary" [routerLink]="['/therapist', 'consult', patient.curp]">{{ patient.curp }}</a></td>
+        <td><a md-button color="primary" [routerLink]="['/therapist', 'consult', patient.patientInfo.curp]">{{ patient.patientInfo.curp }}</a></td>
         <td>{{ patient.firstName }}</td>
         <td>{{ patient.pName }}</td>
         <td>{{ patient.mName }}</td>

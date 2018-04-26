@@ -1,3 +1,21 @@
 .curp{
   color: #00a537;
 }
+
+.activity-table{
+  width: 100%;
+}
+
+.table-container{
+  overflow-x: auto;
+}
+
+.table-headers{
+  color: #f428c1;
+}
+
+@media screen and (max-width: 800px){
+    ..activity-table{
+      width: auto;
+    }
+}

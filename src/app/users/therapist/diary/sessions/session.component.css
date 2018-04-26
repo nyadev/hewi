@@ -45,8 +45,16 @@ mat-spinner{
   width: 400px;
 }
 
+.form-group{
+  width: 100%;
+}
+
 @media screen and (max-width: 800px){
     .session-form, .session-table{
       height: auto;
+    }
+
+    .table-container{
+      overflow-x: auto;
     }
 }

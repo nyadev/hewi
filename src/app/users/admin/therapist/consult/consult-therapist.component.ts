@@ -22,10 +22,6 @@ export class ConsultTherapistComponent implements OnInit {
   loading = true;
 
   ngOnInit() {
-    this.consulttherapistForm = new FormGroup({
-      curp: new FormControl(null, Validators.required),
-    });
-
     this.consultService
        .getTherapists()
        .then((therapists: User[]) => {

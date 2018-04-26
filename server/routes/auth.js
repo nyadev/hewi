@@ -33,15 +33,16 @@ app.post('/signin', (req, res, next) => {
     firstName: user.firstName,
     pName: user.pName,
     mName: user.mName,
-    curp: user.curp,
-    userType: user.userType
+    userType: user.userType,
+    therapistInfo: user.therapistInfo,
+    patientInfo: user.patientInfo
   })
 })
 
 const createToken = (user) => jwt.sign({ user }, secret, { expiresIn: 86400 })
 
 app.post('/signup', (req, res) => {
-  const { email, password, firstName, pName, mName, curp, userType } = req.body
+  const { email, password, firstName, pName, mName, curp, userType, therapistInfo, patientInfo } = req.body
   const user={
     email,
     password,
@@ -49,7 +50,9 @@ app.post('/signup', (req, res) => {
     pName,
     mName,
     curp,
-    userType
+    userType,
+    therapistInfo,
+    patientInfo
   }
    debug(`Creating new user: ${user}`)
    users.push(user)
@@ -62,7 +65,9 @@ app.post('/signup', (req, res) => {
      pName: user.pName,
      mName: user.mName,
      curp: user.curp,
-     userType: user.userType
+     userType: user.userType,
+     therapistInfo: user.therapistInfo,
+     patientInfo: user.patientInfo
    })
 })
 

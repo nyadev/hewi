@@ -1,18 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from '../user.model';
+import { Patient } from '../patient.model';
 import { AuthService } from '../auth.service';
+import { ConsultService } from '../../users/admin/therapist/consult/consult.service';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.css'],
+  providers: [ConsultService]
 })
 export class SignupComponent implements OnInit {
    step = 0;
    signupForm: FormGroup;
+   therapists: User [];
 
-   constructor (private authService: AuthService) {}
+   constructor (
+     private authService: AuthService,
+     private consultService: ConsultService
+   ) {}
 
    ngOnInit() {
      this.signupForm = new FormGroup({
@@ -27,6 +34,7 @@ export class SignupComponent implements OnInit {
        ageP: new FormControl(null, []),
        lateralidadP: new FormControl(null, []),
        escolaridadP: new FormControl(null, []),
+       therapist: new FormControl(null, []),
        diagnostico: new FormControl(null, []),
        estudios: new FormControl(null, []),
        pNameT: new FormControl(null, []),
@@ -46,18 +54,28 @@ export class SignupComponent implements OnInit {
        email: new FormControl(null, []),
        password: new FormControl(null, [])
      });
+
+     this.consultService
+        .getTherapists()
+        .then((therapists: User[]) => {
+          this.therapists = therapists;
+        });
    }
 
    onSubmit() {
      if (this.signupForm.valid) {
-       const { pNameP, mNameP, nameP, curp, phone,
-         cellphone, email, password, address, extnumber, intnumber, colonia, delegacion,
-         postalcode, state}  = this.signupForm.value;
+       const { email, password, nameP, pNameP, mNameP,
+         therapist, curp, datebornP, genderP, ageP, lateralidadP, escolaridadP,
+         phone, cellPhone, address, extnumber, intnumber, colonia, delegacion, postalcode, state,
+         nameT, pNameT, mNameT, escolaridadT, ageT}  = this.signupForm.value;
        const userType = 'patient';
-       const user = new User(email, password, nameP , pNameP, mNameP, curp, userType);
+       const patient = new Patient(therapist, curp, datebornP, genderP, ageP, lateralidadP, escolaridadP,
+       phone, cellPhone, address, extnumber, intnumber, colonia, delegacion, postalcode, state,
+       nameT, pNameT, mNameT, escolaridadT, ageT);
+       const user = new User(email, password, nameP , pNameP, mNameP, userType, null, patient);
        this.authService.signup(user)
          .subscribe(
-           null,
+           us => console.log(us),
            err => console.log(err)
          );
          this.signupForm.reset();

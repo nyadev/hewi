@@ -1,7 +1,8 @@
-<mat-card>
-  <h3>Registro del Terapeuta</h3>
+<mat-card class="content">
+  <div class="centered">
+    <span class="title">Registro del Terapeuta</span>
+  </div>
   <form class="login-form" [formGroup]="registertherapistForm" (ngSubmit)="onSubmit()" >
-    <h4>Nombre</h4>
     <mat-input-container>
       <input
        matInput
@@ -29,30 +30,11 @@
     <mat-input-container>
       <input
        matInput
-       placeholder="CURP"
-       formControlName="curp"
-       id="curp"
+       placeholder="Cédula Profesional"
+       formControlName="cedula"
+       id="cedula"
        >
     </mat-input-container>
-    <h4>Horarios</h4>
-    <h4>Contacto</h4>
-    <mat-input-container>
-      <input
-       matInput
-       placeholder="Casa"
-       formControlName="phone"
-       id="phone"
-       >
-    </mat-input-container>
-    <mat-input-container>
-      <input
-       matInput
-       placeholder="Celular"
-       formControlName="cellphone"
-       id="cellphone"
-       >
-    </mat-input-container>
-    <h4>Cuenta</h4>
     <mat-input-container>
       <input
        matInput
@@ -70,85 +52,84 @@
        id="password"
        >
     </mat-input-container>
-    <h4>Domicilio del consultorio y/u oficina</h4>
-    <mat-input-container>
-      <input
-       matInput
-       placeholder="Calle"
-       formControlName="address"
-       id="address"
-       >
-    </mat-input-container>
-    <mat-input-container class="inputnumber">
-      <input
-       matInput
-       type="number"
-       placeholder="No.Exterior"
-       formControlName="extnumber"
-       id="extnumber"
-       >
-    </mat-input-container>
-    <mat-input-container class="inputnumber">
-      <input
-       matInput
-       type="number"
-       placeholder="No.Interior"
-       formControlName="intnumber"
-       id="intnumber"
-       >
-    </mat-input-container>
-    <mat-input-container>
-      <input
-       matInput
-       placeholder="Colonia"
-       formControlName="colonia"
-       id="colonia"
-       >
-    </mat-input-container>
-    <mat-input-container>
-      <input
-       matInput
-       placeholder="Delegación o Municipio"
-       formControlName="delegacion"
-       id="delegacion"
-       >
-    </mat-input-container>
-    <mat-input-container>
-      <input
-       matInput
-       type="number"
-       placeholder="Código Postal"
-       formControlName="postalcode"
-       id="postalcode"
-       >
-    </mat-input-container>
-    <mat-input-container>
-      <input
-       matInput
-       placeholder="Estado"
-       formControlName="state"
-       id="state"
-       >
-    </mat-input-container>
-    <h4>Profesión</h4>
-    <mat-input-container>
-      <input
-       matInput
-       placeholder="Profesión"
-       formControlName="career"
-       id="career"
-       >
-    </mat-input-container>
-    <h4>Estudios de Posgrado</h4>
-    <mat-input-container>
-      <input
-       matInput
-       placeholder="Posgrado"
-       formControlName="posgrade"
-       id="posgrade"
-       >
-    </mat-input-container>
-    <br />
-    <button type="submit" mat-raised-button color="primary">Registrar</button>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th class="th-aligned">Lunes</th>
+          <th class="th-aligned">Martes</th>
+          <th class="th-aligned">Miercoles</th>
+          <th class="th-aligned">Jueves</th>
+          <th class="th-aligned">Viernes</th>
+          <th class="th-aligned">Sabado</th>
+          <th class="th-aligned">Domingo</th>
+        </tr>
+        <tr>
+          <td>
+            <mat-input-container>
+              <input
+               matInput
+               type="time"
+               formControlName="lunes"
+               id="lunes"/>
+            </mat-input-container>
+          </td>
+          <td>
+            <mat-input-container>
+              <input
+               matInput
+               type="time"
+               formControlName="martes"
+               id="martes"/>
+            </mat-input-container>
+          </td>
+          <td>
+            <mat-input-container>
+              <input
+               matInput
+               type="time"
+               formControlName="miercoles"
+               id="miercoles"/>
+            </mat-input-container>
+          </td>
+          <td>
+            <mat-input-container>
+              <input
+               matInput
+               type="time"
+               formControlName="jueves"
+               id="jueves"/>
+            </mat-input-container>
+          </td>
+          <td>
+            <mat-input-container>
+              <input
+               matInput
+               type="time"
+               formControlName="viernes"
+               id="viernes"/>
+            </mat-input-container>
+          </td>
+          <td>
+            <mat-input-container>
+              <input
+               matInput
+               type="time"
+               formControlName="sabado"
+               id="sabado"/>
+            </mat-input-container>
+          </td>
+          <td>
+            <mat-input-container>
+              <input
+               matInput
+               type="time"
+               formControlName="domingo"
+               id="domingo"/>
+            </mat-input-container>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <button type="submit" mat-raised-button color="primary" class="submit-button">Registrar</button>
   </form>
 </mat-card>

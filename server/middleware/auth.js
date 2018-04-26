@@ -11,7 +11,6 @@ export const users = [
     firstName: 'Ernesto',
     pName: 'Moreno',
     mName: 'Soto',
-    curp: 'CURP',
     userType: 'admin'
   },
   {
@@ -20,8 +19,11 @@ export const users = [
     firstName: 'Axel',
     pName: 'Cuevas',
     mName: 'Olvera',
-    curp: 'CUOI001111HDFVLNA5',
-    userType: 'therapist'
+    userType: 'therapist',
+    patientInfo: { },
+    therapistInfo: {
+      cedula: 'CEDULATERAPEUTA'
+    }
   },
   {
     email: 'axelcuevas321@gmail.com',
@@ -29,8 +31,11 @@ export const users = [
     firstName: 'Andrés',
     pName: 'Lopez',
     mName: 'Esquivel',
-    curp: 'CURPNOREALPRUEBAA',
-    userType: 'patient'
+    userType: 'patient',
+    patientInfo: {
+      curp: 'CURPPACIENTE'
+    },
+    therapistInfo: {}
   },
 ]
 

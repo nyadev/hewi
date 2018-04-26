@@ -31,7 +31,7 @@ export class PatientDetailComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.title
+    this.title.setTitle('Hewi - Detalle de paciente');
     this.sub = this.route.params.subscribe(params => {
       this.consultService
       .getPatient(params.curpp)
@@ -40,6 +40,7 @@ export class PatientDetailComponent implements OnInit, OnDestroy {
         this.loading = false;
       });
     });
+
     this.loading = true;
     this.sub = this.route.params.subscribe(params => {
       this.activityService

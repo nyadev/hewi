@@ -1,15 +1,37 @@
 <mat-spinner *ngIf="loading"></mat-spinner>
 <div *ngIf="!loading" class="patient-detail">
   <mat-card>
-    <h1>{{ patient.firstName }} {{ patient.pName }} {{ patient.mName }}</h1>
-    <h3 class="curp">{{ patient.curp }}</h3>
-    <h3>Paciente</h3>
+    <h2>Nombre: {{ patient.firstName }} {{ patient.pName }} {{ patient.mName }}</h2>
+    <h2 class="curp">Curp: {{ patient.curp }}</h2>
   </mat-card>
-  <h1>Expediente</h1>
-  <mat-card *ngFor="let activity of activities">
-    <h2>Actividad {{ activity.numberOf }}</h2>
-    <h3>Aciertos: {{ activity.corrects }}</h3>
-    <h3>Errores: {{ activity.fails }}</h3>
-    <h3>Nivel: {{ activity.level }}</h3>
+  <mat-card class="table-container">
+    <mat-card-header>
+      <mat-card-title>
+        Expediente de Actividades
+      </mat-card-title>
+    </mat-card-header>
+    <table matSort (matSortChange)="sortData($event)" class="activity-table">
+      <tr class="table-headers">
+        <th mat-sort-header="type">Tipo</th>
+        <th mat-sort-header="numberOf">Actividad</th>
+        <th mat-sort-header="level">Nivel</th>
+        <th mat-sort-header="phase">Fase</th>
+        <th mat-sort-header="corrects">Aciertos</th>
+        <th mat-sort-header="fails">Errores</th>
+        <th mat-sort-header="fecha">Fecha</th>
+
+      </tr>
+
+     <tr *ngFor="let activity of activities">
+        <td *ngIf="activity.type == 0">Atención</td>
+        <td *ngIf="activity.type == 1">Visioespacial</td>
+        <td>{{ activity.numberOf }}</td>
+        <td>{{ activity.level }}</td>
+        <td>{{ activity.phase }}</td>
+        <td>{{ activity.corrects }}</td>
+        <td>{{ activity.fails }}</td>
+        <td>{{ activity.date }}</td>
+      </tr>
+    </table>
   </mat-card>
 </div>

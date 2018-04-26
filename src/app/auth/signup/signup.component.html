@@ -94,6 +94,13 @@
               <mat-option value="Cariotipo">Cariotipo</mat-option>
             </mat-select>
           </mat-form-field>
+          <mat-form-field >
+            <mat-select placeholder="Terapeuta" formControlName="therapist" id="therapist">
+              <mat-option *ngFor="let therapist of therapists" [value]="therapist.therapistInfo.cedula">
+                {{ therapist.firstName }} {{ therapist.pName }} {{ therapist.mName }} - {{ therapist.therapistInfo.cedula }}
+              </mat-option>
+            </mat-select>
+         </mat-form-field>
         </mat-card-content>
       </mat-card>
     </div>

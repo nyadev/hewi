@@ -10,8 +10,8 @@
     <div class="form-group">
         <mat-form-field >
           <mat-select placeholder="CURP" formControlName="curp" id="curp">
-            <mat-option *ngFor="let patient of patients" [value]="patient.curp">
-              {{ patient.firstName }} {{ patient.pName }} {{ patient.mName }} - {{ patient.curp }}
+            <mat-option *ngFor="let patient of patients" [value]="patient.patientInfo.curp">
+              {{ patient.firstName }} {{ patient.pName }} {{ patient.mName }} - {{ patient.patientInfo.curp }}
             </mat-option>
           </mat-select>
        </mat-form-field>
@@ -30,20 +30,11 @@
         [matDatepicker]="pickerTo"
         placeholder="Fecha"
         formControlName="fecha"
-        [min]="today"
+        [min]="tomorrow"
         id="fecha"
         readonly/>
         <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
         <mat-datepicker #pickerTo></mat-datepicker>
-      </mat-form-field>
-      <mat-form-field>
-        <input
-         matInput
-         type="number"
-         placeholder="# de Sesión"
-         formControlName="noSession"
-         id="noSession"
-         />
       </mat-form-field>
         <mat-form-field>
           <textarea
@@ -75,19 +66,17 @@
       <div class="table-container" *ngIf="!loading">
         <table matSort (matSortChange)="sortData($event)" class="patient-table">
           <tr>
-            <th mat-sort-header="name">CURP</th>
-            <th mat-sort-header="calories">Fecha</th>
-            <th mat-sort-header="fat">Hora</th>
-            <th mat-sort-header="carbs">No de Sesión</th>
-            <th mat-sort-header="protein">Observaciones</th>
+            <th mat-sort-header="curp">CURP</th>
+            <th mat-sort-header="date">Hora y Fecha</th>
+            <th mat-sort-header="obs">Observaciones</th>
+            <th mat-sort-header="createdAt">Fecha de Creación</th>
           </tr>
 
           <tr *ngFor="let session of sessions">
             <td><a md-button color="primary" [routerLink]="['/therapist', 'consult', session.curpp]">{{ session.curpp }}</a></td>
-            <td>{{ session.date }}</td>
-            <td>{{ session.time }}</td>
-            <td>{{ session.sessionnumber }}</td>
+            <td>{{ session.date | amLocale: 'es' | amDateFormat: 'YYYY-MM-DD HH:mm' }}</td>
             <td>{{ session.notes }}</td>
+            <td>{{ session.createdAt | amLocale: 'es' | amTimeAgo }}</td>
           </tr>
         </table>
       </div>

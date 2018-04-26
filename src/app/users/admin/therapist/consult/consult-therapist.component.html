@@ -6,14 +6,14 @@
   <div *ngIf="!loading">
     <table matSort (matSortChange)="sortData($event)" class="patient-table">
       <tr>
-        <th mat-sort-header="curp">CURP</th>
+        <th mat-sort-header="cedula">CEDULA</th>
         <th mat-sort-header="nome">Nombre</th>
         <th mat-sort-header="LNameP">Apellido paterno</th>
           <th mat-sort-header="LNameM">Apellido materno</th>
       </tr>
 
      <tr *ngFor="let therapist of therapists">
-        <td><a md-button color="primary" [routerLink]="['/admin', 'consult', therapist.curp]">{{ therapist.curp }}</a></td>
+        <td><a md-button color="primary" [routerLink]="['/admin', 'consult', therapist.therapistInfo.cedula]">{{ therapist.therapistInfo.cedula }}</a></td>
         <td>{{ therapist.firstName }}</td>
         <td>{{ therapist.pName }}</td>
         <td>{{ therapist.mName }}</td>

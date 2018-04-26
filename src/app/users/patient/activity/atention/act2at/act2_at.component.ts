@@ -31,25 +31,20 @@ export class Act2AtComponent implements OnInit {
             this.loadScript();
         });
 
-        this.instructions();
+        console.log(document.getElementById('aciertos'));
 
-        this.activityForm = new FormGroup({
-          aciertos: new FormControl(null, []),
-          errores: new FormControl(null, []),
-          level: new FormControl(null, [])
-        });
+        this.instructions();
     }
 
     onSubmit() {
-      const { aciertos, errores, level } = this.activityForm.value;
       const activity = new Activity(
-        this.authService.currentUser.curp,
+        'ARREGLAME',
         0,
         2,
-        +level,
+        2,
         null,
-        +aciertos,
-        +errores,
+        2,
+        2,
         null
       );
 

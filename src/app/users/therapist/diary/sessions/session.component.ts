@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../../../auth/auth.service';
 import { ConsultService } from '../../patient/consult/consult.service';
 import { User } from '../../../../auth/user.model';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, Sort } from '@angular/material';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -19,6 +19,7 @@ import { Title } from '@angular/platform-browser';
 export class SessionComponent implements OnInit {
 
     sessionForm: FormGroup;
+    sortedData;
 
   constructor(
     private sessionService: SessionService,
@@ -26,14 +27,16 @@ export class SessionComponent implements OnInit {
     private consultService: ConsultService,
     private router: Router,
     private snackBar: MatSnackBar,
-    private title: Title) {
+    private title: Title,
+    ) {
 
-  }
+    }
     sessions: Session[];
     patients: User[];
     sessionsDate: Session[];
     loading = true;
-    today: Date = new Date();
+    tomorrow: Date = new Date();
+
 
    ngOnInit() {
      this.title.setTitle('Hewi - Sesiones');
@@ -42,7 +45,6 @@ export class SessionComponent implements OnInit {
        curp: new FormControl(null, Validators.required),
        hora: new FormControl(null, Validators.required),
        fecha: new FormControl(null, Validators.required),
-       noSession: new FormControl(null, Validators.required),
        observaciones: new FormControl(null, Validators.required),
      });
 
@@ -59,6 +61,7 @@ export class SessionComponent implements OnInit {
            this.patients = patients;
            this.loading = false;
          });
+      this.tomorrow.setDate(this.tomorrow.getDate() + 1);
    }
 
     onSubmit(form: NgForm) {
@@ -67,14 +70,13 @@ export class SessionComponent implements OnInit {
       }
 
       if (this.sessionForm.valid) {
+        const fecha = new Date(form.value.fecha.toLocaleDateString('en-US') + ' ' + form.value.hora);
         const session = new Session(
         null,
-        this.authService.currentUser.curp,
         form.value.curp,
-        form.value.fecha.toLocaleDateString('en-US'),
-        form.value.hora,
-        form.value.noSession,
-        form.value.observaciones
+        fecha,
+        form.value.observaciones,
+        new Date()
         );
        this.sessionService
        .addSession(session)

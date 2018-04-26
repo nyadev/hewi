@@ -1,7 +1,52 @@
+.content{
+  padding: 5%;
+}
+
 mat-input-container{
   width: 33%
 }
 
-.inputnumber{
-  width: 15%
+.centered{
+  width: 100%;
+}
+
+.title{
+  font-size: 30px;
+  color: #3f51b5;
+}
+
+.table-container{
+  width: 100%;
+  overflow-x: auto;
+}
+
+table{
+  width: 80%;
+}
+
+td, th{
+  text-align: left;
+}
+
+td mat-input-container{
+  width: 30%;
+}
+
+.submit-button{
+  float: right;
+}
+
+
+@media screen and (max-width: 800px){
+    .content{
+      padding: 0;
+    }
+
+    mat-input-container{
+      width: 100%;
+    }
+
+    table{
+      width: auto;
+    }
 }

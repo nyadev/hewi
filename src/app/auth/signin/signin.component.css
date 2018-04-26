@@ -1,5 +1,5 @@
 .content{
-  height: 92%;
+  height: 100%;
   width: 100%;
   display: inline-flex;
 }
@@ -15,10 +15,10 @@ mat-card{
   margin: 1% 1%;
 }
 
-.one{ background-color: #00bcd4}
-.two{ background-color: #9c27b0}
-.three{ background-color: #7eca26}
-.four{ background-color: #ff9800}
+.one{ background-color: #2196F3}
+.two{ background-color: #64DD17}
+.three{ background-color: #FF9800}
+.four{ background-color: #9C27B0}
 .five{ background-color: #009688}
 .six{ background-color: #e91e63}
 .seven{ background-color: #21dea8}
@@ -53,7 +53,7 @@ mat-form-field{
 }
 
 .loguito{
-  width: 100%;
+  width: 80%;
   height: auto;
   display: flex;
   margin: auto;
@@ -74,11 +74,13 @@ mat-card-content{
 
 .justified{
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   padding: 5px;
   width: auto;
   float: left;
 }
+
+
 
 @media screen and (max-width: 800px){
     .content{

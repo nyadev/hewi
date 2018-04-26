@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../../../../auth/auth.service';
 import { User } from '../../../../auth/user.model';
+import { Therapist } from '../../../../auth/therapist.model';
+import { MatSnackBar } from '@angular/material';
+
 @Component({
   selector: 'app-register-therapist',
   templateUrl: './register-therapist.component.html',
@@ -11,45 +14,46 @@ import { User } from '../../../../auth/user.model';
 export class RegisterTherapistComponent  implements OnInit {
   registertherapistForm: FormGroup;
 
-  constructor(private authService: AuthService) {
-
-  }
+  constructor(
+    private authService: AuthService,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.registertherapistForm = new FormGroup({
-      pName: new FormControl(null, []),
-      mName: new FormControl(null, []),
-      firstName: new FormControl(null, []),
-      curp: new FormControl(null, []),
-      phone: new FormControl(null, []),
-      cellphone: new FormControl(null, []),
-      email: new FormControl(null, []),
-      password: new FormControl(null, []),
-      address: new FormControl(null, []),
-      extnumber: new FormControl(null, []),
-      intnumber: new FormControl(null, []),
-      colonia: new FormControl(null, []),
-      delegacion: new FormControl(null, []),
-      postalcode: new FormControl(null, []),
-      state: new FormControl(null, []),
-      career: new FormControl(null, []),
-      posgrade: new FormControl(null, []),
+      pName: new FormControl(null, [Validators.required]),
+      mName: new FormControl(null, [Validators.required]),
+      firstName: new FormControl(null, [Validators.required]),
+      cedula: new FormControl(null, [Validators.required]),
+      lunes: new FormControl(null, [Validators.required]),
+      martes: new FormControl(null, [Validators.required]),
+      miercoles: new FormControl(null, [Validators.required]),
+      jueves: new FormControl(null, [Validators.required]),
+      viernes: new FormControl(null, [Validators.required]),
+      sabado: new FormControl(null, [Validators.required]),
+      domingo: new FormControl(null, [Validators.required]),
+      email: new FormControl(null,
+        [Validators.required,
+        Validators.pattern(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)]),
+      password: new FormControl(null, [Validators.required])
     });
   }
 
   onSubmit() {
     if (this.registertherapistForm.valid) {
-      const { pName, mName, firstName, curp, phone,
-        cellphone, email, password, address, extnumber, intnumber, colonia, delegacion,
-        postalcode, state, career, posgrade}  = this.registertherapistForm.value;
+      const { email, password, firstName, pName, mName,
+        cedula, lunes, martes, miercoles, jueves, viernes, sabado, domingo  }  = this.registertherapistForm.value;
       const userType = 'therapist';
-      const user = new User(email, password, firstName , pName, mName, curp, userType);
+      const therapist = new Therapist(cedula, lunes, martes, miercoles, jueves, viernes, sabado, domingo);
+      const user = new User(email, password, firstName , pName, mName, userType, therapist);
       this.authService.signup(user)
         .subscribe(
-          null,
+          us => console.log(us),
           err => console.log(err)
         );
-        this.registertherapistForm.reset();
+      this.snackBar.open(`Se registró a ${firstName} de manera exitosa`, 'x', { duration: 2000});
+      this.registertherapistForm.reset();
+    } else {
+      this.snackBar.open('Debes llenar todos los campos', 'x', { duration: 2000});
     }
   }
 }

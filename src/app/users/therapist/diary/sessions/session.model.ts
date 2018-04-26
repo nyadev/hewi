@@ -1,27 +1,21 @@
 export class Session {
   id: number;
-  curpt: string;
   curpp: string;
   date: Date;
-  time: Date;
-  sessionnumber: number;
   notes: string;
+  createdAt: Date;
 
   constructor(
     id: number,
-    curpt: string,
     curpp: string,
     date: Date,
-    time: Date,
-    sessionnumber: number,
-    notes: string
+    notes: string,
+    createdAt: Date
   ) {
     this.id = id;
-    this.curpt = curpt;
     this.curpp = curpp;
     this.date = date;
-    this.time = time;
-    this.sessionnumber = sessionnumber;
     this.notes = notes;
+    this.createdAt = createdAt;
   }
 }

@@ -1,3 +1,6 @@
+import { Therapist } from './therapist.model';
+import { Patient } from './patient.model';
+
 export class User {
   constructor(
     public email: string,
@@ -5,11 +8,8 @@ export class User {
     public firstName?: string,
     public pName?: string,
     public mName?: string,
-    public curp?: string,
     public userType?: string,
+    public therapistInfo?: Therapist,
+    public patientInfo?: Patient
   ) {  }
-
-  public fullName() {
-    return `${this.firstName} ${this.pName} ${this.mName}`;
-  }
 }

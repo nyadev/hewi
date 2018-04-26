@@ -1,30 +1,16 @@
 export class Activity {
-  curp: string;
-  type: number;
-  numberOf: number;
-  level?: number;
-  phase?: number;
-  corrects?: number;
-  fails?: number;
-  date?: Date;
-
   constructor(
-    curp: string,
-    type: number,
-    numberOf: number,
-    level?: number,
-    phase?: number,
-    corrects?: number,
-    fails?: number,
-    date?: Date
-  ) {
-    this.curp = curp;
-    this.type = type;
-    this.numberOf = numberOf;
-    this.level = level;
-    this.phase = phase;
-    this.corrects = corrects;
-    this.fails = fails;
-    this.date = date;
+    public curp: string,
+    public type: number,
+    public numberOf: number,
+    public level?: number,
+    public phase?: number,
+    public corrects?: number,
+    public fails?: number,
+    public date?: Date
+  ) { }
+
+  fullType() {
+    return `hola bb como as estado`;
   }
 }

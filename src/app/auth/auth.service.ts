@@ -4,8 +4,7 @@ import { environment } from '../../environments/environment';
 import { User } from './user.model';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
+import 'rxjs/Rx';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material';
 
@@ -21,8 +20,8 @@ export class AuthService {
 
     this.usersUrl = urljoin(environment.apiUrl, 'auth');
     if (this.isLoggedIn()) {
-      const { email, firstName, pName, mName, curp, userType } = JSON.parse(localStorage.getItem('user'));
-      this.currentUser = new User(email, null, firstName, pName, mName, curp, userType);
+      const { email, firstName, pName, mName, userType, therapistInfo, patientInfo } = JSON.parse(localStorage.getItem('user'));
+      this.currentUser = new User(email, null, firstName, pName, mName, userType, therapistInfo, patientInfo );
     }
   }
 
@@ -55,10 +54,10 @@ export class AuthService {
       });
   }
 
-  login = ({ token, email, userId, firstName, pName, mName, curp, userType }) => {
-    this.currentUser = new User(email, null, firstName, pName, mName, curp, userType);
+  login = ({ token, userId, email, firstName, pName, mName, userType, therapistInfo, patientInfo  }) => {
+    this.currentUser = new User(email, null, firstName, pName, mName, userType, therapistInfo, patientInfo);
     localStorage.setItem('token', token);
-    localStorage.setItem('user', JSON.stringify({ userId, email, firstName, pName, mName, curp, userType }));
+    localStorage.setItem('user', JSON.stringify({ userId, email, firstName, pName, mName, userType, therapistInfo, patientInfo }));
     this.router.navigateByUrl('/');
   }
 
@@ -78,12 +77,12 @@ export class AuthService {
 
   public handleError = (error: any) => {
     const { error: { name }, message } = error;
-    if ( name === 'TokenExpiredError') {
+    if (name === 'TokenExpiredError') {
       this.showError('Tu sesión ha expirado');
-    } else if ( name === 'JsonWebTokenError' ) {
+    } else if (name === 'JsonWebTokenError') {
       this.showError('Ha habido un problema con tu sesión');
     } else {
-      this.showError(message || 'Ha ocurrido un error. Inténtalo nuevamente');
+      this.showError('Ha ocurrido un error. Inténtalo nuevamente');
     }
     this.logout();
   }

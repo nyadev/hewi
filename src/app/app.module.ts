@@ -1,7 +1,7 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { MomentModule } from 'ngx-moment';
 
 import { AppComponent } from './app.component';
 
@@ -70,7 +70,8 @@ import { AuthService } from './auth/auth.service';
     Routing,
     HttpModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MomentModule
   ],
   providers: [Title, AuthService],
   bootstrap: [AppComponent]
