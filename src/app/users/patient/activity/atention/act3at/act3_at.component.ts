@@ -30,7 +30,9 @@ export class Act3AtComponent implements OnInit {
     }
 
     instructions() {
-      // swal('Instrucciones',
-      // 'Pegar aquí las instrucciones');
+      swal('Instrucciones',
+      'Aparecerá un estímulo en el centro de un color determinado,' +
+      'después en otra pantalla el niño deberá escoger el círculo que corresponde con el color mostrado.');
     }
+      // 'Pegar aquí las instrucciones');
 }

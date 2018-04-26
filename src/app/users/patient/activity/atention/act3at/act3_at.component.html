@@ -2,9 +2,8 @@
   <mat-card class="activity">
     <mat-card-header>
       <mat-toolbar color="primary">
-        <span>Actividad n</span>
+        <span>Actividad 3</span>&nbsp; &nbsp;
         Atención sostenida y selectiva &nbsp; &nbsp; &nbsp; &nbsp; Nivel: <span id="nivel">1</span>
-        <span class="space"></span>
         <button mat-mini-fab id="comienzo" onclick="iniciarEjercicio()"><mat-icon>play_arrow</mat-icon></button>
         <span class="spacer"></span>
         <img src="" id="0" name="figure" class="estimulo clave">
@@ -18,7 +17,31 @@
       <span class="space"></span>
       <div class="activity-content">
         <!-- Actividad aquí -->
-        <button mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
+        <div><!--Div que contiene todos los elementos-->
+					<div id="resultadosBox" style="background: white; visibility: hidden;">
+						<button mat-raised-button id="save-results" class="btn boton" type="button" value="Guardar resultados" onclick="saveResults()" style="display:none">Guardar Resultados</button>
+					</div>
+
+					<div id="estimuloBox" style="position: relative; background: white; visibility:visible;">
+						<canvas id="canvas1" width="150" height="150" style=" border: 0px solid #000000"></canvas>
+
+          </div>
+          <div>
+					<div id="opcionesBox" style=" background: white; visibility:hidden;">
+						<table>
+						<tr>
+							<td><div><canvas id="canvas2" width="100" height="100" onclick="validarRespuesta(0)" style=" border: 2px solid #000000"></canvas></div></td>
+							<td><div><canvas id="canvas3" width="100" height="100" onclick="validarRespuesta(1)" style=" border: 2px solid #000000"></canvas></div></td>
+							<td><div><canvas id="canvas4" width="100" height="100" onclick="validarRespuesta(2)" style=" border: 2px solid #000000"></canvas></div></td>
+							<td><canvas id="canvas5" width="100" height="100" onclick="validarRespuesta(3)" style=" border: 2px solid #000000"></canvas></td>
+							<td><canvas id="canvas6" width="100" height="100" onclick="validarRespuesta(4)" style=" border: 2px solid #000000"></canvas></td>
+							<td><canvas id="canvas7" width="100" height="100" onclick="validarRespuesta(5)" style=" border: 2px solid #000000"></canvas></td>
+						</tr>
+						</table>
+					</div>
+				</div>
+
+          </div>
       </div>
       <span class="space"></span>
     </div>
@@ -31,6 +54,33 @@
     </mat-card-header>
     <div class="nivel">
       <!-- Aquí van los niveles -->
+      <div class="radio">
+			<label>
+				<input type="radio" name="niveles" onclick="setNivel(1);" value="1" checked/>
+					Nivel 1: El estímulo durará 5 segundos, y toda la tarea 60 segundos.
+          <br>
+			</label>
+			<label>
+				<input type="radio" name="niveles" onclick="setNivel(2);" value="2"/>
+					Nivel 2: El estímulo durará 5 segundos, y toda la tarea 120 segundos
+          <br>
+			</label>
+			<label>
+				<input type="radio" name="niveles" onclick="setNivel(3);" value="3"/>
+					Nivel 3:  El estímulo durará 3 segundos, y toda la tarea 180 segundos
+          <br>
+			</label>
+			<label>
+				<input type="radio" name="niveles" onclick="setNivel(4);"  value="4"/>
+					Nivel 4:  El estímulo durará 2 segundos, y toda la tarea 240 segundos.
+          <br>
+			</label>
+			<label>
+				<input type="radio" name="niveles" onclick="setNivel(5);" value="5"/>
+					Nivel 5:  El estímulo durará 1 segundos, y toda la tarea 300 segundos.
+          <br>
+			</label>
+		</div>
     </div>
   </mat-card>
 </div>
