@@ -28,6 +28,7 @@ import { Act1AtComponent } from './users/patient/activity/atention/act1at/act1_a
 import { Act2AtComponent } from './users/patient/activity/atention/act2at/act2_at.component';
 import { Act3AtComponent } from './users/patient/activity/atention/act3at/act3_at.component';
 import { Act4AtComponent } from './users/patient/activity/atention/act4at/act4_at.component';
+import { Act5AtComponent } from './users/patient/activity/atention/act5at/act5_at.component';
 // visioespaciales
 import { Act1VsComponent } from './users/patient/activity/visiospacial/act1vs/act1_vs.component';
 import { Act2VsComponent } from './users/patient/activity/visiospacial/act2vs/act2_vs.component';
@@ -57,6 +58,7 @@ import { AuthService } from './auth/auth.service';
     RegisterTherapistComponent,ConsultTherapistComponent, TherapistDetailComponent,
     PatientDetailComponent, ConsultPatientComponent, SessionComponent,
     Act2AtComponent, Act1AtComponent, Act3AtComponent, Act4AtComponent,
+    Act5AtComponent,
     Act1VsComponent, Act2VsComponent, Act3VsComponent, Act4VsComponent,
     Act5VsComponent, Act6VsComponent, Act7VsComponent, Act8VsComponent,
     Act16VsComponent, Act10VsComponent, Act11VsComponent,
