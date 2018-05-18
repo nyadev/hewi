@@ -6,6 +6,6 @@ import { TherapistDetailComponent } from './therapist/detail/therapist-detail.co
 
 export const ADMIN_ROUTES: Routes = [
   { path: 'register-therapist', component: RegisterTherapistComponent},
-  { path: 'consult-therapist', component: ConsultTherapistComponent },
-  { path: 'consult/:curp', component: TherapistDetailComponent }
+  { path: 'consult', component: ConsultTherapistComponent },
+  { path: 'consult/:cedula', component: TherapistDetailComponent }
 ];

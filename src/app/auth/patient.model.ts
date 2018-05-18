@@ -2,7 +2,7 @@ import { Activity } from '../users/patient/activity/activity.model';
 
 export class Patient {
   constructor(
-    public therapist: string,
+    public therapist_id: string,
     public curp: string,
     public birth: Date,
     public sex: string,

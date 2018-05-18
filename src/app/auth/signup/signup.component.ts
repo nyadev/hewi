@@ -23,23 +23,23 @@ export class SignupComponent implements OnInit {
 
    ngOnInit() {
      this.signupForm = new FormGroup({
-       pNameP: new FormControl(null, [
+       pName: new FormControl(null, [
          Validators.required
        ]),
-       mNameP: new FormControl(null, []),
-       nameP: new FormControl(null, []),
+       mName: new FormControl(null, []),
+       firstName: new FormControl(null, []),
        curp: new FormControl(null, []),
        genderP: new FormControl(null, []),
        datebornP: new FormControl(null, []),
        ageP: new FormControl(null, []),
        lateralidadP: new FormControl(null, []),
        escolaridadP: new FormControl(null, []),
-       therapist: new FormControl(null, []),
+       therapist_id: new FormControl(null, []),
        diagnostico: new FormControl(null, []),
        estudios: new FormControl(null, []),
        pNameT: new FormControl(null, []),
        mNameT: new FormControl(null, []),
-       nameT: new FormControl(null, []),
+       firstNameT: new FormControl(null, []),
        address: new FormControl(null, []),
        extnumber: new FormControl(null, []),
        intnumber: new FormControl(null, []),
@@ -64,21 +64,21 @@ export class SignupComponent implements OnInit {
 
    onSubmit() {
      if (this.signupForm.valid) {
-       const { email, password, nameP, pNameP, mNameP,
+       const { email, password, firstName, pName, mName,
          therapist, curp, datebornP, genderP, ageP, lateralidadP, escolaridadP,
-         phone, cellPhone, address, extnumber, intnumber, colonia, delegacion, postalcode, state,
-         nameT, pNameT, mNameT, escolaridadT, ageT}  = this.signupForm.value;
+         phone, cellphone, address, extnumber, intnumber, colonia, delegacion, postalcode, state,
+         firstNameT, pNameT, mNameT, escolaridadT, ageT}  = this.signupForm.value;
        const userType = 'patient';
-       const patient = new Patient(therapist, curp, datebornP, genderP, ageP, lateralidadP, escolaridadP,
-       phone, cellPhone, address, extnumber, intnumber, colonia, delegacion, postalcode, state,
-       nameT, pNameT, mNameT, escolaridadT, ageT);
-       const user = new User(email, password, nameP , pNameP, mNameP, userType, null, patient);
+       const patientInfo = new Patient('therapist', curp, datebornP, genderP, ageP, lateralidadP, escolaridadP,
+       phone, cellphone, address, extnumber, intnumber, colonia, delegacion, postalcode, state,
+       firstNameT, pNameT, mNameT, ageT, escolaridadT, []);
+       const user = new User(email, password, firstName , pName, mName, userType, null, patientInfo);
        this.authService.signup(user)
          .subscribe(
            us => console.log(us),
            err => console.log(err)
          );
-         this.signupForm.reset();
+       this.signupForm.reset();
      }
    }
 

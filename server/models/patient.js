@@ -21,13 +21,13 @@ const PatientSchema = new Schema ({
   cp: { type: Number, required: true},
   state: { type: String, required: true},
 
-  nameT: { type: String, required: true },
+  firstNameT: { type: String, required: true },
   pNameT: { type: String, required: true },
   mNameT: { type: String, required: true },
   ageT: { type: String, required: true },
   scholarshipT: { type: String, required: true },
 
-  activities: [{ type: ObjectId, ref: 'Activity', default: []}]
+  activities: [{ type: ObjectId, ref: 'Activity', default: [] }]
 })
 
-export default mongoose.model('Activity', ActivitySchema)
+export default mongoose.model('Patient', PatientSchema)

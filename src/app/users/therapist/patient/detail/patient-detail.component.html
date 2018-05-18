@@ -2,7 +2,7 @@
 <div *ngIf="!loading" class="patient-detail">
   <mat-card>
     <h2>Nombre: {{ patient.firstName }} {{ patient.pName }} {{ patient.mName }}</h2>
-    <h2 class="curp">Curp: {{ patient.curp }}</h2>
+    <h2 class="curp">Curp: {{ patient.patientInfo.curp }}</h2>
   </mat-card>
   <mat-card class="table-container">
     <mat-card-header>

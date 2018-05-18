@@ -1,6 +1,6 @@
 import { users } from './auth';
 
-const findUsers = c => users.filter(({ userType }) => userType === c)
+const findUsers = u => users.filter(({ userType }) => userType === u)
 
 const findUser = c => users.find(({ curp }) => curp === c)
 

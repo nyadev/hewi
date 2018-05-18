@@ -73,7 +73,7 @@ mat-card-content{
 }
 
 .justified{
-  text-align: left;
+  text-align: justify;
   font-size: 16px;
   padding: 5px;
   width: auto;
