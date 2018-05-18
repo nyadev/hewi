@@ -6,14 +6,6 @@ import { mongoUrl, port } from './config'
 
 const debug = new Debug('hewi:root')
 
-mongoose.Promise = global.Promise
-
-async function start() {
-  await mongoose.connect(mongoUrl)
-
-  app.listen(port, () => {
-    debug(`Server running at port ${port}`)
-  })
-}
-
-start()
+app.listen(port, () => {
+  debug(`Server running at port ${port}`)
+})
