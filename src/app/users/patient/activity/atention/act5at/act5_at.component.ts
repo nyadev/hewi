@@ -31,7 +31,10 @@ export class Act5AtComponent implements OnInit {
     }
 
     instructions() {
-      // swal('Instrucciones',
-      // 'Pegar aquí las instrucciones');
+       swal('Instrucciones',
+      'Aparecerán números del 1 al 9 aleatoriamente en la pantalla con duración de un segundo, después' +
+       'de ciertos estímulos aparecerá una pantalla con los números del 1 al 9 y el paciente deberá' +
+        'dar click en el orden en él que aparecieron los estímulos, tendrá dos intentos para realizarlos correctamente'
+    );
     }
 }

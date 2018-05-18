@@ -18,6 +18,7 @@ export class Act6VsComponent implements OnInit {
         this.loadAPI = new Promise((resolve) => {
             this.loadScript();
         });
+        this.instructions();
     }
 
     loadScript() {

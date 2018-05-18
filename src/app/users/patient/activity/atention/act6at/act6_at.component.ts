@@ -32,6 +32,7 @@ export class Act6AtComponent implements OnInit {
 
     instructions() {
        swal('Instrucciones',
-       'Pegar aquí las instrucciones');
+         'Aparecerán letras aleatoriamente, el paciente deberá apretar la' +
+          'barra espaciadora cada vez que aparezca la letra “X”.');
     }
 }
