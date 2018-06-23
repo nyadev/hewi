@@ -23,6 +23,7 @@ import { ConsultPatientComponent } from './users/therapist/patient/consult/consu
 import { PatientDetailComponent } from './users/therapist/patient/detail/patient-detail.component';
 
 // Actividades
+import { ActnTypeComponent } from './users/patient/activity/atention/act_template/actn_type.component';
 // Atencion
 import { Act1AtComponent } from './users/patient/activity/atention/act1at/act1_at.component';
 import { Act2AtComponent } from './users/patient/activity/atention/act2at/act2_at.component';
@@ -64,7 +65,7 @@ import { AuthService } from './auth/auth.service';
     Act5AtComponent, Act6AtComponent,Act7AtComponent, Act8AtComponent,
     Act1VsComponent, Act2VsComponent, Act3VsComponent, Act4VsComponent,
     Act5VsComponent, Act6VsComponent, Act7VsComponent, Act8VsComponent,
-    Act16VsComponent, Act10VsComponent, Act11VsComponent,
+    Act16VsComponent, Act10VsComponent, Act11VsComponent, ActnTypeComponent
     RegisterTherapistComponent,
     RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
     SigninComponent,

@@ -1,36 +1,36 @@
-<div class="divider">
-  <mat-card class="activity">
-    <mat-card-header>
-      <mat-toolbar color="primary">
-        <span>Actividad n</span>
-        Objetivo Actividad &nbsp; &nbsp; &nbsp; &nbsp; Nivel: <span id="nivel">1</span>
-        <span class="space"></span>
-        <button mat-mini-fab id="begin" onclick="begin()"><mat-icon>play_arrow</mat-icon></button>
-        <span class="spacer"></span>
-        <img src="" id="0" name="figure" class="estimulo clave">
-        <span class="spacer"></span>
-        <div id="aciertos" class="aciertos">0</div><mat-icon class="aciertos">done</mat-icon>
-        <span class="spacer"></span>
-        <div id="errores" class="errores">0</div><mat-icon class="errores">clear</mat-icon>
-      </mat-toolbar>
-    </mat-card-header>
-    <div class="activity-container">
-      <span class="space"></span>
-      <div class="activity-content">
-        <!-- Actividad aquí -->
-        <button mat-raised-button id="save-results" class="btn boton" onclick="saveResults()" color="primary">Guardar Resultados</button>
+<div class="full">
+  <div class="activity-panel">
+    <mat-card>
+      <mat-toolbar>Actividad</mat-toolbar>
+      <div class="activity-container">
+
       </div>
-      <span class="space"></span>
-    </div>
-  </mat-card>
-  <mat-card class="level">
-    <mat-card-header>
-      <mat-toolbar color="primary">
-        <span>Nivel: </span><span id="nivel">1</span>
-      </mat-toolbar>
-    </mat-card-header>
-    <div class="nivel">
-      <!-- Aquí van los niveles -->
-    </div>
-  </mat-card>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Instrucciones
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+            Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido. También es una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que, aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original. En otras palabras, un texto es un entramado de signos con una intención comunicativa que adquiere sentido en determinado contexto.
+          </p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card>
+  </div>
+  <div class="level-panel">
+    <mat-card>
+      <mat-toolbar>Opciones</mat-toolbar>
+      <div class="points">
+        <div class="corrects">
+          <span class="corrects-span">Aciertos:</span>
+        </div>
+        <div class="fails">
+          <span class="fails-span">Errores:</span>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+    </mat-card>
+  </div>
 </div>

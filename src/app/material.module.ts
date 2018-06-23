@@ -16,6 +16,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 import { MatTableModule } from '@angular/material/table';
+import { MatChipsModule } from '@angular/material/chips';
 
 const modules = [
   MatButtonModule,
@@ -35,7 +36,8 @@ const modules = [
   MatProgressSpinnerModule,
   MatSnackBarModule,
   ScrollDispatchModule,
-  MatTableModule
+  MatTableModule,
+  MatChipsModule
 ];
 
 @NgModule({

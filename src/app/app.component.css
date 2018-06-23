@@ -11,6 +11,11 @@ mat-toolbar{
   height: 100%;
 }
 
+.mat-toolbar.mat-primary {
+  background: #34495E;
+  color: #fff;
+}
+
 .header_image{
   height: 80%;
   width: auto;
@@ -50,7 +55,7 @@ mat-toolbar{
   font-size: 20px;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
     .sydrome{
       display: none;
     }

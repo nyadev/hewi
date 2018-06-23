@@ -6,8 +6,8 @@ const url = './assets/scripts/atention/nombredeJS.js';
 
 @Component({
   selector: 'app-actn-type',
-  templateUrl: './actn.component.html',
-  styleUrls: ['./actn.component.css', '../../activity.component.css']
+  templateUrl: './actn_type.component.html',
+  styleUrls: ['./actn_type.component.css', '../../activity.component.css']
 })
 
 export class ActnTypeComponent implements OnInit {

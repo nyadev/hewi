@@ -1,5 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
+import { ActnTypeComponent } from './activity/atention/act_template/actn_type.component';
+
 import { Act1AtComponent } from './activity/atention/act1at/act1_at.component';
 import { Act2AtComponent } from './activity/atention/act2at/act2_at.component';
 import { Act3AtComponent } from './activity/atention/act3at/act3_at.component';
@@ -23,7 +25,7 @@ import { Act16VsComponent } from './activity/visiospacial/act16vs/act16_vs.compo
 
 export const PATIENT_ROUTES: Routes = [
   //Atención
-  { path: 'aat1', component: Act1AtComponent},
+  { path: 'aat1', component: ActnTypeComponent},
   { path: 'aat2', component: Act2AtComponent},
   { path: 'aat3', component: Act3AtComponent},
   { path: 'aat4', component: Act4AtComponent},
