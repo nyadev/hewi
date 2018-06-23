@@ -1,0 +1,11 @@
+.div-estimulo{
+  height: 90%;
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.tabla-estimulo{
+  display: flex;
+  margin: auto;
+}

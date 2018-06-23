@@ -10,6 +10,7 @@ import { Act5AtComponent } from './activity/atention/act5at/act5_at.component';
 import { Act6AtComponent } from './activity/atention/act6at/act6_at.component';
 import { Act7AtComponent } from './activity/atention/act7at/act7_at.component';
 import { Act8AtComponent } from './activity/atention/act8at/act8_at.component';
+import { Act9AtComponent } from './activity/atention/act9at/act9_at.component';
 
 import { Act1VsComponent } from './activity/visiospacial/act1vs/act1_vs.component';
 import { Act2VsComponent } from './activity/visiospacial/act2vs/act2_vs.component';
@@ -33,6 +34,7 @@ export const PATIENT_ROUTES: Routes = [
   { path: 'aat6', component: Act6AtComponent},
   { path: 'aat7', component: Act7AtComponent},
   { path: 'aat8', component: Act8AtComponent},
+  { path: 'aat9', component: Act9AtComponent},
 
   //Viseoespaciales
   { path: 'avs1', component: Act1VsComponent},
