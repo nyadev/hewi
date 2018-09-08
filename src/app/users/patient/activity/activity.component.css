@@ -9,6 +9,12 @@ mat-toolbar{
   color: white;
 }
 
+.minitoolbar{
+  height: 30px;
+  font-size: 20px;
+  background: #1f618d6b; 
+}
+
 .activity-panel{
   width: 60%;
 }

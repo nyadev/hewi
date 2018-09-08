@@ -67,7 +67,7 @@ import { AuthService } from './auth/auth.service';
     Act9AtComponent,
     Act1VsComponent, Act2VsComponent, Act3VsComponent, Act4VsComponent,
     Act5VsComponent, Act6VsComponent, Act7VsComponent, Act8VsComponent,
-    Act16VsComponent, Act10VsComponent, Act11VsComponent, ActnTypeComponent
+    Act16VsComponent, Act10VsComponent, Act11VsComponent, ActnTypeComponent,
     RegisterTherapistComponent,
     RegisterPatientComponent, ConsultPatientComponent, SessionComponent,
     SigninComponent,
