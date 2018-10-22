@@ -20,21 +20,22 @@
     </mat-card>
   </div>
   <div class="level-panel">
-    <mat-card>
-      <mat-toolbar>Opciones</mat-toolbar>
-      <div class="points">
-        <div class="corrects">
-          <span class="corrects-span">Aciertos:</span>
+    <form class="login-form" [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+      <mat-card>
+        <mat-toolbar>Opciones</mat-toolbar>
+        <div class="points">
+          <div class="corrects">
+            <span class="corrects-span">Aciertos:</span>
+          </div>
+          <div class="fails">
+            <span class="fails-span">Errores:</span>
+          </div>
         </div>
-        <div class="fails">
-          <span class="fails-span">Errores:</span>
+        <mat-toolbar>Nivel: </mat-toolbar>
+        <div class="radio">
+
         </div>
-      </div>
-      <mat-toolbar class="minitoolbar">Nivel</mat-toolbar>
-      <div class="radio">
-        
-      </div>
-      <mat-toolbar class="minitoolbar"></mat-toolbar>
-    </mat-card>
+      </mat-card>
+    </form>
   </div>
 </div>
